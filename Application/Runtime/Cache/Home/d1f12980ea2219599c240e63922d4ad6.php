@@ -25,8 +25,6 @@
     <!--/meta 作为公共模版分离出去-->
 
     <title>添加酒店 - H-ui.admin v3.1</title>
-    <meta name="keywords" content="H-ui.admin v3.1,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
-    <meta name="description" content="H-ui.admin v3.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
 </head>
 <body>
 <article class="page-container">
@@ -55,7 +53,8 @@
 <script type="text/javascript" src="/peihuo/Public/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="/peihuo/Public/static/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="/peihuo/Public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/peihuo/Public/static/h-ui.admin/js/H-ui.admin.js"></script>
+<!--/_footer 作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/peihuo/Public/lib/My97DatePicker/4.8/WdatePicker.js"></script>
@@ -76,7 +75,7 @@
                 },
             },
             onkeyup:false,
-            focusCleanup:true,
+//            focusCleanup:true, // 如果是 true 那么当未通过验证的元素获得焦点时，移除错误提示。避免和 focusInvalid 一起用。
             success:"valid",
             // 通过验证后运行的函数
             submitHandler:function(form){
