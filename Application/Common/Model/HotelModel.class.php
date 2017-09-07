@@ -19,6 +19,25 @@ class HotelModel extends Model {
         return $this->_db->where($data)->order('hotel_id desc')->select();
     }
 
+    public function updateStatusById($id, $status) {
+        if(!is_numeric($status)) {
+            throw_exception("status不能为非数字");
+        }
+        if(!$id || !is_numeric($id)) {
+            throw_exception("ID不合法");
+        }
+        $data['status'] = $status;
+        return  $this->_db->where('hotel_id='.$id)->save($data); // 根据条件更新记录
+
+    }
+
+    public function insert($data = array()) {
+        if(!$data || !is_array($data)) {
+            return 0;
+        }
+        return $this->_db->add($data);
+    }
+
     public function getAdminByUsername($username='') {
         $res = $this->_db->where('username="'.$username.'"')->find();
         return $res;
@@ -39,36 +58,13 @@ class HotelModel extends Model {
         return  $this->_db->where('admin_id='.$id)->save($data); // 根据条件更新记录
     }
 
-    public function insert($data = array()) {
-        if(!$data || !is_array($data)) {
-            return 0;
-        }
-        return $this->_db->add($data);
-    }
-
     public function getAdmins() {
         $data = array(
             'status' => array('neq',-1),
         );
         return $this->_db->where($data)->order('admin_id desc')->select();
     }
-    /**
-     * 通过id更新的状态
-     * @param $id
-     * @param $status
-     * @return bool
-     */
-    public function updateStatusById($id, $status) {
-        if(!is_numeric($status)) {
-            throw_exception("status不能为非数字");
-        }
-        if(!$id || !is_numeric($id)) {
-            throw_exception("ID不合法");
-        }
-        $data['status'] = $status;
-        return  $this->_db->where('admin_id='.$id)->save($data); // 根据条件更新记录
 
-    }
 
     public function getLastLoginUsers() {
         $time = mktime(0,0,0,date("m"),date("d"),date("Y"));

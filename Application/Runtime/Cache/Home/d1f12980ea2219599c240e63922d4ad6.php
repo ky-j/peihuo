@@ -28,17 +28,17 @@
 </head>
 <body>
 <article class="page-container">
-    <form action="" method="post" class="form form-horizontal" id="form-member-add">
+    <form action="index.php?c=hotel&a=add" method="post" class="form form-horizontal" id="peihuo-form">
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 酒店名称：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="" placeholder="" id="hotelName" name="hotelName">
+                <input type="text" class="input-text" value="" placeholder="" id="hotelName" name="hotel_name">
             </div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 酒店编号：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="" placeholder="" id="hotelNumber" name="hotelNumber">
+                <input type="text" class="input-text" value="" placeholder="" id="hotelNumber" name="hotel_number">
             </div>
         </div>
         <div class="row cl">
@@ -54,6 +54,7 @@
 <script type="text/javascript" src="/peihuo/Public/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="/peihuo/Public/static/h-ui/js/H-ui.min.js"></script>
 <script type="text/javascript" src="/peihuo/Public/static/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="/peihuo/Public/js/dialog.js"></script>
 <!--/_footer 作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
@@ -63,7 +64,7 @@
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/messages_zh.js"></script>
 <script type="text/javascript">
     $(function(){
-        $("#form-member-add").validate({
+        $("#peihuo-form").validate({
             rules:{
                 hotelName:{
                     required:true,
@@ -79,14 +80,31 @@
             success:"valid",
             // 通过验证后运行的函数
             submitHandler:function(form){
-                //$(form).ajaxSubmit();
-                var index = parent.layer.getFrameIndex(window.name);
+                $(form).ajaxSubmit({
+                    success: function (data) {
+//                        console.log(data);
+//                        dialog.msg("操作成功！");
+//                        layer.msg('操作成功!',{icon:1,time:1000});
+//                        var index = parent.layer.getFrameIndex(window.name);
+//                        parent.layer.close(index);
+                        dialog.success("新增成功","index.php?c=hotel");
+                    }
+                });
+//                var index = parent.layer.getFrameIndex(window.name);
                 //parent.$('.btn-refresh').click();
-                parent.layer.close(index);
+//                parent.layer.close(index);
             }
         });
     });
 </script>
+<script>
+    var SCOPE = {
+        'add_url' : 'index.php?c=hotel&a=add',
+        'edit_url' : '/admin.php?c=menu&a=edit',
+        'set_status_url' : 'index.php?c=hotel&a=setStatus',
+    }
+</script>
+<script type="text/javascript" src="/peihuo/Public/js/common.js"></script>
 <!--/请在上方写此页面业务相关的脚本-->
 </body>
 </html>
