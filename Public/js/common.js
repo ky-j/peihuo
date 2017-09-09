@@ -42,18 +42,19 @@ $('.peihuo-table #singcms-edit').on('click',function(){
 /**
  * 删除操作JS
  */
-$('.peihuo-table #peihuo-delete').on('click',function(){
+$('.peihuo-table .peihuo-delete').on('click',function(){
     var id = $(this).attr('attr-id');
-    var a = $(this).attr("attr-a");
-    var message = $(this).attr("attr-message");
+    var a = $(this).attr('attr-a');
+    var message = $(this).attr('attr-message');
     var url = SCOPE.set_status_url;
 
     data = {};
     data['id'] = id;
     data['status'] = -1;
 
+    var confirmMessage = '确认要删除ID为'+id+'的记录吗？';
     var that = this;
-    layer.confirm('确认要删除吗？',function(index){
+    layer.confirm(confirmMessage,function(index){
         $.ajax({
             type: 'POST',
             url: url,

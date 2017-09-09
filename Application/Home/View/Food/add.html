@@ -1,0 +1,101 @@
+<include file="Public/_meta" />
+
+    <title>添加菜品</title>
+</head>
+<body>
+<article class="page-container">
+    <form action="index.php?c=food&a=add" method="post" class="form form-horizontal" id="peihuo-form">
+        <input type="hidden" name="food_id" value="{$food.food_id}">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 菜品名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="{$food.food_name}" placeholder="" id="food_name" name="food_name">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">
+                <span class="c-red">*</span>
+                菜品分类：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box">
+						<select class="select" id="parent_id" name="parent_id" onchange="SetSubID(this);">
+							<option value="">-=请选择分类=-</option>
+                            <foreach name="category" item="cate">
+                            <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $food['parent_id']">selected="selected"</if>>{$cate.category_name}</option>
+                            </foreach>
+						</select>
+						</span>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 默认单价：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="{$food.food_price}" placeholder="不超过小数点两位，如7.85" id="food_price" name="food_price">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 默认单位：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="{$food.food_unit}" placeholder="如：斤、瓶、箱" id="food_unit" name="food_unit">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+
+<include file="Public/_footer" />
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#peihuo-form").validate({
+            rules:{
+                food_name:{
+                    required:true,
+                },
+                parent_id:{
+                    required:true,
+                    digits:true
+                },
+                food_price:{
+                    required:true,
+                    number:true
+                },
+                food_unit:{
+                    required:true,
+                    rangelength:[1,10]
+                },
+            },
+            onkeyup:false,
+            success:"valid",
+            // 通过验证后运行的函数
+            submitHandler:function(form){
+                $(form).ajaxSubmit({
+                    dataType: 'json',
+                    success: function (data) {
+                        if(data.status === 1){
+                            dialog.msg("操作成功！");
+                            window.parent.location.reload();
+                        }else{
+                            dialog.error(data.message);
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

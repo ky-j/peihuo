@@ -1,0 +1,77 @@
+﻿<include file="Public/_meta" />
+
+    <title>订单列表</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 订单管理 <span class="c-gray en">&gt;</span> 订单列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="order_add('添加图片','index.php?c=order&a=add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加订单</a></span> <span class="r">共有数据：<strong>{$total}</strong> 条</span> </div>
+    <div class="mt-20">
+        <table class="table table-border table-bordered table-bg table-hover table-sort peihuo-table">
+            <thead>
+            <tr class="text-c">
+                <th width="80">ID</th>
+                <th width="100">订单编号</th>
+                <th width="100">酒店</th>
+                <th width="50">酒店编号</th>
+                <th width="100">配送日期</th>
+                <th width="50">菜品数量</th>
+                <th width="100">状态</th>
+                <th width="150">更新时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="orderList" id="vo">
+            <tr class="text-c">
+                <td>{$vo.order_id}</td>
+                <td>{$vo.order_number}</td>
+                <td>{$vo.hotel_id|gethotelName=$Hotel,###}</td>
+                <td>{$vo.hotel_id|gethotelNumber=$Hotel,###}</td>
+                <td>{$vo.delivery_date}</td>
+                <td></td>
+                <td></td>
+                <td>{$vo.update_time|date="Y-m-d H:i",###}</td>
+                <td class="td-manage"><button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="{$vo.order_id}" attr-a="order" attr-message="修改" onclick="layer_show('修改订单','index.php?c=order&a=edit&id={$vo.order_id}','',400)">修改</button> | <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="{$vo.order_id}" attr-a="order" attr-message="删除">删除</button></td>
+            </tr>
+            </volist>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<include file="Public/_footer" />
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+    $('.table-sort').dataTable({
+        "aaSorting": [[ 0, "desc" ]],//默认第几个排序
+        "bStateSave": true,//状态保存
+//        "aoColumnDefs": [
+//            //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+//            {"orderable":false,"aTargets":[0,8]}// 制定列不参与排序
+//        ]
+    });
+
+    /*全屏弹出下单页面*/
+    function order_add(title,url){
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+</script>
+<script>
+    var SCOPE = {
+        'set_status_url' : 'index.php?c=order&a=setStatus',
+    }
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

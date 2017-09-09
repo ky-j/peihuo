@@ -24,22 +24,43 @@
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
 
-    <title>添加酒店</title>
+    <title>添加菜品</title>
 </head>
 <body>
 <article class="page-container">
-    <form action="index.php?c=hotel&a=add" method="post" class="form form-horizontal" id="peihuo-form">
-        <input type="hidden" name="hotel_id" value="<?php echo ($hotel["hotel_id"]); ?>">
+    <form action="index.php?c=food&a=add" method="post" class="form form-horizontal" id="peihuo-form">
+        <input type="hidden" name="food_id" value="<?php echo ($food["food_id"]); ?>">
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 酒店名称：</label>
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 菜品名称：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="<?php echo ($hotel["hotel_name"]); ?>" placeholder="" id="hotel_name" name="hotel_name">
+                <input type="text" class="input-text" value="<?php echo ($food["food_name"]); ?>" placeholder="" id="food_name" name="food_name">
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 酒店编号：</label>
+            <label class="form-label col-xs-4 col-sm-3">
+                <span class="c-red">*</span>
+                菜品分类：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="<?php echo ($hotel["hotel_number"]); ?>" placeholder="" id="hotel_number" name="hotel_number">
+						<span class="select-box">
+						<select class="select" id="parent_id" name="parent_id" onchange="SetSubID(this);">
+							<option value="">-=请选择分类=-</option>
+                            <?php if(is_array($category)): foreach($category as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $food['parent_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
+						</select>
+						</span>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 默认单价：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="<?php echo ($food["food_price"]); ?>" placeholder="不超过小数点两位，如7.85" id="food_price" name="food_price">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 默认单位：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="<?php echo ($food["food_unit"]); ?>" placeholder="如：斤、瓶、箱" id="food_unit" name="food_unit">
             </div>
         </div>
         <div class="row cl">
@@ -67,17 +88,23 @@
     $(function(){
         $("#peihuo-form").validate({
             rules:{
-                hotel_name:{
+                food_name:{
                     required:true,
-                    rangelength:[2,10]
                 },
-                hotel_number:{
+                parent_id:{
                     required:true,
                     digits:true
                 },
+                food_price:{
+                    required:true,
+                    number:true
+                },
+                food_unit:{
+                    required:true,
+                    rangelength:[1,10]
+                },
             },
             onkeyup:false,
-//            focusCleanup:true, // 如果是 true 那么当未通过验证的元素获得焦点时，移除错误提示。避免和 focusInvalid 一起用。
             success:"valid",
             // 通过验证后运行的函数
             submitHandler:function(form){
@@ -90,25 +117,11 @@
                         }else{
                             dialog.error(data.message);
                         }
-//                        console.log(data);
-//                        layer.msg('操作成功!',{icon:1,time:1000});
-//                        var index = parent.layer.getFrameIndex(window.name);
-//                        parent.layer.close(index);
                     }
                 });
-//                var index = parent.layer.getFrameIndex(window.name);
-                //parent.$('.btn-refresh').click();
-//                parent.layer.close(index);
             }
         });
     });
-</script>
-<script>
-    var SCOPE = {
-        'add_url' : 'index.php?c=hotel&a=add',
-        'edit_url' : '/admin.php?c=menu&a=edit',
-        'set_status_url' : 'index.php?c=hotel&a=setStatus',
-    }
 </script>
 <script type="text/javascript" src="/peihuo/Public/js/common.js"></script>
 <!--/请在上方写此页面业务相关的脚本-->

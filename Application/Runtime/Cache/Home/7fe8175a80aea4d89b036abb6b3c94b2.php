@@ -29,16 +29,16 @@
 <body>
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 酒店管理 <span class="c-gray en">&gt;</span> 酒店列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
-    <div class="text-c">
-        <input type="text" name="" id="" placeholder=" 酒店名称" style="width:250px" class="input-text">
-        <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜酒店</button>
-    </div>
-    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="hotel_add('添加酒店','index.php?c=hotel&a=add','',400)" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加酒店</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+    <!--<div class="text-c">-->
+        <!--<input type="text" name="" id="" placeholder=" 酒店名称" style="width:250px" class="input-text">-->
+        <!--<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜酒店</button>-->
+    <!--</div>-->
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="layer_show('添加酒店','index.php?c=hotel&a=add','',300)" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加酒店</a></span> <span class="r">共有数据：<strong><?php echo ($total); ?></strong> 条</span> </div>
     <div class="mt-20">
         <table class="table table-border table-bordered table-bg table-hover table-sort peihuo-table">
             <thead>
             <tr class="text-c">
-                <th width="40"><input name="" type="checkbox" value=""></th>
+                <!--<th width="40"><input name="" type="checkbox" value=""></th>-->
                 <th width="80">ID</th>
                 <th>酒店名称</th>
                 <th width="100">酒店编号</th>
@@ -49,12 +49,12 @@
             </thead>
             <tbody>
             <?php if(is_array($hotelList)): $i = 0; $__LIST__ = $hotelList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c">
-                <td><input name="" type="checkbox" value=""></td>
+                <!--<td><input name="" type="checkbox" value=""></td>-->
                 <td><?php echo ($vo["hotel_id"]); ?></td>
                 <td><?php echo ($vo["hotel_name"]); ?></td>
                 <td><?php echo ($vo["hotel_number"]); ?></td>
-                <td>2014-6-11 11:11:42</td>
-                <td class="td-manage"><a style="text-decoration:none" onClick="hotel_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="hotel_edit('图库编辑','hotel-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="hotel_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a> <input class="btn btn-danger size-MINI radius" type="button" attr-id="<?php echo ($vo["hotel_id"]); ?>" id="peihuo-delete" attr-a="hotel" attr-message="删除" value="删除"></td>
+                <td><?php echo (date("Y-m-d H:i",$vo["update_time"])); ?></td>
+                <td class="td-manage"><button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="<?php echo ($vo["hotel_id"]); ?>" attr-a="hotel" attr-message="修改" onclick="layer_show('修改酒店','index.php?c=hotel&a=edit&id=<?php echo ($vo["hotel_id"]); ?>','',300)">修改</button> | <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["hotel_id"]); ?>" attr-a="hotel" attr-message="删除">删除</button></td>
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
         </table>

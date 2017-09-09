@@ -78,14 +78,23 @@
                 </ul>
             </dd>
         </dl>
-        <!--<dl id="menu-article">-->
-            <!--<dt><i class="Hui-iconfont">&#xe616;</i> 资讯管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
-            <!--<dd>-->
-                <!--<ul>-->
-                    <!--<li><a data-href="article-list.html" data-title="资讯管理" href="javascript:void(0)">资讯管理</a></li>-->
-                <!--</ul>-->
-            <!--</dd>-->
-        <!--</dl>-->
+        <dl id="menu-food">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 菜品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="index.php?c=food" data-title="菜品管理" href="javascript:void(0)">菜品管理</a></li>
+                    <li><a data-href="index.php?c=category" data-title="菜品分类" href="javascript:void(0)">菜品分类</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-order">
+            <dt><i class="Hui-iconfont">&#xe627;</i> 订单管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="index.php?c=order" data-title="订单管理" href="javascript:void(0)">订单管理</a></li>
+                </ul>
+            </dd>
+        </dl>
         <!--<dl id="menu-picture">-->
             <!--<dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
             <!--<dd>-->
