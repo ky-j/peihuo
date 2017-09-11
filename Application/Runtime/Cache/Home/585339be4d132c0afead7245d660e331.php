@@ -24,122 +24,224 @@
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
 
-    <title>添加菜品</title>
+<title>添加菜品</title>
 </head>
 <body>
 <div class="page-container">
-    <form class="form form-horizontal" id="form-article-add">
+    <form action="index.php?c=order&a=add" method="post" class="form form-horizontal" id="peihuo-form">
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>图片标题：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="" placeholder="" id="" name="">
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">简略标题：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="" placeholder="" id="" name="">
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>下单酒店：</label>
-            <div class="formControls col-xs-8 col-sm-9">
+            <label class="form-label col-sm-2"><span class="c-red">*</span> 下单酒店：</label>
+            <div class="formControls col-sm-8">
 				<span class="select-box">
-				<select name="" class="select">
+				<select name="hotel_id" class="select">
                     <option value="">-=请选择酒店=-</option>
-                    <?php if(is_array($hotel)): foreach($hotel as $key=>$hotel): ?><option value="<?php echo ($hotel["hotel_id"]); ?>"><?php echo ($hotel["hotel_name"]); ?></option><?php endforeach; endif; ?>
+                    <?php if(is_array($hotelList)): foreach($hotelList as $key=>$hotel): ?><option value="<?php echo ($hotel["hotel_id"]); ?>"><?php echo ($hotel["hotel_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
             </div>
         </div>
+        <!--<div class="row cl">-->
+        <!--<label class="form-label col-sm-2"><span class="c-red">*</span> 下单日期：</label>-->
+        <!--<div class="formControls col-sm-9">-->
+        <!--<input type="text" onfocus="WdatePicker()" id="order_date" name="order_date" value="<?php echo ($today); ?>" class="input-text Wdate">-->
+        <!--</div>-->
+        <!--</div>-->
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">排序值：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="0" placeholder="" id="" name="">
+            <label class="form-label col-sm-2"><span class="c-red">*</span> 配送日期：</label>
+            <div class="formControls col-sm-8">
+                <input type="text" onfocus="WdatePicker()" id="delivery_date" name="delivery_date" value="<?php echo ($tomorrow); ?>"
+                       class="input-text Wdate">
+            </div>
+        </div>
+        <!--<div class="row cl">-->
+        <!--<label class="form-label col-sm-2">中餐：</label>-->
+        <!--</div>-->
+        <!--<div class="row cl">-->
+        <!--<div class="line col-xs-12"></div>-->
+        <!--</div>-->
+        <div class="row cl">
+            <label class="form-label col-sm-2">中餐：</label>
+            <input type="hidden" name="depart_id[]" value="1">
+            <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+            </div>
+            <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="1">-=请选择菜品=-</option>
+				</select>
+				</span>
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text food-price" value="" placeholder="单价" id="" name="food_price[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text food-unit" value="" placeholder="单位" id="" name="food_unit[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id="" name="delivery_number[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <a href="javascript:" class="add-item" title="新增一条中餐记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
+                &nbsp;&nbsp;
+                <a href="javascript:" class="remove-item" title="删除该条中餐记录" attr-depart="中餐"><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">允许评论：</label>
-            <div class="formControls col-xs-8 col-sm-9 skin-minimal">
-                <div class="check-box">
-                    <input type="checkbox" id="checkbox-1">
-                    <label for="checkbox-1">&nbsp;</label>
-                </div>
+            <label class="form-label col-sm-2">西餐：</label>
+            <input type="hidden" name="depart_id[]" value="2">
+            <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+            </div>
+            <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="2">-=请选择菜品=-</option>
+				</select>
+				</span>
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text food-price" value="" placeholder="单价" id="" name="food_price[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text food-unit" value="" placeholder="单位" id="" name="food_unit[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id="" name="delivery_number[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <a href="javascript:" class="add-item" title="新增一条西餐记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
+                &nbsp;&nbsp;
+                <a href="javascript:" class="remove-item" title="删除该条西餐记录" attr-depart="西餐" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>发布日期：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" onfocus="WdatePicker()" id="datemin" class="input-text Wdate">
+            <label class="form-label col-sm-2">日本料理：</label>
+            <input type="hidden" name="depart_id[]" value="3">
+            <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+            </div>
+            <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="2">-=请选择菜品=-</option>
+				</select>
+				</span>
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text food-price" value="" placeholder="单价" id="" name="food_price[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text food-unit" value="" placeholder="单位" id="" name="food_unit[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id="" name="delivery_number[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <a href="javascript:" class="add-item" title="新增一条日本料理记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
+                &nbsp;&nbsp;
+                <a href="javascript:" class="remove-item" title="删除该条日本料理记录" attr-depart="日本料理" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>结束日期：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" onfocus="WdatePicker()" id="datemax" class="input-text Wdate">
+            <label class="form-label col-sm-2">点心：</label>
+            <input type="hidden" name="depart_id[]" value="4">
+            <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+            </div>
+            <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="2">-=请选择菜品=-</option>
+				</select>
+				</span>
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text food-price" value="" placeholder="单价" id="" name="food_price[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text food-unit" value="" placeholder="单位" id="" name="food_unit[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id="" name="delivery_number[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <a href="javascript:" class="add-item" title="新增一条点心记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
+                &nbsp;&nbsp;
+                <a href="javascript:" class="remove-item" title="删除该条点心记录" attr-depart="点心" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">图片作者：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="0" placeholder="" id="" name="">
+            <label class="form-label col-sm-2">味部：</label>
+            <input type="hidden" name="depart_id[]" value="5">
+            <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
             </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">图片来源：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="0" placeholder="" id="" name="">
+            <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="2">-=请选择菜品=-</option>
+				</select>
+				</span>
             </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">关键词：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="0" placeholder="" id="" name="">
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text food-price" value="" placeholder="单价" id="" name="food_price[]">
             </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">图片摘要：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <textarea name="" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"></textarea>
-                <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text food-unit" value="" placeholder="单位" id="" name="food_unit[]">
             </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <div class="uploader-thum-container">
-                    <div id="fileList" class="uploader-list"></div>
-                    <div id="filePicker">选择图片</div>
-                    <button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>
-                </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
             </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">图片上传：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <div class="uploader-list-container">
-                    <div class="queueList">
-                        <div id="dndArea" class="placeholder">
-                            <div id="filePicker-2"></div>
-                            <p>或将照片拖到这里，单次最多可选300张</p>
-                        </div>
-                    </div>
-                    <div class="statusBar" style="display:none;">
-                        <div class="progress"> <span class="text">0%</span> <span class="percentage"></span> </div>
-                        <div class="info"></div>
-                        <div class="btns">
-                            <div id="filePicker2"></div>
-                            <div class="uploadBtn">开始上传</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="formControls col-sm-1">
+                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id="" name="delivery_number[]">
+            </div>
+            <div class="formControls col-sm-1">
+                <a href="javascript:" class="add-item" title="新增一条味部记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
+                &nbsp;&nbsp;
+                <a href="javascript:" class="remove-item" title="删除该条味部记录" attr-depart="味部" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-                <button onClick="article_save_submit();" class="btn btn-primary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
-                <button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
-                <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
             </div>
         </div>
     </form>
@@ -159,42 +261,106 @@
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/messages_zh.js"></script>
 <script type="text/javascript">
-    $(function(){
+    $(function () {
         $("#peihuo-form").validate({
-            rules:{
-                food_name:{
-                    required:true,
+            rules: {
+                hotel_id: {
+                    required: true,
                 },
-                parent_id:{
-                    required:true,
-                    digits:true
+                'food_price[]': {
+                    number: true
                 },
-                food_price:{
-                    required:true,
-                    number:true
-                },
-                food_unit:{
-                    required:true,
-                    rangelength:[1,10]
+                'order_number[]': {
+                    number: true
                 },
             },
-            onkeyup:false,
-            success:"valid",
+            onkeyup: false,
+            success: "valid",
             // 通过验证后运行的函数
-            submitHandler:function(form){
+            submitHandler: function (form) {
                 $(form).ajaxSubmit({
                     dataType: 'json',
                     success: function (data) {
-                        if(data.status === 1){
+                        if (data.status === 1) {
                             dialog.msg("操作成功！");
                             window.parent.location.reload();
-                        }else{
+                        } else {
                             dialog.error(data.message);
                         }
                     }
                 });
             }
         });
+
+        var foodData = {};
+
+        $(".category-id").change(function () {
+            var ele = $(this).parent().parent().parent();
+            var foodSelect = ele.find(".food-id");
+
+            foodSelect.html("");
+            $("<option value=''>-=请选择菜品=-</option>").appendTo(foodSelect);
+
+            var cateValue = $(this).val();
+            if (cateValue != "") {
+                var postData = {
+                    'category_id': cateValue
+                };
+                $.post('index.php?c=food&a=getFoodData', postData, function (result) {
+                    if (result.status == 1) {
+                        //成功
+                        //console.log(result.data);
+                        foodData = result.data;
+                        $.each(foodData, function (k, v) {
+                            $("<option value ='" + v['food_id'] + "'> " + v['food_name'] + "</option>").appendTo(foodSelect);
+                        });
+                    } else if (result.status == 0) {
+                        // 失败
+                        return dialog.error(result.message);
+                    }
+                }, "JSON");
+            }
+        });
+
+        $(".food-id").change(function () {
+            var ele = $(this).parent().parent().parent();
+            foodValue = $(this).val();
+
+            $.each(foodData, function (k, v) {
+                if (foodValue == v['food_id']) {
+                    ele.find('.food-price').val(v['food_price']);
+                    ele.find('.food-unit').val(v['food_unit']);
+                }
+            });
+        });
+
+        $(".add-item").on('click',function () {
+            var ele = $(this).parent().parent();
+            var copy = ele.clone(true);
+            ele.after(copy.addClass('hui-fadein'));
+            var newEle = ele.next();
+            var newFoodSelect = newEle.find('.food-id');
+            newFoodSelect.html('');
+            $("<option value=''>-=请选择菜品=-</option>").appendTo(newFoodSelect);
+            newEle.find('.food-price').val('');
+            newEle.find('.food-unit').val('');
+            newEle.find('.order-number').val('');
+            newEle.find('.delivery-number').val('');
+        })
+
+        $(".remove-item").on('click',function () {
+            var depart = $(this).attr('attr-depart');
+            var confirmMessage = '确认要删除该条'+depart+'记录吗？';
+            var ele = $(this).parent().parent();
+            layer.confirm(confirmMessage,function(index){
+                layer.close(index);
+                ele.addClass('hui-bounceoutR');
+                setTimeout(function () {
+                    ele.remove();
+                },1000);
+            });
+        })
+
     });
 </script>
 <script type="text/javascript" src="/peihuo/Public/js/common.js"></script>

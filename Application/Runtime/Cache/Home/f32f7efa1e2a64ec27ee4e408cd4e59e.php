@@ -42,9 +42,9 @@
                 菜品分类：</label>
             <div class="formControls col-xs-8 col-sm-9">
 						<span class="select-box">
-						<select class="select" id="parent_id" name="parent_id" onchange="SetSubID(this);">
+						<select class="select" id="category_id" name="category_id" onchange="SetSubID(this);">
 							<option value="">-=请选择分类=-</option>
-                            <?php if(is_array($category)): foreach($category as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $food['parent_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
+                            <?php if(is_array($category)): foreach($category as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $food['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
 						</select>
 						</span>
             </div>
@@ -91,7 +91,7 @@
                 food_name:{
                     required:true,
                 },
-                parent_id:{
+                category_id:{
                     required:true,
                     digits:true
                 },

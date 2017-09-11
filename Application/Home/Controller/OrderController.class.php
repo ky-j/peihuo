@@ -19,41 +19,63 @@ class OrderController extends Controller
     public function add()
     {
         if ($_POST) {
+//            print_r($_POST);
+//            exit();
+
             // 数据强校验
-            if (!isset($_POST['order_name']) || !$_POST['order_name']) {
-                return show_msg(0, '菜品名不能为空');
-            }
-            if (!isset($_POST['parent_id']) || !is_numeric($_POST['parent_id'])) {
-                return show_msg(0, '菜品分类不能为空');
+            if (!isset($_POST['hotel_id']) || !$_POST['hotel_id']) {
+                return show_msg(0, '酒店不能为空');
             }
 
             $data = [];
-            $data['order_id'] = $_POST['order_id'];
-            $data['order_name'] = $_POST['order_name'];
-            $data['parent_id'] = $_POST['parent_id'];
-            $data['order_price'] = $_POST['order_price'];
-            $data['order_unit'] = $_POST['order_unit'];
+            $data['hotel_id'] = $_POST['hotel_id'];
+            $data['order_sn'] = get_order_sn();
+            $data['order_date'] = time();
+            $data['delivery_date'] = strtotime($_POST['delivery_date']);
             $data['update_time'] = time();
 
-            // 若是编辑则直接更新
-            if($data['order_id']) {
-                return $this->save($data);
-            }
-
-            $ret = D('Order')->getOrderByName($data['order_name']);
-            if($ret) {
-                return show_msg(0,'菜品名已经存在');
-            }
-
+            // 插入order表
             $orderId = D("Order")->insert($data);
+
             if ($orderId) {
+                // 依据下单数量，处理各个部门的数据
+                $num = count($_POST['order_number']);
+                for($i=0; $i<$num; ++$i) {
+                    $detailData['order_id'] = $orderId;
+                    $detailData['hotel_id'] = $_POST['hotel_id'];
+                    $detailData['order_date'] = time();
+                    $detailData['delivery_date'] = strtotime($_POST['delivery_date']);
+                    $detailData['update_time'] = time();
+                    $detailData['depart_id'] = $_POST['depart_id'][$i];
+                    $detailData['category_id'] = $_POST['category_id'][$i];
+                    $detailData['food_id'] = $_POST['food_id'][$i];
+                    $detailData['food_price'] = $_POST['food_price'][$i];
+                    $detailData['food_unit'] = $_POST['food_unit'][$i];
+                    $detailData['order_number'] = $_POST['order_number'][$i];
+                    $detailData['delivery_number'] = $_POST['delivery_number'][$i];
+
+                    // 只有选择菜品和填写下单数量才会插入detail表
+                    if($detailData['food_id'] && $detailData['order_number']) {
+                        $detaiId = D("Detail")->insert($detailData);
+                    }
+                }
+
                 return show_msg(1, '新增成功', $orderId);
             }
             return show_msg(0, '新增失败', $orderId);
 
         } else {
-            $hotel = D("Hotel")->getHotelList();
-            $this->assign('hotel', $hotel);
+            $hotelList = D("Hotel")->getHotelList();
+            $this->assign('hotelList', $hotelList);
+
+            $categoryList = D("Category")->getCategoryList();
+            $this->assign('categoryList', $categoryList);
+
+//            $today =  get_today_date();
+//            $this->assign('today', $today);
+
+            $tomorrow =  get_tomorrow_date();
+            $this->assign('tomorrow', $tomorrow);
 
             $this->display();
         }
@@ -110,4 +132,5 @@ class OrderController extends Controller
 
         return show_msg(0, '没有提交的数据');
     }
+
 }

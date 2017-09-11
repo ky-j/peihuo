@@ -48,7 +48,7 @@
             <?php if(is_array($foodList)): $i = 0; $__LIST__ = $foodList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c">
                 <td><?php echo ($vo["food_id"]); ?></td>
                 <td><?php echo ($vo["food_name"]); ?></td>
-                <td><?php echo (getCatName($category,$vo["parent_id"])); ?></td>
+                <td><?php echo (getCatName($category,$vo["category_id"])); ?></td>
                 <td><?php echo ($vo["food_price"]); ?></td>
                 <td><?php echo ($vo["food_unit"]); ?></td>
                 <td><?php echo (date("Y-m-d H:i",$vo["update_time"])); ?></td>

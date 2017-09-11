@@ -11,6 +11,9 @@ class HotelController extends Controller
         $this->assign('hotelList', $hotelList);
 
         $total = D("Hotel")->getTotal();
+        $this->assign('total', $total);
+
+        $this->display();
     }
 
     public function add()

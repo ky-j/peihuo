@@ -30,15 +30,15 @@
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 订单管理 <span class="c-gray en">&gt;</span> 订单列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 
-    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="order_add('添加图片','index.php?c=order&a=add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加订单</a></span> <span class="r">共有数据：<strong><?php echo ($total); ?></strong> 条</span> </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="order_add('添加订单','index.php?c=order&a=add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加订单</a></span> <span class="r">共有数据：<strong><?php echo ($total); ?></strong> 条</span> </div>
     <div class="mt-20">
         <table class="table table-border table-bordered table-bg table-hover table-sort peihuo-table">
             <thead>
             <tr class="text-c">
                 <th width="80">ID</th>
-                <th width="100">订单编号</th>
-                <th width="100">酒店</th>
-                <th width="50">酒店编号</th>
+                <th width="150">订单编号</th>
+                <th width="200">酒店</th>
+                <th width="80">酒店编号</th>
                 <th width="100">配送日期</th>
                 <th width="50">菜品数量</th>
                 <th width="100">状态</th>
@@ -49,10 +49,10 @@
             <tbody>
             <?php if(is_array($orderList)): $i = 0; $__LIST__ = $orderList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c">
                 <td><?php echo ($vo["order_id"]); ?></td>
-                <td><?php echo ($vo["order_number"]); ?></td>
-                <td><?php echo (gethotelName($Hotel,$vo["hotel_id"])); ?></td>
-                <td><?php echo (gethotelNumber($Hotel,$vo["hotel_id"])); ?></td>
-                <td><?php echo ($vo["delivery_date"]); ?></td>
+                <td><?php echo ($vo["order_sn"]); ?></td>
+                <td><?php echo ($vo["hotel_name"]); ?></td>
+                <td><?php echo ($vo["hotel_number"]); ?></td>
+                <td><?php echo (date("Y-m-d",$vo["delivery_date"])); ?></td>
                 <td></td>
                 <td></td>
                 <td><?php echo (date("Y-m-d H:i",$vo["update_time"])); ?></td>

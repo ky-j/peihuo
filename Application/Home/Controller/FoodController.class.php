@@ -26,14 +26,14 @@ class FoodController extends Controller
             if (!isset($_POST['food_name']) || !$_POST['food_name']) {
                 return show_msg(0, '菜品名不能为空');
             }
-            if (!isset($_POST['parent_id']) || !is_numeric($_POST['parent_id'])) {
+            if (!isset($_POST['category_id']) || !is_numeric($_POST['category_id'])) {
                 return show_msg(0, '菜品分类不能为空');
             }
 
             $data = [];
             $data['food_id'] = $_POST['food_id'];
             $data['food_name'] = $_POST['food_name'];
-            $data['parent_id'] = $_POST['parent_id'];
+            $data['category_id'] = $_POST['category_id'];
             $data['food_price'] = $_POST['food_price'];
             $data['food_unit'] = $_POST['food_unit'];
             $data['update_time'] = time();
@@ -106,6 +106,22 @@ class FoodController extends Controller
                     return show_msg(0, '操作失败');
                 }
 
+            }
+        } catch (Exception $e) {
+            return show_msg(0, $e->getMessage());
+        }
+
+        return show_msg(0, '没有提交的数据');
+    }
+
+    public function getFoodData()
+    {
+        try {
+            if ($_POST) {
+                $categoryID = $_POST['category_id'];
+
+                $res = D("Food")->getFoodData($categoryID);
+                return show_msg(1, '操作成功', $res);
             }
         } catch (Exception $e) {
             return show_msg(0, $e->getMessage());

@@ -18,10 +18,10 @@
                 菜品分类：</label>
             <div class="formControls col-xs-8 col-sm-9">
 						<span class="select-box">
-						<select class="select" id="parent_id" name="parent_id" onchange="SetSubID(this);">
+						<select class="select" id="category_id" name="category_id" onchange="SetSubID(this);">
 							<option value="">-=请选择分类=-</option>
                             <foreach name="category" item="cate">
-                            <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $food['parent_id']">selected="selected"</if>>{$cate.category_name}</option>
+                            <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $food['category_id']">selected="selected"</if>>{$cate.category_name}</option>
                             </foreach>
 						</select>
 						</span>
@@ -63,7 +63,7 @@
                 food_name:{
                     required:true,
                 },
-                parent_id:{
+                category_id:{
                     required:true,
                     digits:true
                 },

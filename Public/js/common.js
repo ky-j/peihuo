@@ -1,4 +1,16 @@
 /**
+ * 全局ajax的loading效果
+ */
+$(document).ready(function(){
+    var layerLoad;
+    $(document).ajaxStart(function(){
+        layerLoad = layer.load(2);
+    }).ajaxStop(function () {
+        layer.close(layerLoad);
+    });
+});
+
+/**
  * 添加按钮操作
  */
 $("#button-add").click(function(){
