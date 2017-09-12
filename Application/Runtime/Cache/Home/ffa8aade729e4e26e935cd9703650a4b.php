@@ -56,7 +56,7 @@
                 <td></td>
                 <td></td>
                 <td><?php echo (date("Y-m-d H:i",$vo["update_time"])); ?></td>
-                <td class="td-manage"><button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="修改" onclick="layer_show('修改订单','index.php?c=order&a=edit&id=<?php echo ($vo["order_id"]); ?>','',400)">修改</button> | <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="删除">删除</button></td>
+                <td class="td-manage"><button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="修改" onclick="layer_show('修改订单','index.php?c=order&a=edit&id=<?php echo ($vo["order_id"]); ?>','',400)">修改</button> | <button class="btn btn-success size-MINI radius peihuo-delivery" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="配送">标记配送</button> | <button class="btn btn-warning size-MINI radius peihuo-complete" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="终结">终结</button> | <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="删除">删除</button></td>
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
         </table>

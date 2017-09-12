@@ -139,3 +139,1234 @@ NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible
 SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0120s ]
 SQL: SELECT * FROM `ph_food` WHERE `status` = 1 AND `category_id` = 1 ORDER BY food_id asc  [ RunTime:0.0010s ]
 
+[ 2017-09-12T14:56:50+08:00 ] ::1 /peihuo/index.php?c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.036002s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.036002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-09-12T14:56:58+08:00 ] ::1 /peihuo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webname F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T14:56:58+08:00 ] ::1 /peihuo/index.php?a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T14:57:01+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.2240s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0640s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T14:57:04+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0840s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id desc  [ RunTime:0.0180s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-09-12T14:57:50+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` = 1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0440s ]
+
+[ 2017-09-12T14:58:00+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T14:58:02+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id desc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T15:14:59+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-12T15:25:13+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id desc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T15:27:28+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id desc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T15:27:41+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id desc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T15:28:09+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id desc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T15:28:37+08:00 ] ::1 /peihuo/index.php?c=food
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0990s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_food` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-12T15:28:57+08:00 ] ::1 /peihuo/index.php?c=food&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 32 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 36 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 57 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T15:30:09+08:00 ] ::1 /peihuo/index.php?c=food&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 32 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 36 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 57 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-09-12T15:30:51+08:00 ] ::1 /peihuo/index.php?c=food&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ph_food` WHERE `food_name` = '大闸蟹' AND `status` <> -1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: INSERT INTO `ph_food` (`food_id`,`food_name`,`category_id`,`food_price`,`food_unit`,`update_time`) VALUES ('0','大闸蟹','4','57.6','斤','1505201450') [ RunTime:0.0180s ]
+
+[ 2017-09-12T15:30:52+08:00 ] ::1 /peihuo/index.php?c=food
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0550s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_food` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-09-12T15:31:13+08:00 ] ::1 /peihuo/index.php?c=food&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 32 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 36 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 47 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 57 行.
+NOTIC: [8] Undefined variable: food F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f32f7efa1e2a64ec27ee4e408cd4e59e.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-12T15:31:30+08:00 ] ::1 /peihuo/index.php?c=food&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `ph_food` WHERE `food_name` = '黑米' AND `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ph_food` (`food_id`,`food_name`,`category_id`,`food_price`,`food_unit`,`update_time`) VALUES ('0','黑米','7','7','斤','1505201489') [ RunTime:0.0000s ]
+
+[ 2017-09-12T15:31:31+08:00 ] ::1 /peihuo/index.php?c=food
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_food` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T15:31:55+08:00 ] ::1 /peihuo/index.php?c=category
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_category` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-09-12T15:31:59+08:00 ] ::1 /peihuo/index.php?c=food
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_food` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T15:32:00+08:00 ] ::1 /peihuo/index.php?c=category
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_category` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-09-12T15:32:01+08:00 ] ::1 /peihuo/index.php?c=food
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_food` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T15:32:04+08:00 ] ::1 /peihuo/index.php?c=hotel
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_hotel` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-12T15:32:33+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0870s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T15:33:11+08:00 ] ::1 /peihuo/index.php?c=order&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0430s ]
+SQL: UPDATE `ph_order` SET `status`='-1' WHERE ( order_id=11 ) [ RunTime:0.0010s ]
+
+[ 2017-09-12T15:33:12+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2017-09-12T15:33:18+08:00 ] ::1 /peihuo/index.php?c=order&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0480s ]
+SQL: UPDATE `ph_order` SET `status`='-1' WHERE ( order_id=9 ) [ RunTime:0.0010s ]
+
+[ 2017-09-12T15:33:20+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-12T16:02:48+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.1050s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` = 1 AND `category_id` = 3 ORDER BY food_id asc  [ RunTime:0.0010s ]
+
+[ 2017-09-12T16:02:52+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` = 1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-09-12T16:02:55+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` = 1 AND `category_id` = 5 ORDER BY food_id asc  [ RunTime:0.0010s ]
+
+[ 2017-09-12T16:02:59+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` = 1 AND `category_id` = 4 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-09-12T16:03:21+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-09-12T16:13:40+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0770s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T16:17:32+08:00 ] ::1 /peihuo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webname F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-09-12T16:17:32+08:00 ] ::1 /peihuo/index.php?a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T16:17:34+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T16:17:56+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T16:18:03+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T16:22:12+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.1020s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+NOTIC: [8] Undefined index: hotel_name F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 53 行.
+NOTIC: [8] Undefined index: hotel_number F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T16:23:15+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-12T16:24:47+08:00 ] ::1 /peihuo/index.php?c=order&a=edit&id=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=10 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotelList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 38 行.
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+NOTIC: [8] Undefined variable: tomorrow F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 52 行.
+NOTIC: [8] Undefined variable: hotelList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 62 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 82 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 118 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 154 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 190 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 226 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

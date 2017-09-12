@@ -54,6 +54,19 @@
             </div>
         </div>
         <!--<div class="row cl">-->
+            <!--<label class="form-label col-sm-2"><span class="c-red">*</span> 订单状态：</label>-->
+            <!--<div class="formControls col-sm-8">-->
+				<!--<span class="select-box">-->
+				<!--<select name="hotel_id" class="select">-->
+                    <!--<option value="">-=请选择酒店=-</option>-->
+                    <!--<?php if(is_array($hotelList)): foreach($hotelList as $key=>$hotel): ?>-->
+                        <!--<option value="<?php echo ($hotel["hotel_id"]); ?>"><?php echo ($hotel["hotel_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row cl">-->
         <!--<label class="form-label col-sm-2">中餐：</label>-->
         <!--</div>-->
         <!--<div class="row cl">-->
@@ -92,7 +105,7 @@
             <div class="formControls col-sm-1">
                 <a href="javascript:" class="add-item" title="新增一条中餐记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
                 &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item" title="删除该条中餐记录" attr-depart="中餐"><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                <a href="javascript:" class="remove-item hide" title="删除该条中餐记录" attr-depart="中餐"><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
         <div class="row cl">
@@ -128,7 +141,7 @@
             <div class="formControls col-sm-1">
                 <a href="javascript:" class="add-item" title="新增一条西餐记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
                 &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item" title="删除该条西餐记录" attr-depart="西餐" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                <a href="javascript:" class="remove-item hide" title="删除该条西餐记录" attr-depart="西餐" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
         <div class="row cl">
@@ -164,7 +177,7 @@
             <div class="formControls col-sm-1">
                 <a href="javascript:" class="add-item" title="新增一条日本料理记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
                 &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item" title="删除该条日本料理记录" attr-depart="日本料理" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                <a href="javascript:" class="remove-item hide" title="删除该条日本料理记录" attr-depart="日本料理" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
         <div class="row cl">
@@ -200,7 +213,7 @@
             <div class="formControls col-sm-1">
                 <a href="javascript:" class="add-item" title="新增一条点心记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
                 &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item" title="删除该条点心记录" attr-depart="点心" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                <a href="javascript:" class="remove-item hide" title="删除该条点心记录" attr-depart="点心" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
         <div class="row cl">
@@ -236,7 +249,7 @@
             <div class="formControls col-sm-1">
                 <a href="javascript:" class="add-item" title="新增一条味部记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
                 &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item" title="删除该条味部记录" attr-depart="味部" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                <a href="javascript:" class="remove-item hide" title="删除该条味部记录" attr-depart="味部" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
         <div class="row cl">
@@ -265,6 +278,9 @@
         $("#peihuo-form").validate({
             rules: {
                 hotel_id: {
+                    required: true,
+                },
+                delivery_date: {
                     required: true,
                 },
                 'food_price[]': {
@@ -336,7 +352,9 @@
 
         $(".add-item").on('click',function () {
             var ele = $(this).parent().parent();
+            ele.find('.remove-item').removeClass('hide');
             var copy = ele.clone(true);
+
             ele.after(copy.addClass('hui-fadein'));
             var newEle = ele.next();
             var newFoodSelect = newEle.find('.food-id');
