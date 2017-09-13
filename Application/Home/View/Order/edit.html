@@ -1,22 +1,23 @@
 <include file="Public/_meta"/>
 
-<title>添加菜品</title>
+<title>修改订单</title>
 </head>
 <body>
 <div class="page-container">
     <form action="index.php?c=order&a=add" method="post" class="form form-horizontal" id="peihuo-form">
+        <div class="row cl">
+            <label class="form-label col-sm-2">订单编号：</label>
+            <label class="form-label col-sm-8" style="text-align: left">{$order.order_sn}</label>
+        </div>
         <div class="row cl">
             <label class="form-label col-sm-2"><span class="c-red">*</span> 下单酒店：</label>
             <div class="formControls col-sm-8">
 				<span class="select-box">
 				<select name="hotel_id" class="select">
                     <option value="">-=请选择酒店=-</option>
-                    <foreach name="hotelList" item="hotel">
-                        <option value="{$hotel.hotel_id}">{$hotel.hotel_name}</option>
-                    </foreach>
-                    <foreach name="hotelList" item="hotel">
-                        <option value="{$hotel.hotel_id}" <if condition="$hotel['hotel_id'] eq $food['hotel_id']">selected="selected"</if>>{$hotel.hotel_name}</option>
-                    </foreach>
+                     <foreach name="hotelList" item="hotel">
+                         <option value="{$hotel.hotel_id}" <if condition="$hotel['hotel_id'] eq $order['hotel_id']">selected="selected"</if>>{$hotel.hotel_name}</option>
+                     </foreach>
 				</select>
 				</span>
             </div>
@@ -30,8 +31,9 @@
         <div class="row cl">
             <label class="form-label col-sm-2"><span class="c-red">*</span> 配送日期：</label>
             <div class="formControls col-sm-8">
-                <input type="text" onfocus="WdatePicker()" id="delivery_date" name="delivery_date" value="{$tomorrow}"
-                       class="input-text Wdate">
+                <input type="text" onfocus="WdatePicker()" id="delivery_date" name="delivery_date"
+                       value="{$order.delivery_date|date=" Y-m-d",###}"
+                class="input-text Wdate">
             </div>
         </div>
         <div class="row cl">
@@ -40,17 +42,17 @@
             </div>
         </div>
         <!--<div class="row cl">-->
-            <!--<label class="form-label col-sm-2"><span class="c-red">*</span> 订单状态：</label>-->
-            <!--<div class="formControls col-sm-8">-->
-				<!--<span class="select-box">-->
-				<!--<select name="hotel_id" class="select">-->
-                    <!--<option value="">-=请选择酒店=-</option>-->
-                    <!--<foreach name="hotelList" item="hotel">-->
-                        <!--<option value="{$hotel.hotel_id}">{$hotel.hotel_name}</option>-->
-                    <!--</foreach>-->
-				<!--</select>-->
-				<!--</span>-->
-            <!--</div>-->
+        <!--<label class="form-label col-sm-2"><span class="c-red">*</span> 订单状态：</label>-->
+        <!--<div class="formControls col-sm-8">-->
+        <!--<span class="select-box">-->
+        <!--<select name="hotel_id" class="select">-->
+        <!--<option value="">-=请选择酒店=-</option>-->
+        <!--<foreach name="hotelList" item="hotel">-->
+        <!--<option value="{$hotel.hotel_id}">{$hotel.hotel_name}</option>-->
+        <!--</foreach>-->
+        <!--</select>-->
+        <!--</span>-->
+        <!--</div>-->
         <!--</div>-->
         <!--<div class="row cl">-->
         <!--<label class="form-label col-sm-2">中餐：</label>-->
@@ -58,10 +60,12 @@
         <!--<div class="row cl">-->
         <!--<div class="line col-xs-12"></div>-->
         <!--</div>-->
-        <div class="row cl">
-            <label class="form-label col-sm-2">中餐：</label>
-            <input type="hidden" name="depart_id[]" value="1">
-            <div class="formControls col-sm-2">
+
+        <empty name="list_1">
+            <div class="row cl">
+                <label class="form-label col-sm-2">中餐：</label>
+                <input type="hidden" name="depart_id[]" value="1">
+                <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="category_id[]" class="select category-id">
                     <option value="">-=请选择菜品分类=-</option>
@@ -70,34 +74,91 @@
                     </foreach>
 				</select>
 				</span>
-            </div>
-            <div class="formControls col-sm-2">
+                </div>
+                <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="1">-=请选择菜品=-</option>
 				</select>
 				</span>
-            </div>
-            <div class="formControls col-sm-2">
-                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
-                <input type="hidden" value="" class="food-unit" name="food_unit[]">
-            </div>
-            <!--<div class="formControls col-sm-1">-->
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
+                           name="food_price[]"> <span class="unit"></span>
+                    <input type="hidden" value="" class="food-unit" name="food_unit[]">
+                </div>
+                <!--<div class="formControls col-sm-1">-->
                 <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
-            <!--</div>-->
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
+                <!--</div>-->
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
+                           name="order_number[]">
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
+                           name="delivery_number[]">
+                </div>
+                <div class="formControls col-sm-1">
+                    <a href="javascript:" class="add-item" title="新增一条中餐记录"><i class="Hui-iconfont c-success">
+                        &#xe600;</i></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:" class="remove-item hide" title="删除该条中餐记录" attr-depart="中餐"><i
+                            class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                </div>
             </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id="" name="delivery_number[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <a href="javascript:" class="add-item" title="新增一条中餐记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
-                &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item hide" title="删除该条中餐记录" attr-depart="中餐"><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
-            </div>
-        </div>
-        <div class="row cl" style="display: none;">
+            <else/>
+            <foreach name="list_1" item="zc">
+                <div class="row cl">
+                    <label class="form-label col-sm-2">中餐：</label>
+                    <input type="hidden" name="depart_id[]" value="1">
+                    <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <foreach name="categoryList" item="cate">
+                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $zc['category_id']">selected="selected"</if>>{$cate.category_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                    </div>
+                    <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}" <if condition="$food['food_id'] eq $zc['food_id']">selected="selected"</if>>{$food.food_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                    </div>
+                    <div class="formControls col-sm-2">
+                        <input type="text" class="input-text order-add-input food-price" value="{$zc.food_price}" placeholder="单价" id=""
+                               name="food_price[]"> <span class="unit">元 / {$zc.food_unit}</span>
+                    </div>
+                    <!--<div class="formControls col-sm-1">-->
+                    <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-1">
+                        <input type="text" class="input-text order-number" value="{$zc.order_number}" placeholder="下单数量" id=""
+                               name="order_number[]">
+                    </div>
+                    <div class="formControls col-sm-1">
+                        <input type="text" class="input-text delivery-number" value="{$zc.delivery_number}" placeholder="配送数量" id=""
+                               name="delivery_number[]">
+                    </div>
+                    <div class="formControls col-sm-1">
+                        <a href="javascript:" class="add-item" title="新增一条中餐记录"><i class="Hui-iconfont c-success">
+                            &#xe600;</i></a>
+                        &nbsp;&nbsp;
+                        <a href="javascript:" class="remove-item" title="删除该条中餐记录" attr-depart="中餐"><i
+                                class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                    </div>
+                </div>
+            </foreach>
+        </empty>
+
+
+        <div class="row cl">
             <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
         <div class="row cl">
@@ -107,9 +168,7 @@
 				<span class="select-box">
 				<select name="category_id[]" class="select category-id">
                     <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="category">
-                        <option value="{$category.category_id}">{$category.category_name}</option>
-                    </foreach>
+
 				</select>
 				</span>
             </div>
@@ -121,22 +180,27 @@
 				</span>
             </div>
             <div class="formControls col-sm-2">
-                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
+                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
+                       name="food_price[]"> <span class="unit"></span>
                 <input type="hidden" value="" class="food-unit" name="food_unit[]">
             </div>
             <div class="formControls col-sm-1">
-                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
+                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
+                       name="order_number[]">
             </div>
             <div class="formControls col-sm-1">
-                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id="" name="delivery_number[]">
+                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
+                       name="delivery_number[]">
             </div>
             <div class="formControls col-sm-1">
-                <a href="javascript:" class="add-item" title="新增一条西餐记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
+                <a href="javascript:" class="add-item" title="新增一条西餐记录"><i class="Hui-iconfont c-success">
+                    &#xe600;</i></a>
                 &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item hide" title="删除该条西餐记录" attr-depart="西餐" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                <a href="javascript:" class="remove-item hide" title="删除该条西餐记录" attr-depart="西餐"><i
+                        class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
-        <div class="row cl" style="display: none;">
+        <div class="row cl">
             <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
         <div class="row cl">
@@ -160,22 +224,26 @@
 				</span>
             </div>
             <div class="formControls col-sm-2">
-                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
+                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
+                       name="food_price[]"> <span class="unit"></span>
                 <input type="hidden" value="" class="food-unit" name="food_unit[]">
             </div>
             <div class="formControls col-sm-1">
-                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
+                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
+                       name="order_number[]">
             </div>
             <div class="formControls col-sm-1">
-                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id="" name="delivery_number[]">
+                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
+                       name="delivery_number[]">
             </div>
             <div class="formControls col-sm-1">
                 <a href="javascript:" class="add-item" title="新增一条日本料理记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
                 &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item hide" title="删除该条日本料理记录" attr-depart="日本料理" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                <a href="javascript:" class="remove-item hide" title="删除该条日本料理记录" attr-depart="日本料理"><i
+                        class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
-        <div class="row cl" style="display: none;">
+        <div class="row cl">
             <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
         <div class="row cl">
@@ -199,22 +267,27 @@
 				</span>
             </div>
             <div class="formControls col-sm-2">
-                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
+                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
+                       name="food_price[]"> <span class="unit"></span>
                 <input type="hidden" value="" class="food-unit" name="food_unit[]">
             </div>
             <div class="formControls col-sm-1">
-                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
+                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
+                       name="order_number[]">
             </div>
             <div class="formControls col-sm-1">
-                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id="" name="delivery_number[]">
+                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
+                       name="delivery_number[]">
             </div>
             <div class="formControls col-sm-1">
-                <a href="javascript:" class="add-item" title="新增一条点心记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
+                <a href="javascript:" class="add-item" title="新增一条点心记录"><i class="Hui-iconfont c-success">
+                    &#xe600;</i></a>
                 &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item hide" title="删除该条点心记录" attr-depart="点心" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                <a href="javascript:" class="remove-item hide" title="删除该条点心记录" attr-depart="点心"><i
+                        class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
-        <div class="row cl" style="display: none;">
+        <div class="row cl">
             <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
         <div class="row cl">
@@ -238,22 +311,27 @@
 				</span>
             </div>
             <div class="formControls col-sm-2">
-                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
+                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
+                       name="food_price[]"> <span class="unit"></span>
                 <input type="hidden" value="" class="food-unit" name="food_unit[]">
             </div>
             <div class="formControls col-sm-1">
-                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
+                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
+                       name="order_number[]">
             </div>
             <div class="formControls col-sm-1">
-                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id="" name="delivery_number[]">
+                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
+                       name="delivery_number[]">
             </div>
             <div class="formControls col-sm-1">
-                <a href="javascript:" class="add-item" title="新增一条味部记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
+                <a href="javascript:" class="add-item" title="新增一条味部记录"><i class="Hui-iconfont c-success">
+                    &#xe600;</i></a>
                 &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item hide" title="删除该条味部记录" attr-depart="味部" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                <a href="javascript:" class="remove-item hide" title="删除该条味部记录" attr-depart="味部"><i
+                        class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
         </div>
-        <div class="row cl" style="display: none;">
+        <div class="row cl">
             <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
         <div class="row cl">
@@ -344,12 +422,12 @@
                 if (foodValue == v['food_id']) {
                     ele.find('.food-price').val(v['food_price']);
                     ele.find('.food-unit').val(v['food_unit']);
-                    ele.find('.unit').html("元 / "+v['food_unit']);
+                    ele.find('.unit').html("元 / " + v['food_unit']);
                 }
             });
         });
 
-        $(".add-item").on('click',function () {
+        $(".add-item").on('click', function () {
             var ele = $(this).parent().parent();
             ele.find('.remove-item').removeClass('hide');
             var copy = ele.clone(true);
@@ -366,16 +444,16 @@
             newEle.find('.delivery-number').val('');
         })
 
-        $(".remove-item").on('click',function () {
+        $(".remove-item").on('click', function () {
             var depart = $(this).attr('attr-depart');
-            var confirmMessage = '确认要删除该条'+depart+'记录吗？';
+            var confirmMessage = '确认要删除该条' + depart + '记录吗？';
             var ele = $(this).parent().parent();
-            layer.confirm(confirmMessage,function(index){
+            layer.confirm(confirmMessage, function (index) {
                 layer.close(index);
                 ele.addClass('hui-bounceoutR');
                 setTimeout(function () {
                     ele.remove();
-                },1000);
+                }, 1000);
             });
         })
 

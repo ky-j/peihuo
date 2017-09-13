@@ -24,6 +24,27 @@ class DetailModel extends Model
         return $this->_db->where($data)->order('detail_id desc')->select();
     }
 
+    // 根据id获取数据
+    public function getDetailByOrderId($orderID = '', $departID = '')
+    {
+        if ($departID) {
+            $condition = array(
+                'depart_id' => "$departID",
+                'order_id' =>  "$orderID",
+                'status' => array('neq', -1),
+            );
+            $res = $this->_db->where($condition)->select();
+//            echo $this->_db->getLastSql(); // 使用getLastSql来打印sql
+        } else {
+            $condition = array(
+                'order_id' =>  "$orderID",
+                'status' => array('neq', -1),
+            );
+            $res = $this->_db->where($condition)->select();
+        }
+        return $res;
+    }
+
     // 更新状态值
     public function updateStatusById($id, $status)
     {

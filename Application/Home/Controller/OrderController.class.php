@@ -43,33 +43,36 @@ class OrderController extends Controller
 
             if ($orderId) {
                 // 依据下单数量，处理各个部门的数据
-                $num = count($_POST['order_number[]']);
-//                print_r($_POST['order_number[]']);
+                $num = count($_POST['order_number']);
+//                print_r($_POST['order_number']);
 //                echo $num;
 //                exit;
                 for($i=0; $i<$num; ++$i) {
-                    $detailData['order_id'] = $orderId;
-                    $detailData['hotel_id'] = $_POST['hotel_id'];
-                    $detailData['order_date'] = time();
-                    $detailData['delivery_date'] = strtotime($_POST['delivery_date']);
-                    $detailData['update_time'] = time();
-                    $detailData['depart_id'] = $_POST['depart_id'][$i];
+                    if($_POST['order_number'][$i]){
+                        $detailData['order_id'] = $orderId;
+                        $detailData['hotel_id'] = $_POST['hotel_id'];
+                        $detailData['order_date'] = time();
+                        $detailData['delivery_date'] = strtotime($_POST['delivery_date']);
+                        $detailData['update_time'] = time();
+                        $detailData['depart_id'] = $_POST['depart_id'][$i];
 
-                    $detailData['category_id'] = $_POST['category_id'][$i];
-                    $category = D("Category")->getCategoryById($_POST['category_id'][$i]);
-                    $detailData['category_name'] = $category['category_name'];
+                        $detailData['category_id'] = $_POST['category_id'][$i];
+                        $category = D("Category")->getCategoryById($_POST['category_id'][$i]);
+                        $detailData['category_name'] = $category['category_name'];
 
-                    $detailData['food_id'] = $_POST['food_id'][$i];
-                    $food = D("Food")->getFoodById($_POST['food_id'][$i]);
-                    $detailData['food_price'] = $_POST['food_price'][$i];
-                    $detailData['food_unit'] = $_food['food_unit'];
+                        $detailData['food_id'] = $_POST['food_id'][$i];
+                        $food = D("Food")->getFoodById($_POST['food_id'][$i]);
+                        $detailData['food_price'] = $_POST['food_price'][$i];
+                        $detailData['food_name'] = $food['food_name'];
+                        $detailData['food_unit'] = $food['food_unit'];
 
-                    $detailData['order_number'] = $_POST['order_number'][$i];
-                    $detailData['delivery_number'] = $_POST['delivery_number'][$i];
+                        $detailData['order_number'] = $_POST['order_number'][$i];
+                        $detailData['delivery_number'] = $_POST['delivery_number'][$i];
 
-                    // 只有选择菜品和填写下单数量才会插入detail表
-                    if($detailData['food_id'] && $detailData['order_number']) {
-                        $detaiId = D("Detail")->insert($detailData);
+                        // 只有选择菜品和填写下单数量才会插入detail表
+                        if($detailData['food_id'] && $detailData['order_number']) {
+                            $detaiId = D("Detail")->insert($detailData);
+                        }
                     }
                 }
 
@@ -100,8 +103,18 @@ class OrderController extends Controller
         $order = D("Order")->find($orderId);
         $this->assign('order', $order);
 
-        $category = D("Category")->getCategoryList();
-        $this->assign('category', $category);
+        $hotelList = D("Hotel")->getHotelList();
+        $this->assign('hotelList', $hotelList);
+
+        $categoryList = D("Category")->getCategoryList();
+        $this->assign('categoryList', $categoryList);
+
+        $foodList = D("Food")->getFoodList();
+        $this->assign('foodList', $foodList);
+
+        $list_1 =  D("Detail")->getDetailByOrderId($orderId, 1);
+        $this->assign('list_1', $list_1);
+//        print_r($list_1);
 
         $this->display('');
     }
