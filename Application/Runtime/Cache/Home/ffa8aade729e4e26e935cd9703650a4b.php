@@ -40,9 +40,9 @@
                 <th width="200">酒店</th>
                 <th width="80">酒店编号</th>
                 <th width="100">配送日期</th>
-                <th width="50">菜品数量</th>
+                <!--<th width="50">菜品数量</th>-->
                 <th width="100">状态</th>
-                <th width="150">更新时间</th>
+                <th width="150">操作更新时间</th>
                 <th>操作</th>
             </tr>
             </thead>
@@ -53,8 +53,8 @@
                 <td><?php echo ($vo["hotel_name"]); ?></td>
                 <td><?php echo ($vo["hotel_number"]); ?></td>
                 <td><?php echo (date("Y-m-d",$vo["delivery_date"])); ?></td>
-                <td></td>
-                <td></td>
+                <!--<td></td>-->
+                <td><?php echo (orderStatus($vo["status"])); ?></td>
                 <td><?php echo (date("Y-m-d H:i",$vo["update_time"])); ?></td>
                 <td class="td-manage"><button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="修改" onclick="layer_show('修改订单','index.php?c=order&a=edit&id=<?php echo ($vo["order_id"]); ?>','',400)">修改</button> | <button class="btn btn-success size-MINI radius peihuo-delivery" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="配送">标记配送</button> | <button class="btn btn-warning size-MINI radius peihuo-complete" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="终结">终结</button> | <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="删除">删除</button></td>
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>

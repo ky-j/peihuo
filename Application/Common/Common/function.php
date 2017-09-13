@@ -21,6 +21,18 @@ function getCatName($catgories, $id)
     return isset($catList[$id]) ? $catList[$id] : '';
 }
 
+// 获取订单状态
+function orderStatus($status) {
+    if($status == 1) {
+        $str = '未配送';
+    }elseif($status == 2) {
+        $str = '已配送';
+    }elseif($status == 3) {
+        $str = '已终结';
+    }
+    return $str;
+}
+
 /**
  * 得到新订单号，参考ecshop
  * @return  string

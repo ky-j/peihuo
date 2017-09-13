@@ -14,6 +14,9 @@
                     <foreach name="hotelList" item="hotel">
                         <option value="{$hotel.hotel_id}">{$hotel.hotel_name}</option>
                     </foreach>
+                    <foreach name="hotelList" item="hotel">
+                        <option value="{$hotel.hotel_id}" <if condition="$hotel['hotel_id'] eq $food['hotel_id']">selected="selected"</if>>{$hotel.hotel_name}</option>
+                    </foreach>
 				</select>
 				</span>
             </div>

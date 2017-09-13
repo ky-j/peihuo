@@ -24,6 +24,12 @@ class FoodModel extends Model
         return $this->_db->where($data)->order('food_id desc')->select();
     }
 
+    // 根据id获取数据
+    public function getFoodById($foodId=0) {
+        $res = $this->_db->where('food_id='.$foodId)->find();
+        return $res;
+    }
+
     // 更新状态值
     public function updateStatusById($id, $status)
     {

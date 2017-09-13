@@ -27,8 +27,12 @@ class OrderController extends Controller
                 return show_msg(0, '酒店不能为空');
             }
 
+            $hotel = D("Hotel")->getHotelById($_POST['hotel_id']);
+
             $data = [];
             $data['hotel_id'] = $_POST['hotel_id'];
+            $data['hotel_name'] = $hotel['hotel_name'];
+            $data['hotel_number'] = $hotel['hotel_number'];
             $data['order_sn'] = get_order_sn();
             $data['order_date'] = time();
             $data['delivery_date'] = strtotime($_POST['delivery_date']);
@@ -39,7 +43,10 @@ class OrderController extends Controller
 
             if ($orderId) {
                 // 依据下单数量，处理各个部门的数据
-                $num = count($_POST['order_number']);
+                $num = count($_POST['order_number[]']);
+//                print_r($_POST['order_number[]']);
+//                echo $num;
+//                exit;
                 for($i=0; $i<$num; ++$i) {
                     $detailData['order_id'] = $orderId;
                     $detailData['hotel_id'] = $_POST['hotel_id'];
@@ -47,10 +54,16 @@ class OrderController extends Controller
                     $detailData['delivery_date'] = strtotime($_POST['delivery_date']);
                     $detailData['update_time'] = time();
                     $detailData['depart_id'] = $_POST['depart_id'][$i];
+
                     $detailData['category_id'] = $_POST['category_id'][$i];
+                    $category = D("Category")->getCategoryById($_POST['category_id'][$i]);
+                    $detailData['category_name'] = $category['category_name'];
+
                     $detailData['food_id'] = $_POST['food_id'][$i];
+                    $food = D("Food")->getFoodById($_POST['food_id'][$i]);
                     $detailData['food_price'] = $_POST['food_price'][$i];
-                    $detailData['food_unit'] = $_POST['food_unit'][$i];
+                    $detailData['food_unit'] = $_food['food_unit'];
+
                     $detailData['order_number'] = $_POST['order_number'][$i];
                     $detailData['delivery_number'] = $_POST['delivery_number'][$i];
 
@@ -90,7 +103,7 @@ class OrderController extends Controller
         $category = D("Category")->getCategoryList();
         $this->assign('category', $category);
 
-        $this->display('add');
+        $this->display('');
     }
 
     public function save($data) {

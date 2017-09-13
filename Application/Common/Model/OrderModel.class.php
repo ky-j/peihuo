@@ -24,6 +24,16 @@ class OrderModel extends Model
         return $this->_db->where($data)->order('order_id desc')->select();
     }
 
+    // 获取订单酒店列表
+    public function getOrderHotelList()
+    {
+        $data = array(
+            'o.status' => array('neq', -1),
+        );
+        return $this->_db->alias('o')->field('o.*, h.hotel_name, h.hotel_number')->join('LEFT JOIN __HOTEL__ h ON o.hotel_id = h.hotel_id')->where($data)->select();
+        echo $this->_db->getLastSql(); // 使用getLastSql来打印sql
+    }
+
     // 更新状态值
     public function updateStatusById($id, $status)
     {

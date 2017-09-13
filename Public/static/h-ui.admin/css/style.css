@@ -4,3 +4,7 @@
 .dataTable td.sorting_1 {
     background-color: #fff;
 }
+
+.order-add-input {
+    width: 70%;
+}

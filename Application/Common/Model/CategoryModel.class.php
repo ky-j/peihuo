@@ -24,6 +24,12 @@ class CategoryModel extends Model
         return $this->_db->where($data)->order('category_id asc')->select();
     }
 
+    // 根据id获取数据
+    public function getCategoryById($categoryId=0) {
+        $res = $this->_db->where('category_id='.$categoryId)->find();
+        return $res;
+    }
+
     // 更新状态值
     public function updateStatusById($id, $status)
     {

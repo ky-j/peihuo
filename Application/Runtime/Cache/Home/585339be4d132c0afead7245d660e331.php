@@ -53,6 +53,11 @@
                        class="input-text Wdate">
             </div>
         </div>
+        <div class="row cl">
+            <div class="col-sm-offset-2" style="padding: 0 15px">
+                <mark>以下数据只有填写菜品和下单数量才能有效记录</mark>
+            </div>
+        </div>
         <!--<div class="row cl">-->
             <!--<label class="form-label col-sm-2"><span class="c-red">*</span> 订单状态：</label>-->
             <!--<div class="formControls col-sm-8">-->
@@ -90,12 +95,13 @@
 				</select>
 				</span>
             </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text food-price" value="" placeholder="单价" id="" name="food_price[]">
+            <div class="formControls col-sm-2">
+                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
+                <input type="hidden" value="" class="food-unit" name="food_unit[]">
             </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text food-unit" value="" placeholder="单位" id="" name="food_unit[]">
-            </div>
+            <!--<div class="formControls col-sm-1">-->
+                <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
+            <!--</div>-->
             <div class="formControls col-sm-1">
                 <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
             </div>
@@ -107,6 +113,9 @@
                 &nbsp;&nbsp;
                 <a href="javascript:" class="remove-item hide" title="删除该条中餐记录" attr-depart="中餐"><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
+        </div>
+        <div class="row cl" style="display: none;">
+            <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-sm-2">西餐：</label>
@@ -126,11 +135,9 @@
 				</select>
 				</span>
             </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text food-price" value="" placeholder="单价" id="" name="food_price[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text food-unit" value="" placeholder="单位" id="" name="food_unit[]">
+            <div class="formControls col-sm-2">
+                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
+                <input type="hidden" value="" class="food-unit" name="food_unit[]">
             </div>
             <div class="formControls col-sm-1">
                 <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
@@ -143,6 +150,9 @@
                 &nbsp;&nbsp;
                 <a href="javascript:" class="remove-item hide" title="删除该条西餐记录" attr-depart="西餐" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
+        </div>
+        <div class="row cl" style="display: none;">
+            <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-sm-2">日本料理：</label>
@@ -162,11 +172,9 @@
 				</select>
 				</span>
             </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text food-price" value="" placeholder="单价" id="" name="food_price[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text food-unit" value="" placeholder="单位" id="" name="food_unit[]">
+            <div class="formControls col-sm-2">
+                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
+                <input type="hidden" value="" class="food-unit" name="food_unit[]">
             </div>
             <div class="formControls col-sm-1">
                 <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
@@ -179,6 +187,9 @@
                 &nbsp;&nbsp;
                 <a href="javascript:" class="remove-item hide" title="删除该条日本料理记录" attr-depart="日本料理" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
+        </div>
+        <div class="row cl" style="display: none;">
+            <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-sm-2">点心：</label>
@@ -198,11 +209,9 @@
 				</select>
 				</span>
             </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text food-price" value="" placeholder="单价" id="" name="food_price[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text food-unit" value="" placeholder="单位" id="" name="food_unit[]">
+            <div class="formControls col-sm-2">
+                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
+                <input type="hidden" value="" class="food-unit" name="food_unit[]">
             </div>
             <div class="formControls col-sm-1">
                 <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
@@ -215,6 +224,9 @@
                 &nbsp;&nbsp;
                 <a href="javascript:" class="remove-item hide" title="删除该条点心记录" attr-depart="点心" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
+        </div>
+        <div class="row cl" style="display: none;">
+            <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
         <div class="row cl">
             <label class="form-label col-sm-2">味部：</label>
@@ -234,11 +246,9 @@
 				</select>
 				</span>
             </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text food-price" value="" placeholder="单价" id="" name="food_price[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text food-unit" value="" placeholder="单位" id="" name="food_unit[]">
+            <div class="formControls col-sm-2">
+                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
+                <input type="hidden" value="" class="food-unit" name="food_unit[]">
             </div>
             <div class="formControls col-sm-1">
                 <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
@@ -251,6 +261,9 @@
                 &nbsp;&nbsp;
                 <a href="javascript:" class="remove-item hide" title="删除该条味部记录" attr-depart="味部" ><i class="Hui-iconfont c-danger">&#xe6a1;</i></a>
             </div>
+        </div>
+        <div class="row cl" style="display: none;">
+            <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
@@ -346,6 +359,7 @@
                 if (foodValue == v['food_id']) {
                     ele.find('.food-price').val(v['food_price']);
                     ele.find('.food-unit').val(v['food_unit']);
+                    ele.find('.unit').html("元 / "+v['food_unit']);
                 }
             });
         });
@@ -362,6 +376,7 @@
             $("<option value=''>-=请选择菜品=-</option>").appendTo(newFoodSelect);
             newEle.find('.food-price').val('');
             newEle.find('.food-unit').val('');
+            newEle.find('.unit').html('');
             newEle.find('.order-number').val('');
             newEle.find('.delivery-number').val('');
         })
