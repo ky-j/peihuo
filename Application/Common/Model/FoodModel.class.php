@@ -30,6 +30,12 @@ class FoodModel extends Model
         return $res;
     }
 
+    // 根据category_id获取数据
+    public function getFoodByCateId($cateId=0) {
+        $res = $this->_db->where('category_id='.$cateId)->order('food_id desc')->select();
+        return $res;
+    }
+
     // 更新状态值
     public function updateStatusById($id, $status)
     {

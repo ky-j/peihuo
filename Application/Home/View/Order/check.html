@@ -1,0 +1,64 @@
+<include file="Public/_meta"/>
+<style>
+    .order-info {
+        margin: 5px auto;
+    }
+    .order-info span{
+        display: inline-block;
+        width: 250px;
+    }
+</style>
+<title>查看订单</title>
+</head>
+<body>
+
+<div class="page-container" style="width: 900px;margin: 0 auto;">
+    <div class="text-c"><h2>{$order.hotel_name}订单</h2></div>
+    <div class="order-info">
+        <span>订单编号：{$order.order_sn}</span>
+        <span>酒店编号：{$order.hotel_number}</span>
+        <span>配送日期：{$order.delivery_date|date="Y-m-d",###}</span>
+    </div>
+    <table class="table table-border table-bg table-bordered">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>菜品</th>
+            <th>中餐</th>
+            <th>西餐</th>
+            <th>日料</th>
+            <th>点心</th>
+            <th>味部</th>
+            <th>合计</th>
+            <th>备注</th>
+        </tr>
+        </thead>
+        <tbody>
+        <foreach name="detailPrint" item="data">
+        <tr>
+            <td>{$key+1}</td>
+            <td>{$data.food_name}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{$data.total}</td>
+            <td></td>
+        </tr>
+        </foreach>
+        </tbody>
+    </table>
+</div>
+
+<include file="Public/_footer"/>
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

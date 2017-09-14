@@ -21,26 +21,38 @@ class DetailModel extends Model
         $data = array(
             'status' => array('neq', -1),
         );
-        return $this->_db->where($data)->order('detail_id desc')->select();
+        return $this->_db->where($data)->order('detail_id asc')->select();
+    }
+
+    // 获取打印列表
+    public function getDetailPrintList($orderId)
+    {
+        if (!$orderId || !is_numeric($orderId)) {
+            throw_exception("orderId不合法");
+        }
+        $data = array(
+            'status' => array('neq', -1),
+        );
+        return $this->_db->field('food_name,SUM(order_number) AS total ')->where($data)->order('detail_id asc')->group('food_name')->select();
     }
 
     // 根据id获取数据
-    public function getDetailByOrderId($orderID = '', $departID = '')
+    public function getDetailByOrderId($orderId = '', $departID = '')
     {
         if ($departID) {
             $condition = array(
                 'depart_id' => "$departID",
-                'order_id' =>  "$orderID",
+                'order_id' =>  "$orderId",
                 'status' => array('neq', -1),
             );
-            $res = $this->_db->where($condition)->select();
+            $res = $this->_db->where($condition)->order('detail_id asc')->select();
 //            echo $this->_db->getLastSql(); // 使用getLastSql来打印sql
         } else {
             $condition = array(
-                'order_id' =>  "$orderID",
+                'order_id' =>  "$orderId",
                 'status' => array('neq', -1),
             );
-            $res = $this->_db->where($condition)->select();
+            $res = $this->_db->where($condition)->order('detail_id asc')->select();
         }
         return $res;
     }
@@ -71,7 +83,6 @@ class DetailModel extends Model
     // 根据id更新数据
     public function updateByDetailId($id, $data)
     {
-
         if (!$id || !is_numeric($id)) {
             throw_exception("ID不合法");
         }
@@ -79,6 +90,15 @@ class DetailModel extends Model
             throw_exception('更新的数据不合法');
         }
         return $this->_db->where('detail_id=' . $id)->save($data); // 根据条件更新记录
+    }
+
+    // 根据order_id删除数据
+    public function deleteByOrderId($orderId)
+    {
+        if (!$orderId || !is_numeric($orderId)) {
+            throw_exception("orderId不合法");
+        }
+        return $this->_db->where('order_id=' . $orderId)->delete(); // 根据条件删除记录
     }
 
     // 根据名称获取数据，分添加和修改两种情况

@@ -28,7 +28,8 @@
 </head>
 <body>
 <div class="page-container">
-    <form action="index.php?c=order&a=add" method="post" class="form form-horizontal" id="peihuo-form">
+    <form action="index.php?c=order&a=edit" method="post" class="form form-horizontal" id="peihuo-form">
+        <input type="hidden" name="order_id" value="<?php echo ($order["order_id"]); ?>">
         <div class="row cl">
             <label class="form-label col-sm-2">订单编号：</label>
             <label class="form-label col-sm-8" style="text-align: left"><?php echo ($order["order_sn"]); ?></label>
@@ -54,7 +55,7 @@
             <label class="form-label col-sm-2"><span class="c-red">*</span> 配送日期：</label>
             <div class="formControls col-sm-8">
                 <input type="text" onfocus="WdatePicker()" id="delivery_date" name="delivery_date"
-                       value="<?php echo (date(" Y-m-d",$order["delivery_date"])); ?>"
+                       value="<?php echo (date("Y-m-d",$order["delivery_date"])); ?>"
                 class="input-text Wdate">
             </div>
         </div>
@@ -97,14 +98,13 @@
                 <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
-                    <option value="1">-=请选择菜品=-</option>
+                    <option value="">-=请选择菜品=-</option>
 				</select>
 				</span>
                 </div>
                 <div class="formControls col-sm-2">
                     <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
                            name="food_price[]"> <span class="unit"></span>
-                    <input type="hidden" value="" class="food-unit" name="food_unit[]">
                 </div>
                 <!--<div class="formControls col-sm-1">-->
                 <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
@@ -169,177 +169,363 @@
                     </div>
                 </div><?php endforeach; endif; endif; ?>
 
+        <div class="row cl">
+            <div class="line col-sm-offset-1 col-sm-10"></div>
+        </div>
+
+        <?php if(empty($list_2)): ?><div class="row cl">
+                <label class="form-label col-sm-2">西餐：</label>
+                <input type="hidden" name="depart_id[]" value="2">
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="">-=请选择菜品=-</option>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
+                           name="food_price[]"> <span class="unit"></span>
+                </div>
+                <!--<div class="formControls col-sm-1">-->
+                <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
+                <!--</div>-->
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
+                           name="order_number[]">
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
+                           name="delivery_number[]">
+                </div>
+                <div class="formControls col-sm-1">
+                    <a href="javascript:" class="add-item" title="新增一条西餐记录"><i class="Hui-iconfont c-success">
+                        &#xe600;</i></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:" class="remove-item hide" title="删除该条西餐记录" attr-depart="西餐"><i
+                            class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                </div>
+            </div>
+            <?php else: ?>
+            <?php if(is_array($list_2)): foreach($list_2 as $key=>$xc): ?><div class="row cl">
+                    <label class="form-label col-sm-2">西餐：</label>
+                    <input type="hidden" name="depart_id[]" value="2">
+                    <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $xc['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+                    </div>
+                    <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="">-=请选择菜品=-</option>
+                    <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>" <?php if($food['food_id'] == $xc['food_id']): ?>selected="selected"<?php endif; ?>><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+                    </div>
+                    <div class="formControls col-sm-2">
+                        <input type="text" class="input-text order-add-input food-price" value="<?php echo ($xc["food_price"]); ?>" placeholder="单价" id=""
+                               name="food_price[]"> <span class="unit">元 / <?php echo ($xc["food_unit"]); ?></span>
+                    </div>
+                    <!--<div class="formControls col-sm-1">-->
+                    <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-1">
+                        <input type="text" class="input-text order-number" value="<?php echo ($xc["order_number"]); ?>" placeholder="下单数量" id=""
+                               name="order_number[]">
+                    </div>
+                    <div class="formControls col-sm-1">
+                        <input type="text" class="input-text delivery-number" value="<?php echo ($xc["delivery_number"]); ?>" placeholder="配送数量" id=""
+                               name="delivery_number[]">
+                    </div>
+                    <div class="formControls col-sm-1">
+                        <a href="javascript:" class="add-item" title="新增一条西餐记录"><i class="Hui-iconfont c-success">
+                            &#xe600;</i></a>
+                        &nbsp;&nbsp;
+                        <a href="javascript:" class="remove-item" title="删除该条西餐记录" attr-depart="西餐"><i
+                                class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                    </div>
+                </div><?php endforeach; endif; endif; ?>
+
 
         <div class="row cl">
             <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
-        <div class="row cl">
-            <label class="form-label col-sm-2">西餐：</label>
-            <input type="hidden" name="depart_id[]" value="2">
-            <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
 
-				</select>
-				</span>
-            </div>
-            <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="food_id[]" class="select food-id">
-                    <option value="2">-=请选择菜品=-</option>
-				</select>
-				</span>
-            </div>
-            <div class="formControls col-sm-2">
-                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
-                       name="food_price[]"> <span class="unit"></span>
-                <input type="hidden" value="" class="food-unit" name="food_unit[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
-                       name="order_number[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
-                       name="delivery_number[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <a href="javascript:" class="add-item" title="新增一条西餐记录"><i class="Hui-iconfont c-success">
-                    &#xe600;</i></a>
-                &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item hide" title="删除该条西餐记录" attr-depart="西餐"><i
-                        class="Hui-iconfont c-danger">&#xe6a1;</i></a>
-            </div>
-        </div>
-        <div class="row cl">
-            <div class="line col-sm-offset-1 col-sm-10"></div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-sm-2">日本料理：</label>
-            <input type="hidden" name="depart_id[]" value="3">
-            <div class="formControls col-sm-2">
+        <?php if(empty($list_3)): ?><div class="row cl">
+                <label class="form-label col-sm-2">日本料理：</label>
+                <input type="hidden" name="depart_id[]" value="3">
+                <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="category_id[]" class="select category-id">
                     <option value="">-=请选择菜品分类=-</option>
                     <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
-            </div>
-            <div class="formControls col-sm-2">
+                </div>
+                <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
-                    <option value="2">-=请选择菜品=-</option>
+                    <option value="">-=请选择菜品=-</option>
 				</select>
 				</span>
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
+                           name="food_price[]"> <span class="unit"></span>
+                </div>
+                <!--<div class="formControls col-sm-1">-->
+                <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
+                <!--</div>-->
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
+                           name="order_number[]">
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
+                           name="delivery_number[]">
+                </div>
+                <div class="formControls col-sm-1">
+                    <a href="javascript:" class="add-item" title="新增一条日本料理记录"><i class="Hui-iconfont c-success">
+                        &#xe600;</i></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:" class="remove-item hide" title="删除该条日本料理记录" attr-depart="日本料理"><i
+                            class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                </div>
             </div>
-            <div class="formControls col-sm-2">
-                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
-                       name="food_price[]"> <span class="unit"></span>
-                <input type="hidden" value="" class="food-unit" name="food_unit[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
-                       name="order_number[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
-                       name="delivery_number[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <a href="javascript:" class="add-item" title="新增一条日本料理记录"><i class="Hui-iconfont c-success">&#xe600;</i></a>
-                &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item hide" title="删除该条日本料理记录" attr-depart="日本料理"><i
-                        class="Hui-iconfont c-danger">&#xe6a1;</i></a>
-            </div>
-        </div>
+            <?php else: ?>
+            <?php if(is_array($list_3)): foreach($list_3 as $key=>$rbll): ?><div class="row cl">
+                    <label class="form-label col-sm-2">日本料理：</label>
+                    <input type="hidden" name="depart_id[]" value="3">
+                    <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $rbll['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+                    </div>
+                    <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="">-=请选择菜品=-</option>
+                    <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>" <?php if($food['food_id'] == $rbll['food_id']): ?>selected="selected"<?php endif; ?>><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+                    </div>
+                    <div class="formControls col-sm-2">
+                        <input type="text" class="input-text order-add-input food-price" value="<?php echo ($rbll["food_price"]); ?>" placeholder="单价" id=""
+                               name="food_price[]"> <span class="unit">元 / <?php echo ($rbll["food_unit"]); ?></span>
+                    </div>
+                    <!--<div class="formControls col-sm-1">-->
+                    <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-1">
+                        <input type="text" class="input-text order-number" value="<?php echo ($rbll["order_number"]); ?>" placeholder="下单数量" id=""
+                               name="order_number[]">
+                    </div>
+                    <div class="formControls col-sm-1">
+                        <input type="text" class="input-text delivery-number" value="<?php echo ($rbll["delivery_number"]); ?>" placeholder="配送数量" id=""
+                               name="delivery_number[]">
+                    </div>
+                    <div class="formControls col-sm-1">
+                        <a href="javascript:" class="add-item" title="新增一条日本料理记录"><i class="Hui-iconfont c-success">
+                            &#xe600;</i></a>
+                        &nbsp;&nbsp;
+                        <a href="javascript:" class="remove-item" title="删除该条日本料理记录" attr-depart="日本料理"><i
+                                class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                    </div>
+                </div><?php endforeach; endif; endif; ?>
+
         <div class="row cl">
             <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
-        <div class="row cl">
-            <label class="form-label col-sm-2">点心：</label>
-            <input type="hidden" name="depart_id[]" value="4">
-            <div class="formControls col-sm-2">
+
+        <?php if(empty($list_4)): ?><div class="row cl">
+                <label class="form-label col-sm-2">点心：</label>
+                <input type="hidden" name="depart_id[]" value="4">
+                <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="category_id[]" class="select category-id">
                     <option value="">-=请选择菜品分类=-</option>
                     <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
-            </div>
-            <div class="formControls col-sm-2">
+                </div>
+                <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
-                    <option value="2">-=请选择菜品=-</option>
+                    <option value="">-=请选择菜品=-</option>
 				</select>
 				</span>
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
+                           name="food_price[]"> <span class="unit"></span>
+                </div>
+                <!--<div class="formControls col-sm-1">-->
+                <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
+                <!--</div>-->
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
+                           name="order_number[]">
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
+                           name="delivery_number[]">
+                </div>
+                <div class="formControls col-sm-1">
+                    <a href="javascript:" class="add-item" title="新增一条点心记录"><i class="Hui-iconfont c-success">
+                        &#xe600;</i></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:" class="remove-item hide" title="删除该条点心记录" attr-depart="点心"><i
+                            class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                </div>
             </div>
-            <div class="formControls col-sm-2">
-                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
-                       name="food_price[]"> <span class="unit"></span>
-                <input type="hidden" value="" class="food-unit" name="food_unit[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
-                       name="order_number[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
-                       name="delivery_number[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <a href="javascript:" class="add-item" title="新增一条点心记录"><i class="Hui-iconfont c-success">
-                    &#xe600;</i></a>
-                &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item hide" title="删除该条点心记录" attr-depart="点心"><i
-                        class="Hui-iconfont c-danger">&#xe6a1;</i></a>
-            </div>
-        </div>
+            <?php else: ?>
+            <?php if(is_array($list_4)): foreach($list_4 as $key=>$dx): ?><div class="row cl">
+                    <label class="form-label col-sm-2">点心：</label>
+                    <input type="hidden" name="depart_id[]" value="4">
+                    <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $dx['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+                    </div>
+                    <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="">-=请选择菜品=-</option>
+                    <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>" <?php if($food['food_id'] == $dx['food_id']): ?>selected="selected"<?php endif; ?>><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+                    </div>
+                    <div class="formControls col-sm-2">
+                        <input type="text" class="input-text order-add-input food-price" value="<?php echo ($dx["food_price"]); ?>" placeholder="单价" id=""
+                               name="food_price[]"> <span class="unit">元 / <?php echo ($dx["food_unit"]); ?></span>
+                    </div>
+                    <!--<div class="formControls col-sm-1">-->
+                    <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-1">
+                        <input type="text" class="input-text order-number" value="<?php echo ($dx["order_number"]); ?>" placeholder="下单数量" id=""
+                               name="order_number[]">
+                    </div>
+                    <div class="formControls col-sm-1">
+                        <input type="text" class="input-text delivery-number" value="<?php echo ($dx["delivery_number"]); ?>" placeholder="配送数量" id=""
+                               name="delivery_number[]">
+                    </div>
+                    <div class="formControls col-sm-1">
+                        <a href="javascript:" class="add-item" title="新增一条点心记录"><i class="Hui-iconfont c-success">
+                            &#xe600;</i></a>
+                        &nbsp;&nbsp;
+                        <a href="javascript:" class="remove-item" title="删除该条点心记录" attr-depart="点心"><i
+                                class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                    </div>
+                </div><?php endforeach; endif; endif; ?>
+
         <div class="row cl">
             <div class="line col-sm-offset-1 col-sm-10"></div>
         </div>
-        <div class="row cl">
-            <label class="form-label col-sm-2">味部：</label>
-            <input type="hidden" name="depart_id[]" value="5">
-            <div class="formControls col-sm-2">
+
+        <?php if(empty($list_5)): ?><div class="row cl">
+                <label class="form-label col-sm-2">味部：</label>
+                <input type="hidden" name="depart_id[]" value="5">
+                <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="category_id[]" class="select category-id">
                     <option value="">-=请选择菜品分类=-</option>
                     <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
-            </div>
-            <div class="formControls col-sm-2">
+                </div>
+                <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
-                    <option value="2">-=请选择菜品=-</option>
+                    <option value="">-=请选择菜品=-</option>
 				</select>
 				</span>
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
+                           name="food_price[]"> <span class="unit"></span>
+                </div>
+                <!--<div class="formControls col-sm-1">-->
+                <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
+                <!--</div>-->
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
+                           name="order_number[]">
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
+                           name="delivery_number[]">
+                </div>
+                <div class="formControls col-sm-1">
+                    <a href="javascript:" class="add-item" title="新增一条味部记录"><i class="Hui-iconfont c-success">
+                        &#xe600;</i></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:" class="remove-item hide" title="删除该条味部记录" attr-depart="味部"><i
+                            class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                </div>
             </div>
-            <div class="formControls col-sm-2">
-                <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id=""
-                       name="food_price[]"> <span class="unit"></span>
-                <input type="hidden" value="" class="food-unit" name="food_unit[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text order-number" value="" placeholder="下单数量" id=""
-                       name="order_number[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <input type="text" class="input-text delivery-number" value="" placeholder="配送数量" id=""
-                       name="delivery_number[]">
-            </div>
-            <div class="formControls col-sm-1">
-                <a href="javascript:" class="add-item" title="新增一条味部记录"><i class="Hui-iconfont c-success">
-                    &#xe600;</i></a>
-                &nbsp;&nbsp;
-                <a href="javascript:" class="remove-item hide" title="删除该条味部记录" attr-depart="味部"><i
-                        class="Hui-iconfont c-danger">&#xe6a1;</i></a>
-            </div>
-        </div>
-        <div class="row cl">
-            <div class="line col-sm-offset-1 col-sm-10"></div>
-        </div>
+            <?php else: ?>
+            <?php if(is_array($list_5)): foreach($list_5 as $key=>$wb): ?><div class="row cl">
+                    <label class="form-label col-sm-2">味部：</label>
+                    <input type="hidden" name="depart_id[]" value="5">
+                    <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id">
+                    <option value="">-=请选择菜品分类=-</option>
+                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $wb['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+                    </div>
+                    <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id">
+                    <option value="">-=请选择菜品=-</option>
+                    <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>" <?php if($food['food_id'] == $wb['food_id']): ?>selected="selected"<?php endif; ?>><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
+				</select>
+				</span>
+                    </div>
+                    <div class="formControls col-sm-2">
+                        <input type="text" class="input-text order-add-input food-price" value="<?php echo ($wb["food_price"]); ?>" placeholder="单价" id=""
+                               name="food_price[]"> <span class="unit">元 / <?php echo ($wb["food_unit"]); ?></span>
+                    </div>
+                    <!--<div class="formControls col-sm-1">-->
+                    <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-1">
+                        <input type="text" class="input-text order-number" value="<?php echo ($wb["order_number"]); ?>" placeholder="下单数量" id=""
+                               name="order_number[]">
+                    </div>
+                    <div class="formControls col-sm-1">
+                        <input type="text" class="input-text delivery-number" value="<?php echo ($wb["delivery_number"]); ?>" placeholder="配送数量" id=""
+                               name="delivery_number[]">
+                    </div>
+                    <div class="formControls col-sm-1">
+                        <a href="javascript:" class="add-item" title="新增一条味部记录"><i class="Hui-iconfont c-success">
+                            &#xe600;</i></a>
+                        &nbsp;&nbsp;
+                        <a href="javascript:" class="remove-item" title="删除该条味部记录" attr-depart="味部"><i
+                                class="Hui-iconfont c-danger">&#xe6a1;</i></a>
+                    </div>
+                </div><?php endforeach; endif; endif; ?>
+
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
                 <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
@@ -363,6 +549,26 @@
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/messages_zh.js"></script>
 <script type="text/javascript">
     $(function () {
+//        if(parseInt($(".order-number").val()) == $(".order-number").val()){
+//            $(".order-number").val(parseInt($(".order-number").val()))
+//        }
+        $(".order-number").each(function(index) {
+            if ($(this).val() == parseInt($(this).val())) {
+                $(this).val(parseInt($(this).val()));
+            }
+        })
+
+
+        $(".delivery-number").each(function(index) {
+            if (!parseInt($(this).val())) {
+                $(this).val('');
+            }
+            if ($(this).val() == parseInt($(this).val())) {
+                $(this).val(parseInt($(this).val()));
+            }
+        })
+
+
         $("#peihuo-form").validate({
             rules: {
                 hotel_id: {
@@ -446,6 +652,8 @@
 
             ele.after(copy.addClass('hui-fadein'));
             var newEle = ele.next();
+            var newCateSelect = newEle.find('.category-id');
+            newCateSelect.find("option[value='']").attr("selected",true);
             var newFoodSelect = newEle.find('.food-id');
             newFoodSelect.html('');
             $("<option value=''>-=请选择菜品=-</option>").appendTo(newFoodSelect);

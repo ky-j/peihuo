@@ -91,7 +91,7 @@
             <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
-                    <option value="1">-=请选择菜品=-</option>
+                    <option value="">-=请选择菜品=-</option>
 				</select>
 				</span>
             </div>
@@ -131,7 +131,7 @@
             <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
-                    <option value="2">-=请选择菜品=-</option>
+                    <option value="">-=请选择菜品=-</option>
 				</select>
 				</span>
             </div>
@@ -168,7 +168,7 @@
             <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
-                    <option value="2">-=请选择菜品=-</option>
+                    <option value="">-=请选择菜品=-</option>
 				</select>
 				</span>
             </div>
@@ -205,7 +205,7 @@
             <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
-                    <option value="2">-=请选择菜品=-</option>
+                    <option value="">-=请选择菜品=-</option>
 				</select>
 				</span>
             </div>
@@ -242,7 +242,7 @@
             <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
-                    <option value="2">-=请选择菜品=-</option>
+                    <option value="">-=请选择菜品=-</option>
 				</select>
 				</span>
             </div>
@@ -371,6 +371,8 @@
 
             ele.after(copy.addClass('hui-fadein'));
             var newEle = ele.next();
+            var newCateSelect = newEle.find('.category-id');
+            newCateSelect.find("option[value='']").attr("selected",true);
             var newFoodSelect = newEle.find('.food-id');
             newFoodSelect.html('');
             $("<option value=''>-=请选择菜品=-</option>").appendTo(newFoodSelect);

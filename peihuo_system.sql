@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-09-14 00:27:42
+Date: 2017-09-14 22:23:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -49,7 +49,6 @@ DROP TABLE IF EXISTS `ph_detail`;
 CREATE TABLE `ph_detail` (
   `detail_id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
   `order_id` smallint(6) unsigned NOT NULL,
-  `hotel_id` smallint(6) unsigned NOT NULL,
   `depart_id` tinyint(1) NOT NULL DEFAULT '0',
   `category_id` smallint(6) NOT NULL,
   `category_name` varchar(255) NOT NULL,
@@ -59,19 +58,20 @@ CREATE TABLE `ph_detail` (
   `food_unit` varchar(10) DEFAULT '',
   `order_number` decimal(10,1) unsigned NOT NULL,
   `delivery_number` decimal(10,1) unsigned NOT NULL,
-  `order_date` int(10) unsigned NOT NULL DEFAULT '0',
-  `delivery_date` int(10) unsigned NOT NULL DEFAULT '0',
   `update_time` int(10) unsigned NOT NULL DEFAULT '0',
   `status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`detail_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of ph_detail
 -- ----------------------------
-INSERT INTO `ph_detail` VALUES ('33', '35', '3', '1', '2', '肉类', '9', '猪肉', '8.56', '斤', '10.0', '0.0', '1505315921', '1505318400', '1505315921', '1');
-INSERT INTO `ph_detail` VALUES ('34', '35', '3', '1', '2', '肉类', '9', '猪肉', '8.56', '斤', '14.0', '0.0', '1505315921', '1505318400', '1505315921', '1');
-INSERT INTO `ph_detail` VALUES ('35', '35', '3', '2', '1', '蔬菜', '8', '生菜', '2.58', '斤', '15.0', '0.0', '1505315921', '1505318400', '1505315921', '1');
+INSERT INTO `ph_detail` VALUES ('51', '35', '3', '3', '水果', '1', '香蕉', '6.00', '斤', '14.0', '0.0', '1505359095', '1');
+INSERT INTO `ph_detail` VALUES ('49', '35', '2', '2', '肉类', '9', '猪肉', '8.56', '斤', '52.0', '51.0', '1505359095', '1');
+INSERT INTO `ph_detail` VALUES ('50', '35', '2', '1', '蔬菜', '8', '生菜', '2.58', '斤', '10.0', '0.0', '1505359095', '1');
+INSERT INTO `ph_detail` VALUES ('48', '35', '1', '1', '蔬菜', '10', '油麦菜', '3.56', '斤', '10.0', '9.0', '1505359095', '1');
+INSERT INTO `ph_detail` VALUES ('52', '35', '3', '2', '肉类', '9', '猪肉', '8.56', '斤', '23.0', '0.0', '1505359095', '1');
+INSERT INTO `ph_detail` VALUES ('53', '35', '3', '1', '蔬菜', '8', '生菜', '2.58', '斤', '50.0', '0.0', '1505359095', '1');
 
 -- ----------------------------
 -- Table structure for ph_food
@@ -159,4 +159,4 @@ CREATE TABLE `ph_order` (
 -- ----------------------------
 -- Records of ph_order
 -- ----------------------------
-INSERT INTO `ph_order` VALUES ('35', '3', '1004', '万达酒店', '2017091301441', '1505315921', '1505318400', '0.0', '0.0', '1505315921', '1');
+INSERT INTO `ph_order` VALUES ('35', '3', '1004', '万达酒店', '2017091301441', '1505315921', '1505404800', '0.0', '0.0', '1505359095', '1');
