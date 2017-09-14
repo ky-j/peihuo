@@ -25,18 +25,30 @@
     <!--/meta 作为公共模版分离出去-->
 <style>
     .order-info {
-        margin: 5px auto;
+        margin: 10px auto;
     }
     .order-info span{
         display: inline-block;
-        width: 250px;
+        width: 220px;
+    }
+    .page-container{
+        width: 700px;
+        margin: 0 auto;
+    }
+    .table-head{
+        font-weight: bold;
+    }
+    .btn-print{
+        text-align: center;
+        margin: 50px;
     }
 </style>
 <title>查看订单</title>
 </head>
 <body>
 
-<div class="page-container" style="width: 900px;margin: 0 auto;">
+<div class="page-container">
+    <div id="printArea">
     <div class="text-c"><h2><?php echo ($order["hotel_name"]); ?>订单</h2></div>
     <div class="order-info">
         <span>订单编号：<?php echo ($order["order_sn"]); ?></span>
@@ -45,32 +57,34 @@
     </div>
     <table class="table table-border table-bg table-bordered">
         <thead>
-        <tr>
-            <th>序号</th>
-            <th>菜品</th>
-            <th>中餐</th>
-            <th>西餐</th>
-            <th>日料</th>
-            <th>点心</th>
-            <th>味部</th>
-            <th>合计</th>
-            <th>备注</th>
+        <tr class="table-head">
+            <td>序号</td>
+            <td>菜品</td>
+            <td>中餐</td>
+            <td>西餐</td>
+            <td>日料</td>
+            <td>点心</td>
+            <td>味部</td>
+            <td>合计</td>
+            <td>备注</td>
         </tr>
         </thead>
         <tbody>
-        <?php if(is_array($detailPrint)): foreach($detailPrint as $key=>$data): ?><tr>
+        <?php if(is_array($countPrint)): foreach($countPrint as $key=>$data): ?><tr>
             <td><?php echo ($key+1); ?></td>
             <td><?php echo ($data["food_name"]); ?></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><?php echo ($data["total"]); ?></td>
+            <td class="format-number"><?php echo ($data["total1"]); ?></td>
+            <td class="format-number"><?php echo ($data["total2"]); ?></td>
+            <td class="format-number"><?php echo ($data["total3"]); ?></td>
+            <td class="format-number"><?php echo ($data["total4"]); ?></td>
+            <td class="format-number"><?php echo ($data["total5"]); ?></td>
+            <td class="format-number"><?php echo ($data["total"]); ?></td>
             <td></td>
         </tr><?php endforeach; endif; ?>
         </tbody>
     </table>
+    </div>
+    <div class="btn-print"><input class="btn btn-success radius size-L" id="printBtn" type="button" value="打印订单"></div>
 </div>
 
 <!--_footer 作为公共模版分离出去-->
@@ -86,7 +100,23 @@
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.9.0/printThis.min.js"></script>
 <script type="text/javascript" src="/peihuo/Public/js/common.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".format-number").each(function (index) {
+            if ($(this).html() == parseInt($(this).html())) {
+                $(this).html(parseInt($(this).html()));
+            }
+        })
+
+        $("#printBtn").on("click",function () {
+            $('#printArea').printThis({
+                importStyle: true,
+            });
+        })
+    });
+</script>
 <!--/请在上方写此页面业务相关的脚本-->
 </body>
 </html>

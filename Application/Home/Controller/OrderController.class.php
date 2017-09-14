@@ -44,14 +44,15 @@ class OrderController extends Controller
             if ($orderId) {
                 // 依据下单数量，处理各个部门的数据
                 $num = count($_POST['order_number']);
-//                print_r($_POST['order_number']);
-//                echo $num;
-//                exit;
+
                 for($i=0; $i<$num; ++$i) {
                     if($_POST['order_number'][$i]){
                         $detailData['order_id'] = $orderId;
                         $detailData['update_time'] = time();
-                        $detailData['depart_id'] = $_POST['depart_id'][$i];
+                        $detailData['hotel_name'] = $hotel['hotel_name'];
+                        $detailData['hotel_number'] = $hotel['hotel_number'];
+                        $detailData['depart_id'] = $departID = $_POST['depart_id'][$i];
+                        $detailData["depart_number_$departID"] = $_POST['order_number'][$i];
 
                         $detailData['category_id'] = $_POST['category_id'][$i];
                         $category = D("Category")->getCategoryById($_POST['category_id'][$i]);
@@ -69,6 +70,8 @@ class OrderController extends Controller
                         // 只有选择菜品和填写下单数量才会插入detail表
                         if($detailData['food_id'] && $detailData['order_number']) {
                             $detaiId = D("Detail")->insert($detailData);
+                            $countId = D("Count")->insert($detailData);
+                            unset($detailData["depart_number_$departID"]); //销毁depart_number_$i
                         }
                     }
                 }
@@ -122,6 +125,9 @@ class OrderController extends Controller
                 // 删除detail表中原有数据
                 D("Detail")->deleteByOrderId($orderId);
 
+                // 删除count表中原有数据
+                D("Count")->deleteByOrderId($orderId);
+
                 // 依据下单数量，处理各个部门的数据
                 $num = count($_POST['order_number']);
 //                print_r($_POST['order_number']);
@@ -131,7 +137,10 @@ class OrderController extends Controller
                     if($_POST['order_number'][$i]){
                         $detailData['order_id'] = $orderId;
                         $detailData['update_time'] = time();
-                        $detailData['depart_id'] = $_POST['depart_id'][$i];
+                        $detailData['hotel_name'] = $hotel['hotel_name'];
+                        $detailData['hotel_number'] = $hotel['hotel_number'];
+                        $detailData['depart_id'] = $departID = $_POST['depart_id'][$i];
+                        $detailData["depart_number_$departID"] = $_POST['order_number'][$i];
 
                         $detailData['category_id'] = $_POST['category_id'][$i];
                         $category = D("Category")->getCategoryById($_POST['category_id'][$i]);
@@ -146,9 +155,14 @@ class OrderController extends Controller
                         $detailData['order_number'] = $_POST['order_number'][$i];
                         $detailData['delivery_number'] = $_POST['delivery_number'][$i];
 
-                        // 只有选择菜品和填写下单数量才会插入detail表
+//                        print_r($detailData);
+//                        exit();
+
+                        // 只有选择菜品和填写下单数量才会插入detail和count表
                         if($detailData['food_id'] && $detailData['order_number']) {
                             $detaiId = D("Detail")->insert($detailData);
+                            $countId = D("Count")->insert($detailData);
+                            unset($detailData["depart_number_$departID"]); //销毁depart_number_$i
                         }
                     }
                 }
@@ -209,9 +223,9 @@ class OrderController extends Controller
         $order = D("Order")->find($orderId);
         $this->assign('order', $order);
 
-        $detailPrint = D("Detail")->getDetailPrintList($orderId);
-        print_r($detailPrint);
-        $this->assign('detailPrint', $detailPrint);
+        $countPrint = D("Count")->getCountPrintList($orderId);
+        //print_r($countPrint);
+        $this->assign('countPrint', $countPrint);
 
 
         $this->display('');

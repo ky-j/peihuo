@@ -5336,3 +5336,1032 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2017-09-14T22:29:24+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T22:29:26+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today H:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T22:29:31+08:00 ] ::1 /peihuo/index.php?c=order&a=edit&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 1 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 2 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 3 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 4 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 5 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today H:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f773b9f65af8d1264ea6cb518a921941.php 第 51 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T22:30:44+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` = 1 AND `category_id` = 1 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-09-14T22:50:52+08:00 ] ::1 /peihuo/index.php?c=order&a=edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_hotel` WHERE ( hotel_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 125 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0130s ]
+SQL: UPDATE `ph_order` SET `order_id`='35',`hotel_id`='3',`hotel_name`='万达酒店',`hotel_number`='1004',`delivery_date`='1505404800',`update_time`='1505400652' WHERE ( order_id=35 ) [ RunTime:0.0330s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0070s ]
+SQL: DELETE FROM `ph_detail` WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0070s ]
+SQL: DELETE FROM `ph_count` WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=10 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400652','1','1','蔬菜','10','3.56','油麦菜','斤','10','9') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: countlData H:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 156 行.
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=9 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400652','2','2','肉类','9','8.56','猪肉','斤','52','51') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: countlData H:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 156 行.
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400652','2','1','蔬菜','8','2.58','生菜','斤','10','') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: countlData H:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 156 行.
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400652','3','3','水果','1','6.00','香蕉','斤','14','') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: countlData H:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 156 行.
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=9 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400652','3','2','肉类','9','8.56','猪肉','斤','23','') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: countlData H:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 156 行.
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400652','3','1','蔬菜','8','2.58','生菜','斤','50','') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: countlData H:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 156 行.
+
+[ 2017-09-14T22:50:53+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T22:50:56+08:00 ] ::1 /peihuo/index.php?c=order&a=edit&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 1 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 2 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 3 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 4 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 5 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today H:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f773b9f65af8d1264ea6cb518a921941.php 第 51 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T22:51:28+08:00 ] ::1 /peihuo/index.php?c=order&a=edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T22:51:37+08:00 ] ::1 /peihuo/index.php?c=order&a=edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T22:51:52+08:00 ] ::1 /peihuo/index.php?c=order&a=edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T22:52:31+08:00 ] ::1 /peihuo/index.php?c=order&a=edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `ph_hotel` WHERE ( hotel_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 125 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0240s ]
+SQL: UPDATE `ph_order` SET `order_id`='35',`hotel_id`='3',`hotel_name`='万达酒店',`hotel_number`='1004',`delivery_date`='1505404800',`update_time`='1505400751' WHERE ( order_id=35 ) [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0130s ]
+SQL: DELETE FROM `ph_detail` WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0140s ]
+SQL: DELETE FROM `ph_count` WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=10 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400751','1','1','蔬菜','10','3.56','油麦菜','斤','10','9') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400751','10','1','蔬菜','10','3.56','油麦菜','斤','10','9') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=9 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400751','2','2','肉类','9','8.56','猪肉','斤','52','51') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`) VALUES ('35','1505400751','10','2','肉类','9','8.56','猪肉','斤','52','51','52') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400751','2','1','蔬菜','8','2.58','生菜','斤','10','') [ RunTime:0.0010s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`) VALUES ('35','1505400751','10','1','蔬菜','8','2.58','生菜','斤','10','','10') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400751','3','3','水果','1','6.00','香蕉','斤','14','') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`,`depart_number_3`) VALUES ('35','1505400751','10','3','水果','1','6.00','香蕉','斤','14','','10','14') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=9 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400751','3','2','肉类','9','8.56','猪肉','斤','23','') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`,`depart_number_3`) VALUES ('35','1505400751','10','2','肉类','9','8.56','猪肉','斤','23','','10','23') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505400751','3','1','蔬菜','8','2.58','生菜','斤','50','') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`,`depart_number_3`) VALUES ('35','1505400751','10','1','蔬菜','8','2.58','生菜','斤','50','','10','50') [ RunTime:0.0000s ]
+
+[ 2017-09-14T22:52:32+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T22:56:53+08:00 ] ::1 /peihuo/index.php?c=order&a=edit&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 1 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 2 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 3 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 4 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 5 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today H:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f773b9f65af8d1264ea6cb518a921941.php 第 51 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T22:56:58+08:00 ] ::1 /peihuo/index.php?c=order&a=edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_hotel` WHERE ( hotel_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 125 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0140s ]
+SQL: UPDATE `ph_order` SET `order_id`='35',`hotel_id`='3',`hotel_name`='万达酒店',`hotel_number`='1004',`delivery_date`='1505404800',`update_time`='1505401017' WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0130s ]
+SQL: DELETE FROM `ph_detail` WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0110s ]
+SQL: DELETE FROM `ph_count` WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=10 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401017','1','1','蔬菜','10','3.56','油麦菜','斤','10','9') [ RunTime:0.0010s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401017','万达酒店','10','1','蔬菜','10','3.56','油麦菜','斤','10','9') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=9 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401018','2','2','肉类','9','8.56','猪肉','斤','52','51') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`) VALUES ('35','1505401018','万达酒店','10','2','肉类','9','8.56','猪肉','斤','52','51','52') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401018','2','1','蔬菜','8','2.58','生菜','斤','10','') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`) VALUES ('35','1505401018','万达酒店','10','1','蔬菜','8','2.58','生菜','斤','10','','10') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401018','3','3','水果','1','6.00','香蕉','斤','14','') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`,`depart_number_3`) VALUES ('35','1505401018','万达酒店','10','3','水果','1','6.00','香蕉','斤','14','','10','14') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=9 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401018','3','2','肉类','9','8.56','猪肉','斤','23','') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`,`depart_number_3`) VALUES ('35','1505401018','万达酒店','10','2','肉类','9','8.56','猪肉','斤','23','','10','23') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401018','3','1','蔬菜','8','2.58','生菜','斤','50','') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`,`depart_number_3`) VALUES ('35','1505401018','万达酒店','10','1','蔬菜','8','2.58','生菜','斤','50','','10','50') [ RunTime:0.0010s ]
+
+[ 2017-09-14T22:56:59+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T23:00:03+08:00 ] ::1 /peihuo/index.php?c=order&a=edit&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 1 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 2 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 3 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 4 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 5 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today H:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f773b9f65af8d1264ea6cb518a921941.php 第 51 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T23:00:14+08:00 ] ::1 /peihuo/index.php?c=order&a=edit&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 1 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 2 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 3 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 4 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 5 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: today H:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f773b9f65af8d1264ea6cb518a921941.php 第 51 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T23:00:23+08:00 ] ::1 /peihuo/index.php?c=order&a=edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T23:03:41+08:00 ] ::1 /peihuo/index.php?c=order&a=edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `ph_hotel` WHERE ( hotel_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 125 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0130s ]
+SQL: UPDATE `ph_order` SET `order_id`='35',`hotel_id`='3',`hotel_name`='万达酒店',`hotel_number`='1004',`delivery_date`='1505404800',`update_time`='1505401421' WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0110s ]
+SQL: DELETE FROM `ph_detail` WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0100s ]
+SQL: DELETE FROM `ph_count` WHERE ( order_id=35 ) [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=10 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-09-14T23:05:09+08:00 ] ::1 /peihuo/index.php?c=order&a=edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `ph_hotel` WHERE ( hotel_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 125 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0150s ]
+SQL: UPDATE `ph_order` SET `order_id`='35',`hotel_id`='3',`hotel_name`='万达酒店',`hotel_number`='1004',`delivery_date`='1505404800',`update_time`='1505401509' WHERE ( order_id=35 ) [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0140s ]
+SQL: DELETE FROM `ph_detail` WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0140s ]
+SQL: DELETE FROM `ph_count` WHERE ( order_id=35 ) [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=10 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401509','1','1','蔬菜','10','3.56','油麦菜','斤','10','9') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`hotel_number`,`depart_number_1`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401509','万达酒店','1004','10','1','蔬菜','10','3.56','油麦菜','斤','10','9') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=9 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401509','2','2','肉类','9','8.56','猪肉','斤','52','51') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`hotel_number`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`) VALUES ('35','1505401509','万达酒店','1004','2','肉类','9','8.56','猪肉','斤','52','51','52') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401509','2','1','蔬菜','8','2.58','生菜','斤','10','') [ RunTime:0.0010s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`hotel_number`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_2`) VALUES ('35','1505401509','万达酒店','1004','1','蔬菜','8','2.58','生菜','斤','10','','10') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401509','3','3','水果','1','6.00','香蕉','斤','14','') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`hotel_number`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_3`) VALUES ('35','1505401509','万达酒店','1004','3','水果','1','6.00','香蕉','斤','14','','14') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=9 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401509','3','2','肉类','9','8.56','猪肉','斤','23','') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`hotel_number`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_3`) VALUES ('35','1505401509','万达酒店','1004','2','肉类','9','8.56','猪肉','斤','23','','23') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_category` WHERE ( category_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_detail` (`order_id`,`update_time`,`depart_id`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`) VALUES ('35','1505401509','3','1','蔬菜','8','2.58','生菜','斤','50','') [ RunTime:0.0000s ]
+SQL: INSERT INTO `ph_count` (`order_id`,`update_time`,`hotel_name`,`hotel_number`,`category_id`,`category_name`,`food_id`,`food_price`,`food_name`,`food_unit`,`order_number`,`delivery_number`,`depart_number_3`) VALUES ('35','1505401509','万达酒店','1004','1','蔬菜','8','2.58','生菜','斤','50','','50') [ RunTime:0.0010s ]
+
+[ 2017-09-14T23:05:10+08:00 ] ::1 /peihuo/index.php?c=order&a=edit&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 1 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 2 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 3 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 4 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 5 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today H:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f773b9f65af8d1264ea6cb518a921941.php 第 51 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T23:17:40+08:00 ] ::1 /peihuo/index.php?c=order&a=check&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0130s ]
+SQL: SELECT `food_name`,SUM(depart_number_1) AS total1,SUM(depart_number_2) AS total2,SUM(depart_number_3) AS total3,SUM(depart_number_4) AS total4,SUM(depart_number_5) AS total5,SUM(order_number) AS total FROM `ph_count` WHERE `status` <> -1 GROUP BY food_name ORDER BY count_id asc  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T23:18:49+08:00 ] ::1 /peihuo/index.php?c=order&a=check&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0140s ]
+SQL: SELECT `food_name`,SUM(depart_number_1) AS total1,SUM(depart_number_2) AS total2,SUM(depart_number_3) AS total3,SUM(depart_number_4) AS total4,SUM(depart_number_5) AS total5,SUM(order_number) AS total FROM `ph_count` WHERE `status` <> -1 GROUP BY food_name ORDER BY count_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T23:26:02+08:00 ] ::1 /peihuo/index.php?c=order&a=check&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0190s ]
+SQL: SELECT `food_name`,SUM(depart_number_1) AS total1,SUM(depart_number_2) AS total2,SUM(depart_number_3) AS total3,SUM(depart_number_4) AS total4,SUM(depart_number_5) AS total5,SUM(order_number) AS total FROM `ph_count` WHERE `status` <> -1 GROUP BY food_name ORDER BY count_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T23:26:07+08:00 ] ::1 /peihuo/index.php?c=order&a=check&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0110s ]
+SQL: SELECT `food_name`,SUM(depart_number_1) AS total1,SUM(depart_number_2) AS total2,SUM(depart_number_3) AS total3,SUM(depart_number_4) AS total4,SUM(depart_number_5) AS total5,SUM(order_number) AS total FROM `ph_count` WHERE `status` <> -1 GROUP BY food_name ORDER BY count_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T23:27:52+08:00 ] ::1 /peihuo/index.php?c=order&a=check&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0220s ]
+SQL: SELECT `food_name`,SUM(depart_number_1) AS total1,SUM(depart_number_2) AS total2,SUM(depart_number_3) AS total3,SUM(depart_number_4) AS total4,SUM(depart_number_5) AS total5,SUM(order_number) AS total FROM `ph_count` WHERE `status` <> -1 GROUP BY food_name ORDER BY count_id asc  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T23:28:04+08:00 ] ::1 /peihuo/index.php?c=order&a=check&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0220s ]
+SQL: SELECT `food_name`,SUM(depart_number_1) AS total1,SUM(depart_number_2) AS total2,SUM(depart_number_3) AS total3,SUM(depart_number_4) AS total4,SUM(depart_number_5) AS total5,SUM(order_number) AS total FROM `ph_count` WHERE `status` <> -1 GROUP BY food_name ORDER BY count_id asc  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T23:28:21+08:00 ] ::1 /peihuo/index.php?c=order&a=check&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0230s ]
+SQL: SELECT `food_name`,SUM(depart_number_1) AS total1,SUM(depart_number_2) AS total2,SUM(depart_number_3) AS total3,SUM(depart_number_4) AS total4,SUM(depart_number_5) AS total5,SUM(order_number) AS total FROM `ph_count` WHERE `status` <> -1 GROUP BY food_name ORDER BY count_id asc  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T23:36:49+08:00 ] ::1 /peihuo/index.php?c=order&a=edit&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 1 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 2 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 3 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 4 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 5 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: today H:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f773b9f65af8d1264ea6cb518a921941.php 第 51 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T23:49:31+08:00 ] ::1 /peihuo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webname H:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T23:49:32+08:00 ] ::1 /peihuo/index.php?a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T23:49:35+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ph_order` WHERE `status` <> -1 ORDER BY order_id desc  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T23:49:38+08:00 ] ::1 /peihuo/index.php?c=order&a=check&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0070s ]
+SQL: SELECT `food_name`,SUM(depart_number_1) AS total1,SUM(depart_number_2) AS total2,SUM(depart_number_3) AS total3,SUM(depart_number_4) AS total4,SUM(depart_number_5) AS total5,SUM(order_number) AS total FROM `ph_count` WHERE `status` <> -1 GROUP BY food_name ORDER BY count_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T23:49:44+08:00 ] ::1 /peihuo/index.php?c=order&a=check&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.1140s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0080s ]
+SQL: SELECT `food_name`,SUM(depart_number_1) AS total1,SUM(depart_number_2) AS total2,SUM(depart_number_3) AS total3,SUM(depart_number_4) AS total4,SUM(depart_number_5) AS total5,SUM(order_number) AS total FROM `ph_count` WHERE `status` <> -1 GROUP BY food_name ORDER BY count_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T23:50:07+08:00 ] ::1 /peihuo/index.php?c=order&a=edit&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CategoryModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CategoryModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `ph_category` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ph_category` WHERE `status` <> -1 ORDER BY category_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\DetailModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\DetailModel.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `ph_detail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 1 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 2 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 3 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 4 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ph_detail` WHERE `depart_id` = 5 AND `order_id` = 35 AND `status` <> -1 ORDER BY detail_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today H:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\f773b9f65af8d1264ea6cb518a921941.php 第 51 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T23:51:21+08:00 ] ::1 /peihuo/index.php?c=order&a=check&id=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_order` WHERE ( order_id=35 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\CountModel::find() should be compatible with Think\Model::find($options = Array) H:\phpStudy\WWW\peihuo\Application\Common\Model\CountModel.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ph_count` [ RunTime:0.0080s ]
+SQL: SELECT `food_name`,SUM(depart_number_1) AS total1,SUM(depart_number_2) AS total2,SUM(depart_number_3) AS total3,SUM(depart_number_4) AS total4,SUM(depart_number_5) AS total5,SUM(order_number) AS total FROM `ph_count` WHERE `status` <> -1 GROUP BY food_name ORDER BY count_id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
