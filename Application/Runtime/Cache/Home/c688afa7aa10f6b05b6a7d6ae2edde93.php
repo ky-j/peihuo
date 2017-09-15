@@ -100,7 +100,7 @@
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/messages_zh.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.9.0/printThis.min.js"></script>
+<script type="text/javascript" src="/peihuo/Public/js/printThis.min.js"></script>
 <script type="text/javascript" src="/peihuo/Public/js/common.js"></script>
 <script type="text/javascript">
     $(function () {

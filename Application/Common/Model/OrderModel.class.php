@@ -91,6 +91,17 @@ class OrderModel extends Model
         return $res;
     }
 
+    // 根据订单编号获取订单
+    public function getOrderBySn($orderSn)
+    {
+        $condition = array(
+            'order_sn' => "$orderSn",
+            'status' => array('neq', -1),
+        );
+        $res = $this->_db->where($condition)->find();
+        return $res;
+    }
+
     // 根据ID获取数据
     public function find($id)
     {

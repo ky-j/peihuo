@@ -42,6 +42,27 @@ class CountModel extends Model
 	    SUM(order_number) AS total')->where($data)->order('count_id asc')->group('food_name')->select();
     }
 
+    // 获取每日菜品清单，按菜品和配送日期
+    public function getFoodByDate($foodId, $deliveryDate)
+    {
+        if (!$foodId || !is_numeric($foodId)) {
+            throw_exception("foodId不合法");
+        }
+        $data = array(
+            'status' => array('neq', -1),
+            'food_id' => $foodId,
+            'delivery_date' => $deliveryDate,
+        );
+        return $this->_db->field('hotel_name,
+        hotel_number,
+        SUM(depart_number_1) AS total1,
+        SUM(depart_number_2) AS total2,
+	    SUM(depart_number_3) AS total3,
+	    SUM(depart_number_4) AS total4,
+	    SUM(depart_number_5) AS total5,
+	    SUM(order_number) AS total')->join('LEFT JOIN __ORDER__ ON __COUNT__.order_id = __ORDER__.order_id')->where($data)->order('count_id asc')->group('food_name,hotel_name')->select();
+    }
+
     // 根据id获取数据
     public function getCountByOrderId($orderId = '', $departID = '')
     {

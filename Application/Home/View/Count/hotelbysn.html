@@ -1,0 +1,128 @@
+<include file="Public/_meta"/>
+<style>
+    .order-info {
+        margin: 10px auto;
+    }
+    .order-info span{
+        display: inline-block;
+        width: 220px;
+    }
+    .page-container{
+        width: 700px;
+        margin: 0 auto;
+    }
+    .table-head{
+        font-weight: bold;
+    }
+</style>
+<title>酒店订单</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 打印 <span class="c-gray en">&gt;</span> 酒店订单 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <form method="get" class="form form-horizontal" id="peihuo-form">
+        <input type="hidden" name="c" value="count">
+        <input type="hidden" name="a" value="hotelbysn">
+        <div class="text-c search-input">
+            订单编号：
+            <input type="text" name="order_sn" value="{$orderSn}" id="order_sn" style="width:450px" class="input-text">
+            <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜订单</button>
+        </div>
+    </form>
+    <present name="orderSn">
+        <div class="mt-50 print-box">
+            <present name="order.order_sn">
+                <div id="printArea">
+                    <div class="text-c"><h2>{$order.hotel_name}订单</h2></div>
+                    <div class="order-info">
+                        <span>订单编号：{$order.order_sn}</span>
+                        <span>酒店编号：{$order.hotel_number}</span>
+                        <span>配送日期：{$order.delivery_date|date="Y-m-d",###}</span>
+                    </div>
+                    <table class="table table-border table-bg table-bordered">
+                        <thead>
+                        <tr class="table-head">
+                            <td>序号</td>
+                            <td>菜品</td>
+                            <td>中餐</td>
+                            <td>西餐</td>
+                            <td>日料</td>
+                            <td>点心</td>
+                            <td>味部</td>
+                            <td>合计</td>
+                            <td>备注</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <empty name="data">
+                            <tr><td colspan="9">没有数据</td></tr>
+                            <else />
+                            <foreach name="data" item="data">
+                                <tr>
+                                    <td>{$key+1}</td>
+                                    <td>{$data.food_name}</td>
+                                    <td class="format-number">{$data.total1}</td>
+                                    <td class="format-number">{$data.total2}</td>
+                                    <td class="format-number">{$data.total3}</td>
+                                    <td class="format-number">{$data.total4}</td>
+                                    <td class="format-number">{$data.total5}</td>
+                                    <td class="format-number">{$data.total}</td>
+                                    <td></td>
+                                </tr>
+                            </foreach>
+                        </empty>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-c mt-50"><input class="btn btn-secondary radius size-L" id="printBtn" type="button" value="打印订单"></div>
+                <else />
+                <div class="text-c">没有找到相应订单数据</div>
+            </present>
+        </div>
+    </present>
+
+</div>
+
+<include file="Public/_footer"/>
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/printThis.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#peihuo-form").validate({
+            rules: {
+                order_sn: {
+                    required: true,
+                    digits:true,
+//                    rangelength:[13,13]
+                }
+            },
+            onkeyup: false,
+            success: "valid",
+            // 通过验证后运行的函数
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+
+        $(".format-number").each(function (index) {
+            if ($(this).html() == parseInt($(this).html())) {
+                $(this).html(parseInt($(this).html()));
+            }
+        });
+
+        $("#printBtn").on("click",function () {
+            $('#printArea').printThis({
+                importStyle: true,
+            });
+        });
+    });
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

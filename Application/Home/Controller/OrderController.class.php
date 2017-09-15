@@ -227,7 +227,6 @@ class OrderController extends Controller
         //print_r($countPrint);
         $this->assign('countPrint', $countPrint);
 
-
         $this->display('');
     }
 
