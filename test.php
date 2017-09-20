@@ -11,6 +11,8 @@ function get_order_sn()
     return date('Ymd') . str_pad(mt_rand(1, 99999), 5, '0', STR_PAD_LEFT);
 }
 
-echo date('Y-m-d');
+//echo date('Y-m-d');
+//echo "<br>";
+echo strtotime('2017-09');
 echo "<br>";
-echo strtotime('2017-09-09');
+echo strtotime('2017-09 +1 month');

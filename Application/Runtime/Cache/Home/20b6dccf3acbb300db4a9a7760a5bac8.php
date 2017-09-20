@@ -39,51 +39,41 @@
         font-weight: bold;
     }
 </style>
-<title>每日菜品清单</title>
+<title>所有菜品统计</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 打印 <span class="c-gray en">&gt;</span> 每日菜品清单 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 数据统计 <span class="c-gray en">&gt;</span> 所有菜品统计 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
     <form method="get" class="form form-horizontal" id="peihuo-form">
         <input type="hidden" name="c" value="count">
-        <input type="hidden" name="a" value="foodbyday">
+        <input type="hidden" name="a" value="foodbytime">
         <div class="text-c search-input">
         <span class="select-box inline">
-            <select name="category_id" class="select category-id">
-                <option value="">-=请选择菜品分类=-</option>
-                <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $info['categoryId']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
-            </select>
+ 				<select name="count_way" class="select">
+                    <option value="">-=请选择统计方式=-</option>
+                    <option value="1" <?php if($info['countWay'] == 1): ?>selected="selected"<?php endif; ?>>按月统计</option>
+                    <option value="2" <?php if($info['countWay'] == 2): ?>selected="selected"<?php endif; ?>>按日统计</option>
+				</select>
 		</span>
-            <span class="select-box inline">
-            <select name="food_id" class="select food-id">
-                <option value="">-=请选择菜品=-</option>
-                <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>" <?php if($food['food_id'] == $info['foodId']): ?>selected="selected"<?php endif; ?>><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
-            </select>
-        </span>
-            配送日期：
-            <input type="text" onfocus="WdatePicker()" value="<?php echo ($info["date"]); ?>" name="delivery_date" class="input-text Wdate" style="width:120px;">
-            <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜清单</button>
+            统计日期：
+            <input type="text" onfocus="selectDate()" value="<?php echo ($info["date"]); ?>" name="delivery_date" autocomplete="off" class="input-text Wdate" style="width:120px;">
+            <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe61c;</i> 统计数据</button>
         </div>
     </form>
-    <div class="mt-50 print-box <?php if(!isset($info["foodName"])): ?>hide<?php endif; ?>">
+    <div class="mt-50 print-box <?php if(!isset($info["countWay"])): ?>hide<?php endif; ?>">
         <div id="printArea">
-            <div class="text-c"><h2><?php echo ($info["foodName"]); ?>配送清单</h2></div>
-            <div class="order-info">
-                <span>配送日期：<?php echo ($info["date"]); ?></span>
+            <div class="text-c"><h2><?php echo ($info["chineseDate"]); ?>所有菜品配送情况统计表</h2></div>
+            <div class="order-info text-r">
+                <span>统计日期：<?php echo ($info["today"]); ?></span>
             </div>
             <table class="table table-border table-bg table-bordered">
                 <thead>
                 <tr class="table-head">
                     <td>序号</td>
-                    <td>酒店</td>
-                    <td>酒店编号</td>
-                    <td>中餐</td>
-                    <td>西餐</td>
-                    <td>日料</td>
-                    <td>点心</td>
-                    <td>味部</td>
-                    <td>合计</td>
-                    <td>备注</td>
+                    <td>菜品</td>
+                    <td>订单数量</td>
+                    <td>实际数量</td>
+                    <td>单位</td>
                 </tr>
                 </thead>
                 <tbody>
@@ -91,15 +81,10 @@
                     <?php else: ?>
                     <?php if(is_array($data)): foreach($data as $key=>$data): ?><tr>
                             <td><?php echo ($key+1); ?></td>
-                            <td><?php echo ($data["hotel_name"]); ?></td>
-                            <td><?php echo ($data["hotel_number"]); ?></td>
+                            <td><?php echo ($data["food_name"]); ?></td>
                             <td class="format-number"><?php echo ($data["total1"]); ?></td>
                             <td class="format-number"><?php echo ($data["total2"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total3"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total4"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total5"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total"]); ?></td>
-                            <td></td>
+                            <td><?php echo ($data["food_unit"]); ?></td>
                         </tr><?php endforeach; endif; endif; ?>
                 </tbody>
             </table>
@@ -127,10 +112,7 @@
     $(function () {
         $("#peihuo-form").validate({
             rules: {
-                category_id: {
-                    required: true,
-                },
-                food_id: {
+                count_way: {
                     required: true,
                 },
                 delivery_date: {
@@ -186,6 +168,9 @@
             });
         });
     });
+    function selectDate(){
+        WdatePicker();
+    }
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
 </body>

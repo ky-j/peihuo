@@ -11,29 +11,28 @@ class LoginController extends Controller {
     public function check() {
         $username = I('post.username');
         $password = I('post.password');
-        $verifycode = I('post.verifycode');
-
-        if(!check_verify($verifycode)){
-            $this->error('验证码错误！');
-        }
 
         if(!trim($username)){
-            $this->error('用户名不能为空！');
+            return show_msg(0,'用户名不能为空！');
         }
 
         if(!trim($password)){
-            $this->error('密码不能为空！');
+            return show_msg(0,'密码不能为空！');
         }
 
-        // 判断用户名和密码是否一致
-        $ret = D(Admin)->checkAdmin($username, $password);
-        if(!$ret){
-            $this->error('用户名或者密码错误！');
+        $ret = D('Admin')->getAdminByUsername($username);
+        if(!$ret || $ret['status'] !=1) {
+            return show_msg(0,'该用户不存在');
         }
+
+        if($ret['password'] != getMd5Password($password)) {
+            return show_msg(0,'密码错误');
+        }
+
+        D("Admin")->updateByAdminId($ret['admin_id'],array('lastlogintime'=>time()));
 
         session('adminUser', $ret);
-
-        $this->success('登录成功！');
+        return show(1,'登录成功');
 
     }
 

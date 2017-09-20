@@ -84,7 +84,7 @@
         </tbody>
     </table>
     </div>
-    <div class="btn-print"><input class="btn btn-success radius size-L" id="printBtn" type="button" value="打印订单"></div>
+    <div class="btn-print"><input class="btn btn-secondary radius size-L" id="printBtn" type="button" value="打印订单"></div>
 </div>
 
 <!--_footer 作为公共模版分离出去-->

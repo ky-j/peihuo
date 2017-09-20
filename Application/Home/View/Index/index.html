@@ -27,8 +27,7 @@
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
         <div class="container-fluid cl">
-            <a class="logo navbar-logo f-l mr-10 hidden-xs" href="/aboutHui.shtml">H-ui.admin</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
-            <span class="logo navbar-slogan f-l mr-10 hidden-xs">v3.1</span>
+            <a class="logo navbar-logo f-l mr-10 hidden-xs" href="/aboutHui.shtml">配货管理系统</a>
             <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
             <!--<nav class="nav navbar-nav">-->
                 <!--<ul class="cl">-->
@@ -105,16 +104,16 @@
                 </ul>
             </dd>
         </dl>
-        <!--<dl id="menu-product">-->
-            <!--<dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
-            <!--<dd>-->
-                <!--<ul>-->
-                    <!--<li><a data-href="product-brand.html" data-title="品牌管理" href="javascript:void(0)">品牌管理</a></li>-->
-                    <!--<li><a data-href="product-category.html" data-title="分类管理" href="javascript:void(0)">分类管理</a></li>-->
-                    <!--<li><a data-href="product-list.html" data-title="产品管理" href="javascript:void(0)">产品管理</a></li>-->
-                <!--</ul>-->
-            <!--</dd>-->
-        <!--</dl>-->
+        <dl id="menu-product">
+            <dt><i class="Hui-iconfont">&#xe61e;</i> 数据统计<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="index.php?c=count&a=hotelbymonth" data-title="酒店统计" href="javascript:void(0)">酒店</a></li>
+                    <li><a data-href="index.php?c=count&a=foodbytime" data-title="所有菜品统计" href="javascript:void(0)">所有菜品</a></li>
+                    <li><a data-href="index.php?c=count&a=onefoodbytime" data-title="单项菜品统计" href="javascript:void(0)">单项菜品</a></li>
+                </ul>
+            </dd>
+        </dl>
         <!--<dl id="menu-comments">-->
             <!--<dt><i class="Hui-iconfont">&#xe622;</i> 评论管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
             <!--<dd>-->

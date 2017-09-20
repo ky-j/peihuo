@@ -92,7 +92,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="text-c mt-50"><input class="btn btn-secondary radius size-L" id="printBtn" type="button" value="打印订单"></div>
+                <div class="text-c mt-50"><input class="btn btn-secondary radius size-L" id="printBtn" type="button" value="打印数据"></div>
                 <?php else: ?>
                 <div class="text-c">没有找到相应订单数据</div><?php endif; ?>
         </div><?php endif; ?>

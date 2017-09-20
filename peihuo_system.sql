@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-09-15 17:42:54
+Date: 2017-09-20 08:32:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -63,7 +63,7 @@ CREATE TABLE `ph_count` (
   `order_number` decimal(10,1) unsigned NOT NULL,
   `delivery_number` decimal(10,1) unsigned NOT NULL,
   PRIMARY KEY (`count_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of ph_count
@@ -81,6 +81,10 @@ INSERT INTO `ph_count` VALUES ('29', '36', '2', '肉类', '11', '牛肉', '25.40
 INSERT INTO `ph_count` VALUES ('28', '36', '1', '蔬菜', '8', '生菜', '2.58', '斤', '0.0', '0.0', '5.0', '0.0', '0.0', '5.0', '0.0');
 INSERT INTO `ph_count` VALUES ('27', '36', '1', '蔬菜', '8', '生菜', '2.58', '斤', '0.0', '4.0', '0.0', '0.0', '0.0', '4.0', '0.0');
 INSERT INTO `ph_count` VALUES ('26', '36', '3', '水果', '1', '香蕉', '6.00', '斤', '1.0', '0.0', '0.0', '0.0', '0.0', '1.0', '0.0');
+INSERT INTO `ph_count` VALUES ('34', '37', '3', '水果', '1', '香蕉', '6.00', '斤', '15.0', '0.0', '0.0', '0.0', '0.0', '15.0', '0.0');
+INSERT INTO `ph_count` VALUES ('35', '37', '1', '蔬菜', '8', '生菜', '2.58', '斤', '0.0', '42.0', '0.0', '0.0', '0.0', '42.0', '0.0');
+INSERT INTO `ph_count` VALUES ('36', '38', '1', '蔬菜', '8', '生菜', '2.58', '斤', '10.0', '0.0', '0.0', '0.0', '0.0', '10.0', '0.0');
+INSERT INTO `ph_count` VALUES ('37', '38', '3', '水果', '1', '香蕉', '6.00', '斤', '0.0', '9.0', '0.0', '0.0', '0.0', '9.0', '0.0');
 
 -- ----------------------------
 -- Table structure for ph_detail
@@ -101,7 +105,7 @@ CREATE TABLE `ph_detail` (
   `update_time` int(10) unsigned NOT NULL DEFAULT '0',
   `status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`detail_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=92 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=97 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of ph_detail
@@ -119,6 +123,10 @@ INSERT INTO `ph_detail` VALUES ('88', '36', '3', '2', '肉类', '11', '牛肉', 
 INSERT INTO `ph_detail` VALUES ('87', '36', '3', '1', '蔬菜', '8', '生菜', '2.58', '斤', '5.0', '0.0', '1505445763', '1');
 INSERT INTO `ph_detail` VALUES ('86', '36', '2', '1', '蔬菜', '8', '生菜', '2.58', '斤', '4.0', '0.0', '1505445763', '1');
 INSERT INTO `ph_detail` VALUES ('85', '36', '1', '3', '水果', '1', '香蕉', '6.00', '斤', '1.0', '0.0', '1505445763', '1');
+INSERT INTO `ph_detail` VALUES ('93', '37', '1', '3', '水果', '1', '香蕉', '6.00', '斤', '15.0', '0.0', '1505724647', '1');
+INSERT INTO `ph_detail` VALUES ('94', '37', '2', '1', '蔬菜', '8', '生菜', '2.58', '斤', '42.0', '0.0', '1505724647', '1');
+INSERT INTO `ph_detail` VALUES ('95', '38', '1', '1', '蔬菜', '8', '生菜', '2.58', '斤', '10.0', '0.0', '1505787109', '1');
+INSERT INTO `ph_detail` VALUES ('96', '38', '2', '3', '水果', '1', '香蕉', '6.00', '斤', '9.0', '0.0', '1505787109', '1');
 
 -- ----------------------------
 -- Table structure for ph_food
@@ -201,10 +209,12 @@ CREATE TABLE `ph_order` (
   `update_time` int(10) unsigned NOT NULL DEFAULT '0',
   `status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of ph_order
 -- ----------------------------
 INSERT INTO `ph_order` VALUES ('35', '3', '1004', '万达酒店', '2017091301441', '1505315921', '1505404800', '0.0', '0.0', '1505401509', '1');
 INSERT INTO `ph_order` VALUES ('36', '1', '1001', '明轩酒店', '2017091504594', '1505406641', '1505404800', '0.0', '0.0', '1505445763', '1');
+INSERT INTO `ph_order` VALUES ('37', '3', '1004', '万达酒店', '2017091858700', '1505723175', '1505750400', '0.0', '0.0', '1505724647', '1');
+INSERT INTO `ph_order` VALUES ('38', '1', '1001', '明轩酒店', '2017091940360', '1505787109', '1505836800', '0.0', '0.0', '1505787109', '1');
