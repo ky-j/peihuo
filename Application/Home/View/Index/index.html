@@ -114,6 +114,14 @@
                 </ul>
             </dd>
         </dl>
+        <dl id="menu-system">
+            <dt><i class="Hui-iconfont">&#xe61d;</i> 系统相关<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="index.php?c=admin" data-title="用户管理" href="javascript:void(0)">用户管理</a></li>
+                </ul>
+            </dd>
+        </dl>
         <!--<dl id="menu-comments">-->
             <!--<dt><i class="Hui-iconfont">&#xe622;</i> 评论管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
             <!--<dd>-->

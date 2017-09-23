@@ -63,3 +63,8 @@ function password_encode($password, $salt)
 {
     return md5($password . $salt);
 }
+
+// 获取加密过的密码
+function getMd5Password($password) {
+    return md5($password . C('MD5_PRE'));
+}

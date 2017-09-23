@@ -32,7 +32,7 @@ class LoginController extends Controller {
         D("Admin")->updateByAdminId($ret['admin_id'],array('lastlogintime'=>time()));
 
         session('adminUser', $ret);
-        return show(1,'登录成功');
+        return show_msg(1,'登录成功');
 
     }
 

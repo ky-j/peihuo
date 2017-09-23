@@ -13,6 +13,6 @@ function get_order_sn()
 
 //echo date('Y-m-d');
 //echo "<br>";
-echo strtotime('2017-09');
-echo "<br>";
-echo strtotime('2017-09 +1 month');
+
+//echo strtotime('2017-09 +1 month');
+echo md5('258456' . 'pei_huo');

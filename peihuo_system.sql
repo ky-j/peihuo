@@ -10,10 +10,34 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-09-20 08:32:52
+Date: 2017-09-23 22:17:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for ph_admin
+-- ----------------------------
+DROP TABLE IF EXISTS `ph_admin`;
+CREATE TABLE `ph_admin` (
+  `admin_id` mediumint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL DEFAULT '',
+  `password` varchar(32) NOT NULL DEFAULT '',
+  `lastloginip` varchar(15) DEFAULT '0',
+  `lastlogintime` int(10) unsigned DEFAULT '0',
+  `mobile` varchar(40) DEFAULT '',
+  `realname` varchar(50) NOT NULL DEFAULT '',
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `update_time` int(10) DEFAULT '0',
+  PRIMARY KEY (`admin_id`),
+  KEY `username` (`username`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ph_admin
+-- ----------------------------
+INSERT INTO `ph_admin` VALUES ('1', 'admin', '02ad1169f0d85fe6983d38d3a5c2e42d', '0', '1505986590', '10086', 'admin', '1', '1506076247');
+INSERT INTO `ph_admin` VALUES ('2', 'jwd', '6e07051b24aedfe4a66b1e918f54a735', '0', '0', '13480060425', '阿得', '1', '1506076258');
 
 -- ----------------------------
 -- Table structure for ph_category

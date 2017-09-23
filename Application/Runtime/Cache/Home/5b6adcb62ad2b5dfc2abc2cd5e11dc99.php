@@ -75,7 +75,7 @@
                     dataType: 'json',
                     success: function (data) {
                         if(data.status === 1){
-                            return dialog.success(data.message, '/index.php?c=index');
+                            return dialog.success(data.message, '/peihuo/index.php?c=index');
                         }else{
                             return dialog.error(data.message);
                         }
