@@ -24,16 +24,16 @@
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
 
-<title>用户列表</title>
+<title>操作日志</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 用户管理 <span class="c-gray en">&gt;</span> 用户列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 用户管理 <span class="c-gray en">&gt;</span> 操作日志 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
     <!--<div class="text-c">-->
     <!--<input type="text" name="" id="" placeholder=" 用户名称" style="width:250px" class="input-text">-->
     <!--<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜用户</button>-->
     <!--</div>-->
-    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="layer_show('添加用户','index.php?c=admin&a=add','',400)" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a></span> <span class="r">共有数据：<strong><?php echo ($total); ?></strong> 条</span> </div>
+    <div class="cl pd-5 bg-1 bk-gray"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="layer_show('添加用户','index.php?c=admin&a=add','',400)" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a></span> <span class="r">共有数据：<strong><?php echo ($total); ?></strong> 条</span> </div>
     <div class="mt-20">
         <table class="table table-border table-bordered table-bg table-hover table-sort peihuo-table">
             <thead>
@@ -57,7 +57,11 @@
                     <td><?php echo ($vo["mobile"]); ?></td>
                     <td><?php echo (date("Y-m-d H:i",$vo["lastlogintime"])); ?></td>
                     <td><?php echo (date("Y-m-d H:i",$vo["update_time"])); ?></td>
-                    <td class="td-manage"><button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="<?php echo ($vo["admin_id"]); ?>" attr-a="admin" attr-message="修改" onclick="layer_show('修改用户','index.php?c=admin&a=edit&id=<?php echo ($vo["admin_id"]); ?>','',400)">修改</button> | <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["admin_id"]); ?>" attr-a="admin" attr-message="删除">删除</button></td>
+                    <td class="td-manage">
+                        <button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="<?php echo ($vo["admin_id"]); ?>" attr-a="admin" attr-message="修改" onclick="layer_show('修改用户','index.php?c=admin&a=edit&id=<?php echo ($vo["admin_id"]); ?>','',400)">修改</button>
+                        <span class="pipe">|</span>
+                        <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["admin_id"]); ?>" attr-a="admin" attr-message="删除">删除</button>
+                    </td>
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
         </table>

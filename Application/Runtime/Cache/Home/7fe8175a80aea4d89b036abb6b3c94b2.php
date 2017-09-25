@@ -33,7 +33,7 @@
         <!--<input type="text" name="" id="" placeholder=" 酒店名称" style="width:250px" class="input-text">-->
         <!--<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜酒店</button>-->
     <!--</div>-->
-    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="layer_show('添加酒店','index.php?c=hotel&a=add','',300)" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加酒店</a></span> <span class="r">共有数据：<strong><?php echo ($total); ?></strong> 条</span> </div>
+    <div class="cl pd-5 bg-1 bk-gray"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="layer_show('添加酒店','index.php?c=hotel&a=add','',300)" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加酒店</a></span> <span class="r">共有数据：<strong><?php echo ($total); ?></strong> 条</span> </div>
     <div class="mt-20">
         <table class="table table-border table-bordered table-bg table-hover table-sort peihuo-table">
             <thead>
@@ -42,7 +42,7 @@
                 <th width="80">ID</th>
                 <th>酒店名称</th>
                 <th width="100">酒店编号</th>
-                <th width="150">更新时间</th>
+                <th width="150">操作更新时间</th>
                 <!--<th width="60">发布状态</th>-->
                 <th width="200">操作</th>
             </tr>
@@ -54,7 +54,10 @@
                 <td><?php echo ($vo["hotel_name"]); ?></td>
                 <td><?php echo ($vo["hotel_number"]); ?></td>
                 <td><?php echo (date("Y-m-d H:i",$vo["update_time"])); ?></td>
-                <td class="td-manage"><button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="<?php echo ($vo["hotel_id"]); ?>" attr-a="hotel" attr-message="修改" onclick="layer_show('修改酒店','index.php?c=hotel&a=edit&id=<?php echo ($vo["hotel_id"]); ?>','',300)">修改</button> | <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["hotel_id"]); ?>" attr-a="hotel" attr-message="删除">删除</button></td>
+                <td class="td-manage">
+                    <button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="<?php echo ($vo["hotel_id"]); ?>" attr-a="hotel" attr-message="修改" onclick="layer_show('修改酒店','index.php?c=hotel&a=edit&id=<?php echo ($vo["hotel_id"]); ?>','',300)">修改</button>
+                    <span class="pipe">|</span>
+                    <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["hotel_id"]); ?>" attr-a="hotel" attr-message="删除">删除</button></td>
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
         </table>
@@ -82,78 +85,6 @@
 //            {"orderable":false,"aTargets":[0,8]}// 制定列不参与排序
 //        ]
     });
-
-    /*酒店-添加*/
-    function hotel_add(title,url,w,h){
-        layer_show(title,url,w,h);
-    }
-
-    /*酒店-查看*/
-    function hotel_show(title,url,id){
-        var index = layer.open({
-            type: 2,
-            title: title,
-            content: url
-        });
-        layer.full(index);
-    }
-
-    /*酒店-审核*/
-    function hotel_shenhe(obj,id){
-        layer.confirm('审核文章？', {
-                    btn: ['通过','不通过'],
-                    shade: false
-                },
-                function(){
-                    $(obj).parents("tr").find(".td-manage").prepend('<a class="c-primary" onClick="hotel_start(this,id)" href="javascript:;" title="申请上线">申请上线</a>');
-                    $(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已发布</span>');
-                    $(obj).remove();
-                    layer.msg('已发布', {icon:6,time:1000});
-                },
-                function(){
-                    $(obj).parents("tr").find(".td-manage").prepend('<a class="c-primary" onClick="hotel_shenqing(this,id)" href="javascript:;" title="申请上线">申请上线</a>');
-                    $(obj).parents("tr").find(".td-status").html('<span class="label label-danger radius">未通过</span>');
-                    $(obj).remove();
-                    layer.msg('未通过', {icon:5,time:1000});
-                });
-    }
-
-    /*酒店-下架*/
-    function hotel_stop(obj,id){
-        layer.confirm('确认要下架吗？',function(index){
-            $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="hotel_start(this,id)" href="javascript:;" title="发布"><i class="Hui-iconfont">&#xe603;</i></a>');
-            $(obj).parents("tr").find(".td-status").html('<span class="label label-defaunt radius">已下架</span>');
-            $(obj).remove();
-            layer.msg('已下架!',{icon: 5,time:1000});
-        });
-    }
-
-    /*酒店-发布*/
-    function hotel_start(obj,id){
-        layer.confirm('确认要发布吗？',function(index){
-            $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="hotel_stop(this,id)" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>');
-            $(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已发布</span>');
-            $(obj).remove();
-            layer.msg('已发布!',{icon: 6,time:1000});
-        });
-    }
-
-    /*酒店-申请上线*/
-    function hotel_shenqing(obj,id){
-        $(obj).parents("tr").find(".td-status").html('<span class="label label-default radius">待审核</span>');
-        $(obj).parents("tr").find(".td-manage").html("");
-        layer.msg('已提交申请，耐心等待审核!', {icon: 1,time:2000});
-    }
-
-    /*酒店-编辑*/
-    function hotel_edit(title,url,id){
-        var index = layer.open({
-            type: 2,
-            title: title,
-            content: url
-        });
-        layer.full(index);
-    }
 
     /*酒店-删除*/
     function hotel_del(obj,id){

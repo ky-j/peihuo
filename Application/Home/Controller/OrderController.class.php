@@ -27,12 +27,12 @@ class OrderController extends Controller
                 return show_msg(0, '酒店不能为空');
             }
 
-            $hotel = D("Hotel")->getHotelById($_POST['hotel_id']);
+//            $hotel = D("Hotel")->getHotelById($_POST['hotel_id']);
 
             $data = [];
             $data['hotel_id'] = $_POST['hotel_id'];
-            $data['hotel_name'] = $hotel['hotel_name'];
-            $data['hotel_number'] = $hotel['hotel_number'];
+//            $data['hotel_name'] = $hotel['hotel_name'];
+//            $data['hotel_number'] = $hotel['hotel_number'];
             $data['order_sn'] = get_order_sn();
             $data['order_date'] = time();
             $data['delivery_date'] = strtotime($_POST['delivery_date']);
@@ -48,21 +48,22 @@ class OrderController extends Controller
                 for($i=0; $i<$num; ++$i) {
                     if($_POST['order_number'][$i]){
                         $detailData['order_id'] = $orderId;
+                        $detailData['hotel_id'] = $_POST['hotel_id'];
                         $detailData['update_time'] = time();
-                        $detailData['hotel_name'] = $hotel['hotel_name'];
-                        $detailData['hotel_number'] = $hotel['hotel_number'];
+//                        $detailData['hotel_name'] = $hotel['hotel_name'];
+//                        $detailData['hotel_number'] = $hotel['hotel_number'];
                         $detailData['depart_id'] = $departID = $_POST['depart_id'][$i];
                         $detailData["depart_number_$departID"] = $_POST['order_number'][$i];
 
                         $detailData['category_id'] = $_POST['category_id'][$i];
-                        $category = D("Category")->getCategoryById($_POST['category_id'][$i]);
-                        $detailData['category_name'] = $category['category_name'];
+//                        $category = D("Category")->getCategoryById($_POST['category_id'][$i]);
+//                        $detailData['category_name'] = $category['category_name'];
 
                         $detailData['food_id'] = $_POST['food_id'][$i];
-                        $food = D("Food")->getFoodById($_POST['food_id'][$i]);
+//                        $food = D("Food")->getFoodById($_POST['food_id'][$i]);
                         $detailData['food_price'] = $_POST['food_price'][$i];
-                        $detailData['food_name'] = $food['food_name'];
-                        $detailData['food_unit'] = $food['food_unit'];
+//                        $detailData['food_name'] = $food['food_name'];
+//                        $detailData['food_unit'] = $food['food_unit'];
 
                         $detailData['order_number'] = $_POST['order_number'][$i];
                         $detailData['delivery_number'] = $_POST['delivery_number'][$i];
@@ -108,13 +109,9 @@ class OrderController extends Controller
                 return show_msg(0, '酒店不能为空');
             }
 
-            $hotel = D("Hotel")->getHotelById($_POST['hotel_id']);
-
-            $data = [];
+            $data = Array();
             $orderId = $data['order_id'] = $_POST['order_id'];
             $data['hotel_id'] = $_POST['hotel_id'];
-            $data['hotel_name'] = $hotel['hotel_name'];
-            $data['hotel_number'] = $hotel['hotel_number'];
             $data['delivery_date'] = strtotime($_POST['delivery_date']);
             $data['update_time'] = time();
 
@@ -136,21 +133,16 @@ class OrderController extends Controller
                 for($i=0; $i<$num; ++$i) {
                     if($_POST['order_number'][$i]){
                         $detailData['order_id'] = $orderId;
+                        $detailData['hotel_id'] = $_POST['hotel_id'];
                         $detailData['update_time'] = time();
-                        $detailData['hotel_name'] = $hotel['hotel_name'];
-                        $detailData['hotel_number'] = $hotel['hotel_number'];
+
                         $detailData['depart_id'] = $departID = $_POST['depart_id'][$i];
                         $detailData["depart_number_$departID"] = $_POST['order_number'][$i];
 
                         $detailData['category_id'] = $_POST['category_id'][$i];
-                        $category = D("Category")->getCategoryById($_POST['category_id'][$i]);
-                        $detailData['category_name'] = $category['category_name'];
 
                         $detailData['food_id'] = $_POST['food_id'][$i];
-                        $food = D("Food")->getFoodById($_POST['food_id'][$i]);
                         $detailData['food_price'] = $_POST['food_price'][$i];
-                        $detailData['food_name'] = $food['food_name'];
-                        $detailData['food_unit'] = $food['food_unit'];
 
                         $detailData['order_number'] = $_POST['order_number'][$i];
                         $detailData['delivery_number'] = $_POST['delivery_number'][$i];
@@ -220,7 +212,7 @@ class OrderController extends Controller
     public function check(){
         $orderId = $_GET['id'];
 
-        $order = D("Order")->find($orderId);
+        $order = D("Order")->getOrderById($orderId);
         $this->assign('order', $order);
 
         $countPrint = D("Count")->getCountPrintList($orderId);
@@ -236,6 +228,25 @@ class OrderController extends Controller
             if ($_POST) {
                 $id = $_POST['id'];
                 $status = $_POST['status'];
+
+                // 标记已配送时，检查配送数量是否都填了
+                if($status == 2){
+                    $res = D("Detail")->getDetailByOrderId($id);
+                    foreach($res as $value){
+                        if($value['delivery_number'] == ""){
+                            return show_msg(0, '需填写完整的配送数量才能进行标记');
+                        }
+                    }
+                }
+
+                // 终结订单时，确保订单状态为已配送
+                if($status == 3){
+                    $res = D("Order")->find($id);
+                    if($res['status'] < 2){
+                        return show_msg(0, '只有状态为已配送的订单才能进行终结操作');
+                    }
+                }
+
                 // 执行数据更新操作
                 $res = D("Order")->updateStatusById($id, $status);
                 if ($res) {

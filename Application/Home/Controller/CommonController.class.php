@@ -21,7 +21,7 @@ class CommonController extends Controller {
         $isLogin = $this->isLogin();
         if(!$isLogin) {
             // 跳转到登录页面
-            $this->redirect('/peihuo/index.php?c=login');
+            $this->redirect('/Home/Login');
         }
     }
 

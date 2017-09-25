@@ -24,7 +24,8 @@
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
 
-<title>添加订单</title>
+<title>添加订单
+</title>
 </head>
 <body>
 <div class="page-container">
@@ -300,6 +301,9 @@
                     number: true
                 },
                 'order_number[]': {
+                    number: true
+                },
+                'delivery_number[]': {
                     number: true
                 },
             },

@@ -15,4 +15,5 @@ function get_order_sn()
 //echo "<br>";
 
 //echo strtotime('2017-09 +1 month');
-echo md5('258456' . 'pei_huo');
+//echo md5('258456' . 'pei_huo');
+print_r($_SESSION['adminUser']);

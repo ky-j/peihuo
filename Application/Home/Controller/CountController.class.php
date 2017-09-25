@@ -5,6 +5,7 @@ use Think\Controller;
 
 class CountController extends Controller
 {
+    // 打印 - 每日菜品清单
     public function foodbyday()
     {
         $categoryId = $_GET['category_id'];
@@ -39,6 +40,7 @@ class CountController extends Controller
         $this->display();
     }
 
+    // 打印 - 酒店订单
     public function hotelbysn()
     {
         $orderSn = $_GET['order_sn'];
@@ -58,6 +60,7 @@ class CountController extends Controller
         $this->display();
     }
 
+    // 数据统计 - 酒店
     public function hotelbymonth()
     {
         $hotelId = $_GET['hotel_id'];
@@ -90,7 +93,7 @@ class CountController extends Controller
         $this->display();
     }
 
-    // 所有菜品按月/按日进行统计
+    // 数据统计 - 所有菜品按月/按日进行统计
     public function foodbytime()
     {
         $countWay = $_GET['count_way'];

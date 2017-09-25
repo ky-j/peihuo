@@ -36,24 +36,20 @@ class DetailModel extends Model
         return $this->_db->field('food_name,SUM(order_number) AS total ')->where($data)->order('detail_id asc')->group('food_name')->select();
     }
 
-    // 根据id获取数据
+    // 根据id获取数据，联表Food查询
     public function getDetailByOrderId($orderId = '', $departID = '')
     {
         if ($departID) {
             $condition = array(
                 'depart_id' => "$departID",
                 'order_id' =>  "$orderId",
-                'status' => array('neq', -1),
             );
-            $res = $this->_db->where($condition)->order('detail_id asc')->select();
-//            echo $this->_db->getLastSql(); // 使用getLastSql来打印sql
         } else {
             $condition = array(
                 'order_id' =>  "$orderId",
-                'status' => array('neq', -1),
             );
-            $res = $this->_db->where($condition)->order('detail_id asc')->select();
         }
+        $res = $this->_db->alias('d')->field('d.*, food_unit')->join('LEFT JOIN __FOOD__ f ON d.food_id = f.food_id')->where($condition)->order('detail_id asc')->select();
         return $res;
     }
 

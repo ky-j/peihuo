@@ -1,43 +1,35 @@
 <include file="Public/_meta" />
 
-<title>用户管理</title>
+<title>操作日志</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统相关 <span class="c-gray en">&gt;</span> 用户管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统相关 <span class="c-gray en">&gt;</span> 操作日志 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
     <!--<div class="text-c">-->
     <!--<input type="text" name="" id="" placeholder=" 用户名称" style="width:250px" class="input-text">-->
     <!--<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜用户</button>-->
     <!--</div>-->
-    <div class="cl pd-5 bg-1 bk-gray"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="layer_show('添加用户','index.php?c=admin&a=add','',400)" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a></span> <span class="r">共有数据：<strong>{$total}</strong> 条</span> </div>
-    <div class="mt-20">
+    <!--<div class="cl pd-5 bg-1 bk-gray"> <span class="l">&lt;!&ndash;<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> &ndash;&gt;<a class="btn btn-primary radius" onclick="layer_show('添加用户','index.php?c=admin&a=add','',400)" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a></span> <span class="r">共有数据：<strong>{$total}</strong> 条</span> </div>-->
+    <div class="mt-10">
         <table class="table table-border table-bordered table-bg table-hover table-sort peihuo-table">
             <thead>
             <tr class="text-c">
                 <!--<th width="40"><input name="" type="checkbox" value=""></th>-->
                 <th width="80">ID</th>
                 <th width="200">用户名</th>
-                <th width="200">真实姓名</th>
-                <th width="200">手机号码</th>
-                <th width="150">最后登录时间</th>
-                <th width="150">操作更新时间</th>
-                <th>操作</th>
+                <th>操作日志</th>
+                <th width="200">操作时间</th>
             </tr>
             </thead>
             <tbody>
             <volist name="admins" id="vo">
                 <tr class="text-c">
                     <!--<td><input name="" type="checkbox" value=""></td>-->
-                    <td>{$vo.admin_id}</td>
-                    <td>{$vo.username}</td>
-                    <td>{$vo.realname}</td>
+                    <td>{$vo.log_id}</td>
+                    <td>{$vo.admin_user}</td>
+                    <td>{$vo.log_info}</td>
                     <td>{$vo.mobile}</td>
-                    <td>{$vo.lastlogintime|date="Y-m-d H:i",###}</td>
-                    <td>{$vo.update_time|date="Y-m-d H:i",###}</td>
-                    <td class="td-manage">
-                        <button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="{$vo.admin_id}" attr-a="admin" attr-message="修改" onclick="layer_show('修改用户','index.php?c=admin&a=edit&id={$vo.admin_id}','',400)">修改</button>
-
-                        <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="{$vo.admin_id}" attr-a="admin" attr-message="删除">删除</button></td>
+                    <td>{$vo.log_time|date="Y-m-d H:i",###}</td>
                 </tr>
             </volist>
             </tbody>

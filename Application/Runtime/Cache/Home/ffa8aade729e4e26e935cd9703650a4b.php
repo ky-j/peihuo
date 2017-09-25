@@ -29,8 +29,7 @@
 <body>
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 订单管理 <span class="c-gray en">&gt;</span> 订单列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
-
-    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="order_show('添加订单','index.php?c=order&a=add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加订单</a></span> <span class="r">共有数据：<strong><?php echo ($total); ?></strong> 条</span> </div>
+    <div class="cl pd-5 bg-1 bk-gray"> <span class="l"><!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> --><a class="btn btn-primary radius" onclick="order_show('添加订单','index.php?c=order&a=add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加订单</a></span> <span class="r">共有数据：<strong><?php echo ($total); ?></strong> 条</span> </div>
     <div class="mt-20">
         <table class="table table-border table-bordered table-bg table-hover table-sort peihuo-table">
             <thead>
@@ -56,7 +55,16 @@
                 <!--<td></td>-->
                 <td><?php echo (orderStatus($vo["status"])); ?></td>
                 <td><?php echo (date("Y-m-d H:i",$vo["update_time"])); ?></td>
-                <td class="td-manage"><button class="btn btn-primary size-MINI radius peihuo-check" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="查看" onclick="order_show('查看订单','index.php?c=order&a=check&id=<?php echo ($vo["order_id"]); ?>')">查看</button> <span class="pipe">|</span> <button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="修改" onclick="order_show('修改订单','index.php?c=order&a=edit&id=<?php echo ($vo["order_id"]); ?>')">修改</button> <span class="pipe">|</span> <button class="btn btn-success size-MINI radius peihuo-delivery" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="配送">标记配送</button> <span class="pipe">|</span> <button class="btn btn-warning size-MINI radius peihuo-complete" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="终结">终结</button> <span class="pipe">|</span> <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="删除">删除</button></td>
+                <td class="td-manage">
+                    <button class="btn btn-primary size-MINI radius peihuo-check" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="查看" onclick="order_show('查看订单','index.php?c=order&a=check&id=<?php echo ($vo["order_id"]); ?>')">查看</button>
+                    <span class="pipe">|</span>
+                    <button class="btn btn-secondary size-MINI radius peihuo-edit <?php if($vo[status] > 2): ?>disabled<?php endif; ?>" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="修改" onclick="order_show('修改订单','index.php?c=order&a=edit&id=<?php echo ($vo["order_id"]); ?>')">修改</button>
+                    <span class="pipe">|</span>
+                    <button class="btn btn-success size-MINI radius peihuo-delivery <?php if($vo[status] > 1): ?>disabled<?php endif; ?>" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="配送">标记配送</button>
+                    <span class="pipe">|</span>
+                    <button class="btn btn-warning size-MINI radius peihuo-complete <?php if($vo[status] > 2): ?>disabled<?php endif; ?>" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="终结">终结</button>
+                    <span class="pipe">|</span>
+                    <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="删除">删除</button></td>
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
         </table>

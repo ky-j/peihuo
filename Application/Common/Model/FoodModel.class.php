@@ -114,7 +114,7 @@ class FoodModel extends Model
     // 获取菜品顶级分类
     public function getFoodCategory() {
         $data = array(
-            'status' => 1,
+            'status' => array('neq', -1),
             'category_id' => 0,
         );
 
@@ -127,7 +127,7 @@ class FoodModel extends Model
     // 根据分类ID获取菜品数据
     public function getFoodData($categoryID){
         $data = array(
-            'status' => 1,
+            'status' => array('neq', -1),
             'category_id' => $categoryID,
         );
         $res = $this->_db->where($data)

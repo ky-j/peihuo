@@ -15,24 +15,37 @@ class OrderModel extends Model
         $this->_db = M('order');
     }
 
-    // 获取列表
+    // 获取订单列表，联表Hotel查询
     public function getOrderList()
-    {
-        $data = array(
-            'status' => array('neq', -1),
-        );
-        return $this->_db->where($data)->order('order_id desc')->select();
-    }
-
-    // 获取订单酒店列表
-    public function getOrderHotelList()
     {
         $data = array(
             'o.status' => array('neq', -1),
         );
-        return $this->_db->alias('o')->field('o.*, h.hotel_name, h.hotel_number')->join('LEFT JOIN __HOTEL__ h ON o.hotel_id = h.hotel_id')->where($data)->select();
-        echo $this->_db->getLastSql(); // 使用getLastSql来打印sql
+        return $this->_db->alias('o')->field('o.*, hotel_name, hotel_number')->join('LEFT JOIN __HOTEL__ h ON o.hotel_id = h.hotel_id')->where($data)->order('order_id asc')->select();
     }
+
+    // 根据ID获取数据，联表Hotel查询
+    public function getOrderById($id)
+    {
+        if (!$id || !is_numeric($id)) {
+            return array();
+        }
+        $data = array(
+            'o.status' => array('neq', -1),
+            'order_id' => $id,
+        );
+        return $this->_db->alias('o')->field('o.*, hotel_name, hotel_number')->join('LEFT JOIN __HOTEL__ h ON o.hotel_id = h.hotel_id')->where($data)->find();
+    }
+
+    // 获取订单酒店列表
+//    public function getOrderHotelList()
+//    {
+//        $data = array(
+//            'o.status' => array('neq', -1),
+//        );
+//        return $this->_db->alias('o')->field('o.*, h.hotel_name, h.hotel_number')->join('LEFT JOIN __HOTEL__ h ON o.hotel_id = h.hotel_id')->where($data)->select();
+////        echo $this->_db->getLastSql(); // 使用getLastSql来打印sql
+//    }
 
     // 更新状态值
     public function updateStatusById($id, $status)
@@ -79,23 +92,32 @@ class OrderModel extends Model
                 'order_id' => array('neq', $orderID),
                 'status' => array('neq', -1),
             );
-            $res = $this->_db->where($condition)->find();
-//            echo $this->_db->getLastSql(); // 使用getLastSql来打印sql
         } else {
             $condition = array(
                 'order_name' => "$orderName",
                 'status' => array('neq', -1),
             );
-            $res = $this->_db->where($condition)->find();
         }
+        $res = $this->_db->where($condition)->find();
         return $res;
     }
 
-    // 根据订单编号获取订单
+    // 根据订单编号获取订单，联表Hotel查询
     public function getOrderBySn($orderSn)
     {
         $condition = array(
             'order_sn' => "$orderSn",
+            'o.status' => array('neq', -1),
+        );
+        $res = $this->_db->alias('o')->field('o.*, hotel_name, hotel_number')->join('LEFT JOIN __HOTEL__ h ON o.hotel_id = h.hotel_id')->where($condition)->find();
+        return $res;
+    }
+
+    // 根据酒店Id获取订单
+    public function getOrderByHotelId($HotelId)
+    {
+        $condition = array(
+            'hotel_id' => "$HotelId",
             'status' => array('neq', -1),
         );
         $res = $this->_db->where($condition)->find();

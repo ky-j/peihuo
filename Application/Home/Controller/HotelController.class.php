@@ -96,6 +96,13 @@ class HotelController extends Controller
             if ($_POST) {
                 $id = $_POST['id'];
                 $status = $_POST['status'];
+
+                // 判断酒店下是否有订单数据
+                $res = D("Order")->getOrderByHotelId($id);
+                if($res){
+                    return show_msg(0, '该酒店下有订单数据，无法删除');
+                }
+
                 // 执行数据更新操作
                 $res = D("Hotel")->updateStatusById($id, $status);
                 if ($res) {

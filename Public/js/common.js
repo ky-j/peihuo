@@ -52,7 +52,7 @@ $('.peihuo-table #singcms-edit').on('click',function(){
 
 
 /**
- * 删除操作JS
+ * 删除记录操作JS
  */
 $('.peihuo-table .peihuo-delete').on('click',function(){
     var id = $(this).attr('attr-id');
@@ -83,37 +83,75 @@ $('.peihuo-table .peihuo-delete').on('click',function(){
             },
         });
     });
-
-    // layer.open({
-    //     type : 0,
-    //     title : '是否提交？',
-    //     btn: ['yes', 'no'],
-    //     icon : 3,
-    //     closeBtn : 2,
-    //     content: "是否确定"+message,
-    //     scrollbar: true,
-    //     yes: function(){
-    //         // 执行相关跳转
-    //         todelete(url, data);
-    //     },
-    //
-    // });
-
 });
-function todelete(url, data) {
-    $.post(
-        url,
-        data,
-        function(s){
-            if(s.status == 1) {
-                return dialog.success(s.message,'');
-                // 跳转到相关页面
-            }else {
-                return dialog.error(s.message);
-            }
-        }
-        ,"JSON");
-}
+
+/**
+ * 标记配送记录操作JS
+ */
+$('.peihuo-table .peihuo-delivery').on('click',function(){
+    var id = $(this).attr('attr-id');
+    var a = $(this).attr('attr-a');
+    var message = $(this).attr('attr-message');
+    var url = SCOPE.set_status_url;
+
+    data = {};
+    data['id'] = id;
+    data['status'] = 2;
+
+    var confirmMessage = '确认要标记ID为'+id+'的记录的状态为已配送吗？';
+    var that = this;
+    layer.confirm(confirmMessage,function(index){
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: data,
+            dataType: 'json',
+            success: function(result){
+                if(result.status === 1){
+                    // $(that).parents("tr").remove();
+                    dialog.msg('标记成功！');
+                    location.reload();
+                }else{
+                    dialog.error(result.message);
+                }
+            },
+        });
+    });
+});
+
+/**
+ * 终结记录操作JS
+ */
+$('.peihuo-table .peihuo-complete').on('click',function(){
+    var id = $(this).attr('attr-id');
+    var a = $(this).attr('attr-a');
+    var message = $(this).attr('attr-message');
+    var url = SCOPE.set_status_url;
+
+    data = {};
+    data['id'] = id;
+    data['status'] = 3;
+
+    var confirmMessage = '确认要终结ID为'+id+'的记录吗？';
+    var that = this;
+    layer.confirm(confirmMessage,function(index){
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: data,
+            dataType: 'json',
+            success: function(result){
+                if(result.status === 1){
+                    // $(that).parents("tr").remove();
+                    dialog.msg('终结成功！');
+                    location.reload();
+                }else{
+                    dialog.error(result.message);
+                }
+            },
+        });
+    });
+});
 
 /**
  * 排序操作

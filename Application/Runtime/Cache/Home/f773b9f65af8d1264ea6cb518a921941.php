@@ -552,6 +552,8 @@
 //        if(parseInt($(".order-number").val()) == $(".order-number").val()){
 //            $(".order-number").val(parseInt($(".order-number").val()))
 //        }
+
+        // 针对数据库为decimal类型的数据进行格式化
         $(".order-number").each(function(index) {
             if ($(this).val() == parseInt($(this).val())) {
                 $(this).val(parseInt($(this).val()));
@@ -559,14 +561,14 @@
         })
 
 
-        $(".delivery-number").each(function(index) {
-            if (!parseInt($(this).val())) {
-                $(this).val('');
-            }
-            if ($(this).val() == parseInt($(this).val())) {
-                $(this).val(parseInt($(this).val()));
-            }
-        })
+//        $(".delivery-number").each(function(index) {
+//            if (!parseInt($(this).val())) {
+//                $(this).val('');
+//            }
+//            if ($(this).val() == parseInt($(this).val())) {
+//                $(this).val(parseInt($(this).val()));
+//            }
+//        })
 
 
         $("#peihuo-form").validate({
@@ -581,6 +583,9 @@
                     number: true
                 },
                 'order_number[]': {
+                    number: true
+                },
+                'delivery_number[]': {
                     number: true
                 },
             },

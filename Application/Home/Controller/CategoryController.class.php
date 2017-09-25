@@ -83,6 +83,13 @@ class CategoryController extends Controller
             if ($_POST) {
                 $id = $_POST['id'];
                 $status = $_POST['status'];
+
+                // 判断分类下是否有数据
+                $res = D("Food")->getFoodData($id);
+                if($res){
+                    return show_msg(0, '该菜品分类下有菜品数据，无法删除');
+                }
+
                 // 执行数据更新操作
                 $res = D("Category")->updateStatusById($id, $status);
                 if ($res) {

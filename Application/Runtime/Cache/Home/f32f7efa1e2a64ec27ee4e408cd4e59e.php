@@ -52,13 +52,13 @@
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 默认单价：</label>
+            <label class="form-label col-xs-4 col-sm-3">默认单价：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <input type="text" class="input-text" value="<?php echo ($food["food_price"]); ?>" placeholder="不超过小数点两位，如7.85" id="food_price" name="food_price">
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span> 默认单位：</label>
+            <label class="form-label col-xs-4 col-sm-3">默认单位：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <input type="text" class="input-text" value="<?php echo ($food["food_unit"]); ?>" placeholder="如：斤、瓶、箱" id="food_unit" name="food_unit">
             </div>
@@ -96,12 +96,7 @@
                     digits:true
                 },
                 food_price:{
-                    required:true,
                     number:true
-                },
-                food_unit:{
-                    required:true,
-                    rangelength:[1,10]
                 },
             },
             onkeyup:false,

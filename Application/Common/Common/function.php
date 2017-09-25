@@ -26,9 +26,9 @@ function orderStatus($status) {
     if($status == 1) {
         $str = '未配送';
     }elseif($status == 2) {
-        $str = '已配送';
+        $str = '<span class="c-success">已配送</span>';
     }elseif($status == 3) {
-        $str = '已终结';
+        $str = '<span class="c-orange">已终结</span>';
     }
     return $str;
 }

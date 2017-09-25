@@ -31,37 +31,44 @@ class CountModel extends Model
             throw_exception("orderId不合法");
         }
         $data = array(
-            'status' => array('neq', -1),
             'order_id' => $orderId,
         );
-        return $this->_db->field('food_name,
+        return $this->_db->alias('c')
+            ->field('food_name,
         SUM(depart_number_1) AS total1,
         SUM(depart_number_2) AS total2,
 	    SUM(depart_number_3) AS total3,
 	    SUM(depart_number_4) AS total4,
 	    SUM(depart_number_5) AS total5,
-	    SUM(order_number) AS total')->where($data)->order('count_id asc')->group('food_name')->select();
+	    SUM(order_number) AS total')
+            ->join('LEFT JOIN __FOOD__ f ON c.food_id = f.food_id')
+//            ->join('LEFT JOIN __HOTEL__ h ON c.hotel_id = h.hotel_id')
+            ->where($data)->order('count_id asc')->group('c.food_id')->select();
     }
 
-    // 获取每日菜品清单，按菜品和配送日期
+    // 获取每日菜品清单，联表hotel、order查询、按菜品和配送日期
     public function getFoodByDate($foodId, $deliveryDate)
     {
         if (!$foodId || !is_numeric($foodId)) {
             throw_exception("foodId不合法");
         }
         $data = array(
-            'status' => array('neq', -1),
+            'o.status' => array('neq', -1),
             'food_id' => $foodId,
             'delivery_date' => $deliveryDate,
         );
-        return $this->_db->field('hotel_name,
+        return $this->_db->alias('c')
+            ->field('hotel_name,
         hotel_number,
         SUM(depart_number_1) AS total1,
         SUM(depart_number_2) AS total2,
 	    SUM(depart_number_3) AS total3,
 	    SUM(depart_number_4) AS total4,
 	    SUM(depart_number_5) AS total5,
-	    SUM(order_number) AS total')->join('LEFT JOIN __ORDER__ ON __COUNT__.order_id = __ORDER__.order_id')->where($data)->order('count_id asc')->group('food_name,hotel_name')->select();
+	    SUM(order_number) AS total')
+            ->join('LEFT JOIN __HOTEL__ h ON c.hotel_id = h.hotel_id')
+            ->join('LEFT JOIN __ORDER__ o ON c.order_id = o.order_id')
+            ->where($data)->order('count_id asc')->group('food_id,c.hotel_id')->select();
     }
 
     // 按月统计酒店菜品清单
@@ -71,71 +78,89 @@ class CountModel extends Model
             throw_exception("hotelId不合法");
         }
         $data = array(
-            'status' => array('neq', -1),
-            'hotel_id' => $hotelId,
+//            'status' => array('neq', -1),
+            'o.status' => array('eq', 3),
+            'o.hotel_id' => $hotelId,
             'delivery_date' => array(
                 array('egt', $startDate),
                 array('lt', $endDate)
             ),
         );
-        return $this->_db->field('food_name,
+        return $this->_db->alias('c')
+            ->field('food_name,
         food_unit,
         SUM(order_number) AS total1,
-        SUM(delivery_number) AS total2')->join('LEFT JOIN __ORDER__ ON __COUNT__.order_id = __ORDER__.order_id')->where($data)->order('count_id asc')->group('food_name')->select();
+        SUM(delivery_number) AS total2')
+            ->join('LEFT JOIN __FOOD__ f ON c.food_id = f.food_id')
+            ->join('LEFT JOIN __ORDER__ o ON c.order_id = o.order_id')
+            ->where($data)->order('count_id asc')->group('c.food_id')->select();
     }
 
     // 按月、日统计所有菜品清单
-    public function getFoodByTime($startDate, $endDate=0)
+    public function getFoodByTime($startDate, $endDate = 0)
     {
-        if($endDate){// 按月
+        if ($endDate) {// 按月
             $data = array(
-                'status' => array('neq', -1),
+//                'status' => array('neq', -1),
+                'o.status' => array('eq', 3),
                 'delivery_date' => array(
                     array('egt', $startDate),
                     array('lt', $endDate)
                 ),
             );
-        }else{ // 按日
+        } else { // 按日
             $data = array(
-                'status' => array('neq', -1),
+//                'status' => array('neq', -1),
+                'o.status' => array('eq', 3),
                 'delivery_date' => $startDate,
             );
         }
 
-        return $this->_db->field('food_name,
+        return $this->_db->alias('c')
+            ->field('food_name,
         food_unit,
         SUM(order_number) AS total1,
-        SUM(delivery_number) AS total2')->join('LEFT JOIN __ORDER__ ON __COUNT__.order_id = __ORDER__.order_id')->where($data)->order('count_id asc')->group('food_name')->select();
+        SUM(delivery_number) AS total2')
+            ->join('LEFT JOIN __FOOD__ f ON c.food_id = f.food_id')
+            ->join('LEFT JOIN __ORDER__ o ON c.order_id = o.order_id')
+            ->where($data)->order('count_id asc')->group('c.food_id')->select();
     }
 
     // 按月、日统计单个菜品清单；按酒店名和配送日期
-    public function getOneFoodByTime($foodId, $startDate, $endDate=0)
+    public function getOneFoodByTime($foodId, $startDate, $endDate = 0)
     {
         if (!$foodId || !is_numeric($foodId)) {
             throw_exception("foodId不合法");
         }
-        if($endDate){// 按月
+        if ($endDate) {// 按月
             $data = array(
-                'status' => array('neq', -1),
-                'food_id' => $foodId,
+//                'status' => array('neq', -1),
+                'o.status' => array('eq', 3),
+                'c.food_id' => $foodId,
                 'delivery_date' => array(
                     array('egt', $startDate),
                     array('lt', $endDate)
                 ),
             );
-        }else{ // 按日
+        } else { // 按日
             $data = array(
-                'status' => array('neq', -1),
-                'food_id' => $foodId,
+//                'status' => array('neq', -1),
+                'o.status' => array('eq', 3),
+                'c.food_id' => $foodId,
                 'delivery_date' => $startDate,
             );
         }
 
-        return $this->_db->field('hotel_name,
+        return $this->_db->alias('c')
+            ->field('hotel_name,
         delivery_date,
         food_unit,
         SUM(order_number) AS total1,
-        SUM(delivery_number) AS total2')->join('LEFT JOIN __ORDER__ ON __COUNT__.order_id = __ORDER__.order_id')->where($data)->order('delivery_date asc')->group('hotel_name, delivery_date')->select();
+        SUM(delivery_number) AS total2')
+            ->join('LEFT JOIN __ORDER__ o ON c.order_id = o.order_id')
+            ->join('LEFT JOIN __HOTEL__ h ON c.hotel_id = h.hotel_id')
+            ->join('LEFT JOIN __FOOD__ f ON c.food_id = f.food_id')
+            ->where($data)->order('delivery_date asc')->group('c.hotel_id, delivery_date')->select();
     }
 
     // 根据id获取数据
