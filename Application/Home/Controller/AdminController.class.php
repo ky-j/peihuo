@@ -43,6 +43,11 @@ class AdminController extends CommonController {
             if(!$id) {
                 return show_msg(0, '新增失败');
             }
+
+            // 添加日志
+            $log = "新增用户：用户ID为$id";
+            D("Log")->insertLog($log);
+
             return show_msg(1, '新增成功');
         }
         $this->display();
@@ -53,7 +58,7 @@ class AdminController extends CommonController {
             return show_msg(0,'初始管理员不允许删除');
         }
         $data = array(
-            'admin_id'=>intval($_POST['id']),
+            'id'=>intval($_POST['id']),
             'status' => intval($_POST['status']),
         );
         return parent::setStatus($_POST,'Admin');
@@ -109,6 +114,11 @@ class AdminController extends CommonController {
             if($id === false) {
                 return show_msg(0, '配置失败');
             }
+
+            // 添加日志
+            $log = "修改用户信息：用户ID为$user[admin_id]";
+            D("Log")->insertLog($log);
+
             return show_msg(1, '配置成功');
         }catch(Exception $e) {
             return show_msg(0, $e->getMessage());

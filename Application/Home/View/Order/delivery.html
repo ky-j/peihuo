@@ -1,0 +1,425 @@
+<include file="Public/_meta"/>
+
+<title>配送情况</title>
+</head>
+<body>
+<div class="page-container">
+    <form action="index.php?c=order&a=delivery" method="post" class="form form-horizontal" id="peihuo-form">
+        <input type="hidden" name="order_id" value="{$order.order_id}">
+        <div class="row cl">
+            <label class="form-label col-sm-2">订单编号：</label>
+            <label class="form-label col-sm-9" style="text-align: left">{$order.order_sn}</label>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-sm-2"><span class="c-red">*</span> 下单酒店：</label>
+            <div class="formControls col-sm-9">
+				<span class="select-box">
+				<select name="hotel_id" class="select" disabled>
+                    <option value="">-=请选择酒店=-</option>
+                     <foreach name="hotelList" item="hotel">
+                         <option value="{$hotel.hotel_id}" <if condition="$hotel['hotel_id'] eq $order['hotel_id']">selected="selected"</if>>{$hotel.hotel_name}</option>
+                     </foreach>
+				</select>
+				</span>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-sm-2"><span class="c-red">*</span> 配送日期：</label>
+            <div class="formControls col-sm-9">
+                <input type="text" onfocus="WdatePicker()" id="delivery_date" name="delivery_date"
+                       value="{$order.delivery_date|date='Y-m-d',###}"
+                class="input-text Wdate" disabled>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-sm-offset-2" style="padding: 0 15px">
+                <mark>以下数据只有全部填写配送数量才能提交，提交后订单状态自动改为“已配送”</mark>
+            </div>
+        </div>
+
+
+        <foreach name="list_1" item="zc">
+            <div class="row cl">
+                <label class="form-label col-sm-2">中餐：</label>
+                <input type="hidden" name="depart_id[]" value="1">
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id" disabled>
+                    <option value="">-=请选择菜品分类=-</option>
+                    <foreach name="categoryList" item="cate">
+                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $zc['category_id']">selected="selected"</if>>{$cate.category_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id" disabled>
+                    <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}" <if condition="$food['food_id'] eq $zc['food_id']">selected="selected"</if>>{$food.food_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text order-add-input food-price" value="{$zc.food_price}" placeholder="单价" name="food_price[]" disabled> <span class="unit">元 / {$zc.food_unit}</span>
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text order-number" value="{$zc.order_number}" placeholder="下单数量"
+                           name="order_number[]" disabled>
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text delivery-number" value="{$zc.delivery_number}" placeholder="配送数量"
+                           name="delivery_number[]">
+                </div>
+            </div>
+        </foreach>
+
+        <notempty name="list_1">
+            <div class="row cl">
+                <div class="line col-sm-offset-1 col-sm-10"></div>
+            </div>
+        </notempty>
+
+        <foreach name="list_2" item="xc">
+            <div class="row cl">
+                <label class="form-label col-sm-2">西餐：</label>
+                <input type="hidden" name="depart_id[]" value="2">
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id" disabled>
+                    <option value="">-=请选择菜品分类=-</option>
+                    <foreach name="categoryList" item="cate">
+                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $xc['category_id']">selected="selected"</if>>{$cate.category_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id" disabled>
+                    <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}" <if condition="$food['food_id'] eq $xc['food_id']">selected="selected"</if>>{$food.food_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text order-add-input food-price" value="{$xc.food_price}" placeholder="单价"
+                           name="food_price[]" disabled> <span class="unit">元 / {$xc.food_unit}</span>
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text order-number" value="{$xc.order_number}" placeholder="下单数量"
+                           name="order_number[]" disabled>
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text delivery-number" value="{$xc.delivery_number}" placeholder="配送数量"
+                           name="delivery_number[]">
+                </div>
+            </div>
+        </foreach>
+
+        <notempty name="list_2">
+            <div class="row cl">
+                <div class="line col-sm-offset-1 col-sm-10"></div>
+            </div>
+        </notempty>
+
+        <foreach name="list_3" item="rbll">
+            <div class="row cl">
+                <label class="form-label col-sm-2">日本料理：</label>
+                <input type="hidden" name="depart_id[]" value="3">
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id" disabled>
+                    <option value="">-=请选择菜品分类=-</option>
+                    <foreach name="categoryList" item="cate">
+                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $rbll['category_id']">selected="selected"</if>>{$cate.category_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id" disabled>
+                    <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}" <if condition="$food['food_id'] eq $rbll['food_id']">selected="selected"</if>>{$food.food_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text order-add-input food-price" value="{$rbll.food_price}" placeholder="单价"
+                           name="food_price[]" disabled> <span class="unit">元 / {$rbll.food_unit}</span>
+                </div>
+                <!--<div class="formControls col-sm-1">-->
+                <!--<input type="text" class="input-text unit" value="" placeholder="单位" name="food_unit[]">-->
+                <!--</div>-->
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text order-number" value="{$rbll.order_number}" placeholder="下单数量"
+                           name="order_number[]" disabled>
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text delivery-number" value="{$rbll.delivery_number}" placeholder="配送数量"
+                           name="delivery_number[]">
+                </div>
+            </div>
+        </foreach>
+
+        <notempty name="list_3">
+            <div class="row cl">
+                <div class="line col-sm-offset-1 col-sm-10"></div>
+            </div>
+        </notempty>
+
+        <foreach name="list_4" item="dx">
+            <div class="row cl">
+                <label class="form-label col-sm-2">点心：</label>
+                <input type="hidden" name="depart_id[]" value="4">
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id" disabled>
+                    <option value="">-=请选择菜品分类=-</option>
+                    <foreach name="categoryList" item="cate">
+                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $dx['category_id']">selected="selected"</if>>{$cate.category_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id" disabled>
+                    <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}" <if condition="$food['food_id'] eq $dx['food_id']">selected="selected"</if>>{$food.food_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text order-add-input food-price" value="{$dx.food_price}" placeholder="单价"
+                           name="food_price[]" disabled> <span class="unit">元 / {$dx.food_unit}</span>
+                </div>
+                <!--<div class="formControls col-sm-1">-->
+                <!--<input type="text" class="input-text unit" value="" placeholder="单位" name="food_unit[]">-->
+                <!--</div>-->
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text order-number" value="{$dx.order_number}" placeholder="下单数量"
+                           name="order_number[]" disabled>
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text delivery-number" value="{$dx.delivery_number}" placeholder="配送数量"
+                           name="delivery_number[]">
+                </div>
+            </div>
+        </foreach>
+
+        <notempty name="list_4">
+            <div class="row cl">
+                <div class="line col-sm-offset-1 col-sm-10"></div>
+            </div>
+        </notempty>
+
+        <foreach name="list_5" item="wb">
+            <div class="row cl">
+                <label class="form-label col-sm-2">味部：</label>
+                <input type="hidden" name="depart_id[]" value="5">
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="category_id[]" class="select category-id" disabled>
+                    <option value="">-=请选择菜品分类=-</option>
+                    <foreach name="categoryList" item="cate">
+                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $wb['category_id']">selected="selected"</if>>{$cate.category_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+				<span class="select-box">
+				<select name="food_id[]" class="select food-id" disabled>
+                    <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}" <if condition="$food['food_id'] eq $wb['food_id']">selected="selected"</if>>{$food.food_name}</option>
+                    </foreach>
+				</select>
+				</span>
+                </div>
+                <div class="formControls col-sm-2">
+                    <input type="text" class="input-text order-add-input food-price" value="{$wb.food_price}" placeholder="单价"
+                           name="food_price[]" disabled> <span class="unit">元 / {$wb.food_unit}</span>
+                </div>
+                <!--<div class="formControls col-sm-1">-->
+                <!--<input type="text" class="input-text unit" value="" placeholder="单位" name="food_unit[]">-->
+                <!--</div>-->
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text order-number" value="{$wb.order_number}" placeholder="下单数量"
+                           name="order_number[]" disabled>
+                </div>
+                <div class="formControls col-sm-1">
+                    <input type="text" class="input-text delivery-number" value="{$wb.delivery_number}" placeholder="配送数量"
+                           name="delivery_number[]">
+                </div>
+            </div>
+        </foreach>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</div>
+
+<include file="Public/_footer"/>
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+    $(function () {
+//        if(parseInt($(".order-number").val()) == $(".order-number").val()){
+//            $(".order-number").val(parseInt($(".order-number").val()))
+//        }
+
+        // 针对数据库为decimal类型的数据进行格式化
+        $(".order-number").each(function(index) {
+            if ($(this).val() == parseInt($(this).val())) {
+                $(this).val(parseInt($(this).val()));
+            }
+        })
+
+
+//        $(".delivery-number").each(function(index) {
+//            if (!parseInt($(this).val())) {
+//                $(this).val('');
+//            }
+//            if ($(this).val() == parseInt($(this).val())) {
+//                $(this).val(parseInt($(this).val()));
+//            }
+//        })
+
+
+        $("#peihuo-form").validate({
+            rules: {
+                hotel_id: {
+                    required: true,
+                },
+                delivery_date: {
+                    required: true,
+                },
+                'food_price[]': {
+                    number: true
+                },
+                'order_number[]': {
+                    number: true
+                },
+                'delivery_number[]': {
+                    required: true,
+                    number: true
+                },
+            },
+            onkeyup: false,
+            success: "valid",
+            // 通过验证后运行的函数
+            submitHandler: function (form) {
+                $(":input").removeAttr("disabled");
+                $(form).ajaxSubmit({
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.status === 1) {
+                            dialog.msg("操作成功！");
+                            window.parent.location.reload();
+                        } else {
+                            dialog.error(data.message);
+                        }
+                    }
+                });
+            }
+        });
+
+        var foodData = {};
+
+        $(".category-id").change(function () {
+            var ele = $(this).parent().parent().parent();
+            var foodSelect = ele.find(".food-id");
+
+            foodSelect.html("");
+            $("<option value=''>-=请选择菜品=-</option>").appendTo(foodSelect);
+
+            var cateValue = $(this).val();
+            if (cateValue != "") {
+                var postData = {
+                    'category_id': cateValue
+                };
+                $.post('index.php?c=food&a=getFoodData', postData, function (result) {
+                    if (result.status == 1) {
+                        //成功
+                        //console.log(result.data);
+                        foodData = result.data;
+                        $.each(foodData, function (k, v) {
+                            $("<option value ='" + v['food_id'] + "'> " + v['food_name'] + "</option>").appendTo(foodSelect);
+                        });
+                    } else if (result.status == 0) {
+                        // 失败
+                        return dialog.error(result.message);
+                    }
+                }, "JSON");
+            }
+        });
+
+        $(".food-id").change(function () {
+            var ele = $(this).parent().parent().parent();
+            foodValue = $(this).val();
+
+            $.each(foodData, function (k, v) {
+                if (foodValue == v['food_id']) {
+                    ele.find('.food-price').val(v['food_price']);
+                    ele.find('.food-unit').val(v['food_unit']);
+                    ele.find('.unit').html("元 / " + v['food_unit']);
+                }
+            });
+        });
+
+        $(".add-item").on('click', function () {
+            var ele = $(this).parent().parent();
+            ele.find('.remove-item').removeClass('hide');
+            var copy = ele.clone(true);
+
+            ele.after(copy.addClass('hui-fadein'));
+            var newEle = ele.next();
+            var newCateSelect = newEle.find('.category-id');
+            newCateSelect.find("option[value='']").attr("selected",true);
+            var newFoodSelect = newEle.find('.food-id');
+            newFoodSelect.html('');
+            $("<option value=''>-=请选择菜品=-</option>").appendTo(newFoodSelect);
+            newEle.find('.food-price').val('');
+            newEle.find('.food-unit').val('');
+            newEle.find('.unit').html('');
+            newEle.find('.order-number').val('');
+            newEle.find('.delivery-number').val('');
+        })
+
+        $(".remove-item").on('click', function () {
+            var depart = $(this).attr('attr-depart');
+            var confirmMessage = '确认要删除该条' + depart + '记录吗？';
+            var ele = $(this).parent().parent();
+            layer.confirm(confirmMessage, function (index) {
+                layer.close(index);
+                ele.addClass('hui-bounceoutR');
+                setTimeout(function () {
+                    ele.remove();
+                }, 1000);
+            });
+        })
+
+    });
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

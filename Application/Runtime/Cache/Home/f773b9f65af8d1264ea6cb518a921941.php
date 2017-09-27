@@ -60,6 +60,17 @@
             </div>
         </div>
         <div class="row cl">
+            <label class="form-label col-sm-2"><span class="c-red">*</span> 订单状态：</label>
+            <div class="formControls col-sm-8">
+				<span class="select-box">
+				<select name="status" class="select">
+                    <option value="1" <?php if($order['status'] == 1): ?>selected="selected"<?php endif; ?>>未配送</option>
+                    <option value="2" <?php if($order['status'] == 2): ?>selected="selected"<?php endif; ?>>已配送</option>
+				</select>
+				</span>
+            </div>
+        </div>
+        <div class="row cl">
             <div class="col-sm-offset-2" style="padding: 0 15px">
                 <mark>以下数据只有填写菜品和下单数量才能有效记录</mark>
             </div>

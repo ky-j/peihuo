@@ -88,36 +88,36 @@ $('.peihuo-table .peihuo-delete').on('click',function(){
 /**
  * 标记配送记录操作JS
  */
-$('.peihuo-table .peihuo-delivery').on('click',function(){
-    var id = $(this).attr('attr-id');
-    var a = $(this).attr('attr-a');
-    var message = $(this).attr('attr-message');
-    var url = SCOPE.set_status_url;
-
-    data = {};
-    data['id'] = id;
-    data['status'] = 2;
-
-    var confirmMessage = '确认要标记ID为'+id+'的记录的状态为已配送吗？';
-    var that = this;
-    layer.confirm(confirmMessage,function(index){
-        $.ajax({
-            type: 'POST',
-            url: url,
-            data: data,
-            dataType: 'json',
-            success: function(result){
-                if(result.status === 1){
-                    // $(that).parents("tr").remove();
-                    dialog.msg('标记成功！');
-                    location.reload();
-                }else{
-                    dialog.error(result.message);
-                }
-            },
-        });
-    });
-});
+// $('.peihuo-table .peihuo-delivery').on('click',function(){
+//     var id = $(this).attr('attr-id');
+//     var a = $(this).attr('attr-a');
+//     var message = $(this).attr('attr-message');
+//     var url = SCOPE.set_status_url;
+//
+//     data = {};
+//     data['id'] = id;
+//     data['status'] = 2;
+//
+//     var confirmMessage = '确认要标记ID为'+id+'的记录的状态为已配送吗？';
+//     var that = this;
+//     layer.confirm(confirmMessage,function(index){
+//         $.ajax({
+//             type: 'POST',
+//             url: url,
+//             data: data,
+//             dataType: 'json',
+//             success: function(result){
+//                 if(result.status === 1){
+//                     // $(that).parents("tr").remove();
+//                     dialog.msg('标记成功！');
+//                     location.reload();
+//                 }else{
+//                     dialog.error(result.message);
+//                 }
+//             },
+//         });
+//     });
+// });
 
 /**
  * 终结记录操作JS

@@ -33,6 +33,28 @@ function orderStatus($status) {
     return $str;
 }
 
+// 获取删除日志信息
+function getDeleteLog($models, $id, $status='-1') {
+    if($models == "Admin") {
+        $logs = "删除用户：用户ID为$id";
+    }elseif($models == "Hotel") {
+        $logs = "删除酒店：酒店ID为$id";
+    }elseif($models == "Category") {
+        $logs = "删除菜品分类：菜品分类ID为$id";
+    }elseif($models == "Food") {
+        $logs = "删除菜品：菜品ID为$id";
+    }elseif($models == "Order") {
+        if($status == '-1'){
+            $logs = "删除订单：订单ID为$id";
+        }elseif($status == '2'){
+            $logs = "标记订单为“已配送”状态：订单ID为$id";
+        }elseif($status == '3'){
+            $logs = "标记订单为“已终结”状态：订单ID为$id";
+        }
+    }
+    return $logs;
+}
+
 /**
  * 得到新订单号，参考ecshop
  * @return  string

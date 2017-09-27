@@ -3,7 +3,7 @@ namespace Home\Controller;
 
 use Think\Controller;
 
-class CategoryController extends Controller
+class CategoryController extends CommonController
 {
     public function index()
     {
@@ -41,6 +41,10 @@ class CategoryController extends Controller
 
             $categoryId = D("Category")->insert($data);
             if ($categoryId) {
+                // 添加日志
+                $log = "新增菜品分类：菜品分类ID为$categoryId";
+                D("Log")->insertLog($log);
+
                 return show_msg(1, '新增成功', $categoryId);
             }
             return show_msg(0, '新增失败', $categoryId);
@@ -70,6 +74,9 @@ class CategoryController extends Controller
             if($id === false) {
                 return show_msg(0,'更新失败');
             }
+            // 添加日志
+            $log = "修改菜品分类信息：菜品分类ID为$data[category_id]";
+            D("Log")->insertLog($log);
             return show_msg(1,'更新成功');
         }catch(Exception $e) {
             return show_msg(0,$e->getMessage());
@@ -79,30 +86,15 @@ class CategoryController extends Controller
 
     public function setStatus()
     {
-        try {
-            if ($_POST) {
-                $id = $_POST['id'];
-                $status = $_POST['status'];
-
-                // 判断分类下是否有数据
-                $res = D("Food")->getFoodData($id);
-                if($res){
-                    return show_msg(0, '该菜品分类下有菜品数据，无法删除');
-                }
-
-                // 执行数据更新操作
-                $res = D("Category")->updateStatusById($id, $status);
-                if ($res) {
-                    return show_msg(1, '操作成功');
-                } else {
-                    return show_msg(0, '操作失败');
-                }
-
-            }
-        } catch (Exception $e) {
-            return show_msg(0, $e->getMessage());
+        // 判断分类下是否有数据
+        $res = D("Food")->getFoodData(intval($_POST['id']));
+        if($res){
+            return show_msg(0, '该菜品分类下有菜品数据，无法删除');
         }
-
-        return show_msg(0, '没有提交的数据');
+        $data = array(
+            'id'=>intval($_POST['id']),
+            'status' => intval($_POST['status']),
+        );
+        return parent::setStatus($data,'Category');
     }
 }

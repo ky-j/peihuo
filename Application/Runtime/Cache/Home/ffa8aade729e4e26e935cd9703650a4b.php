@@ -60,7 +60,7 @@
                     <span class="pipe">|</span>
                     <button class="btn btn-secondary size-MINI radius peihuo-edit <?php if($vo[status] > 2): ?>disabled<?php endif; ?>" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="修改" onclick="order_show('修改订单','index.php?c=order&a=edit&id=<?php echo ($vo["order_id"]); ?>')">修改</button>
                     <span class="pipe">|</span>
-                    <button class="btn btn-success size-MINI radius peihuo-delivery <?php if($vo[status] > 1): ?>disabled<?php endif; ?>" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="配送">标记配送</button>
+                    <button class="btn btn-success size-MINI radius peihuo-delivery_x <?php if($vo[status] > 1): ?>disabled<?php endif; ?>" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="配送" onclick="order_show('配送情况','index.php?c=order&a=delivery&id=<?php echo ($vo["order_id"]); ?>')">配送情况</button>
                     <span class="pipe">|</span>
                     <button class="btn btn-warning size-MINI radius peihuo-complete <?php if($vo[status] > 2): ?>disabled<?php endif; ?>" attr-id="<?php echo ($vo["order_id"]); ?>" attr-a="order" attr-message="终结">终结</button>
                     <span class="pipe">|</span>

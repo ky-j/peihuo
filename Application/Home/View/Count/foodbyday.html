@@ -45,7 +45,7 @@
             <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜清单</button>
         </div>
     </form>
-    <div class="text-c mt-20"><mark>（数据只统计“已终结”订单）</mark></div>
+    <!--<div class="text-c mt-20"><mark>（数据只统计“已终结”订单）</mark></div>-->
     <div class="mt-30 print-box <notpresent name="info.foodName">hide</notpresent>">
         <div id="printArea">
             <div class="text-c"><h2>{$info.foodName}配送清单</h2></div>
@@ -63,7 +63,7 @@
                     <td>日料</td>
                     <td>点心</td>
                     <td>味部</td>
-                    <td>合计</td>
+                    <td>小计</td>
                     <td>备注</td>
                 </tr>
                 </thead>
@@ -76,15 +76,25 @@
                             <td>{$key+1}</td>
                             <td>{$data.hotel_name}</td>
                             <td>{$data.hotel_number}</td>
-                            <td class="format-number">{$data.total1}</td>
-                            <td class="format-number">{$data.total2}</td>
-                            <td class="format-number">{$data.total3}</td>
-                            <td class="format-number">{$data.total4}</td>
-                            <td class="format-number">{$data.total5}</td>
-                            <td class="format-number">{$data.total}</td>
+                            <td class="format-number zc-number">{$data.total1}</td>
+                            <td class="format-number xc-number">{$data.total2}</td>
+                            <td class="format-number rl-number">{$data.total3}</td>
+                            <td class="format-number dx-number">{$data.total4}</td>
+                            <td class="format-number wb-number">{$data.total5}</td>
+                            <td class="format-number all-number">{$data.total}</td>
                             <td></td>
                         </tr>
                     </foreach>
+                    <tr>
+                        <td colspan="3" class="text-c">合计</td>
+                        <td id="zcTotal"></td>
+                        <td id="xcTotal"></td>
+                        <td id="rlTotal"></td>
+                        <td id="dxTotal"></td>
+                        <td id="wbTotal"></td>
+                        <td id="allTotal"></td>
+                        <td></td>
+                    </tr>
                 </empty>
                 </tbody>
             </table>
@@ -158,6 +168,42 @@
                 $(this).html(parseInt($(this).html()));
             }
         });
+
+        var zcTotal = 0;
+        $(".zc-number").each(function(i){
+            zcTotal = zcTotal + parseFloat($(this).text());
+        });
+        $("#zcTotal").text(zcTotal);
+
+        var xcTotal = 0;
+        $(".xc-number").each(function(i){
+            xcTotal = xcTotal + parseFloat($(this).text());
+        });
+        $("#xcTotal").text(xcTotal);
+
+        var rlTotal = 0;
+        $(".rl-number").each(function(i){
+            rlTotal = rlTotal + parseFloat($(this).text());
+        });
+        $("#rlTotal").text(rlTotal);
+
+        var dxTotal = 0;
+        $(".dx-number").each(function(i){
+            dxTotal = dxTotal + parseFloat($(this).text());
+        });
+        $("#dxTotal").text(dxTotal);
+
+        var wbTotal = 0;
+        $(".wb-number").each(function(i){
+            wbTotal = wbTotal + parseFloat($(this).text());
+        });
+        $("#wbTotal").text(wbTotal);
+
+        var allTotal = 0;
+        $(".all-number").each(function(i){
+            allTotal = allTotal + parseFloat($(this).text());
+        });
+        $("#allTotal").text(allTotal);
 
         $("#printBtn").on("click",function () {
             $('#printArea').printThis({

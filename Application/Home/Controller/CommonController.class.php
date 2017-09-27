@@ -56,6 +56,10 @@ class CommonController extends Controller {
                 }
                 $res = D($models)->updateStatusById($id, $status);
                 if ($res) {
+                    // 添加日志
+                    $log = getDeleteLog($models, $id, $status);
+                    D("Log")->insertLog($log);
+
                     return show_msg(1, '操作成功');
                 } else {
                     return show_msg(0, '操作失败');

@@ -3,7 +3,7 @@ namespace Home\Controller;
 
 use Think\Controller;
 
-class HotelController extends Controller
+class HotelController extends CommonController
 {
     public function index()
     {
@@ -50,10 +50,13 @@ class HotelController extends Controller
 
             $hotelId = D("Hotel")->insert($data);
             if ($hotelId) {
+                // 添加日志
+                $log = "新增酒店：酒店ID为$hotelId";
+                D("Log")->insertLog($log);
+
                 return show_msg(1, '新增成功', $hotelId);
             }
             return show_msg(0, '新增失败', $hotelId);
-
         } else {
             $this->display();
         }
@@ -83,6 +86,11 @@ class HotelController extends Controller
             if($id === false) {
                 return show_msg(0,'更新失败');
             }
+
+            // 添加日志
+            $log = "修改酒店信息：酒店ID为$data[hotel_id]";
+            D("Log")->insertLog($log);
+
             return show_msg(1,'更新成功');
         }catch(Exception $e) {
             return show_msg(0,$e->getMessage());
@@ -92,30 +100,15 @@ class HotelController extends Controller
 
     public function setStatus()
     {
-        try {
-            if ($_POST) {
-                $id = $_POST['id'];
-                $status = $_POST['status'];
-
-                // 判断酒店下是否有订单数据
-                $res = D("Order")->getOrderByHotelId($id);
-                if($res){
-                    return show_msg(0, '该酒店下有订单数据，无法删除');
-                }
-
-                // 执行数据更新操作
-                $res = D("Hotel")->updateStatusById($id, $status);
-                if ($res) {
-                    return show_msg(1, '操作成功');
-                } else {
-                    return show_msg(0, '操作失败');
-                }
-
-            }
-        } catch (Exception $e) {
-            return show_msg(0, $e->getMessage());
+        // 判断酒店下是否有订单数据
+        $res = D("Order")->getOrderByHotelId(intval($_POST['id']));
+        if($res){
+            return show_msg(0, '该酒店下有订单数据，无法删除');
         }
-
-        return show_msg(0, '没有提交的数据');
+        $data = array(
+            'id'=>intval($_POST['id']),
+            'status' => intval($_POST['status']),
+        );
+        return parent::setStatus($data,'Hotel');
     }
 }

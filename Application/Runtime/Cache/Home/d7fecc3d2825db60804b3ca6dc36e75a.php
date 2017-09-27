@@ -40,18 +40,17 @@
             <tr class="text-c">
                 <!--<th width="40"><input name="" type="checkbox" value=""></th>-->
                 <th width="80">ID</th>
-                <th width="200">用户名</th>
+                <th width="200">操作者</th>
                 <th>操作日志</th>
                 <th width="200">操作时间</th>
             </tr>
             </thead>
             <tbody>
-            <?php if(is_array($admins)): $i = 0; $__LIST__ = $admins;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c">
+            <?php if(is_array($logs)): $i = 0; $__LIST__ = $logs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c">
                     <!--<td><input name="" type="checkbox" value=""></td>-->
                     <td><?php echo ($vo["log_id"]); ?></td>
                     <td><?php echo ($vo["admin_user"]); ?></td>
                     <td><?php echo ($vo["log_info"]); ?></td>
-                    <td><?php echo ($vo["mobile"]); ?></td>
                     <td><?php echo (date("Y-m-d H:i",$vo["log_time"])); ?></td>
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>

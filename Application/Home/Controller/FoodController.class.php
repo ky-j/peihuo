@@ -3,7 +3,7 @@ namespace Home\Controller;
 
 use Think\Controller;
 
-class FoodController extends Controller
+class FoodController extends CommonController
 {
     public function index()
     {
@@ -50,6 +50,10 @@ class FoodController extends Controller
 
             $foodId = D("Food")->insert($data);
             if ($foodId) {
+                // 添加日志
+                $log = "新增菜品：菜品ID为$foodId";
+                D("Log")->insertLog($log);
+
                 return show_msg(1, '新增成功', $foodId);
             }
             return show_msg(0, '新增失败', $foodId);
@@ -85,6 +89,9 @@ class FoodController extends Controller
             if($id === false) {
                 return show_msg(0,'更新失败');
             }
+            // 添加日志
+            $log = "修改菜品信息：菜品ID为$data[food_id]";
+            D("Log")->insertLog($log);
             return show_msg(1,'更新成功');
         }catch(Exception $e) {
             return show_msg(0,$e->getMessage());
@@ -94,24 +101,11 @@ class FoodController extends Controller
 
     public function setStatus()
     {
-        try {
-            if ($_POST) {
-                $id = $_POST['id'];
-                $status = $_POST['status'];
-                // 执行数据更新操作
-                $res = D("Food")->updateStatusById($id, $status);
-                if ($res) {
-                    return show_msg(1, '操作成功');
-                } else {
-                    return show_msg(0, '操作失败');
-                }
-
-            }
-        } catch (Exception $e) {
-            return show_msg(0, $e->getMessage());
-        }
-
-        return show_msg(0, '没有提交的数据');
+        $data = array(
+            'id'=>intval($_POST['id']),
+            'status' => intval($_POST['status']),
+        );
+        return parent::setStatus($data,'Food');
     }
 
     public function getFoodData()

@@ -24,10 +24,10 @@
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
 
-<title>操作日志</title>
+<title>用户管理</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 用户管理 <span class="c-gray en">&gt;</span> 操作日志 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统相关 <span class="c-gray en">&gt;</span> 用户管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
     <!--<div class="text-c">-->
     <!--<input type="text" name="" id="" placeholder=" 用户名称" style="width:250px" class="input-text">-->
@@ -59,9 +59,8 @@
                     <td><?php echo (date("Y-m-d H:i",$vo["update_time"])); ?></td>
                     <td class="td-manage">
                         <button class="btn btn-secondary size-MINI radius peihuo-edit" attr-id="<?php echo ($vo["admin_id"]); ?>" attr-a="admin" attr-message="修改" onclick="layer_show('修改用户','index.php?c=admin&a=edit&id=<?php echo ($vo["admin_id"]); ?>','',400)">修改</button>
-                        <span class="pipe">|</span>
-                        <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["admin_id"]); ?>" attr-a="admin" attr-message="删除">删除</button>
-                    </td>
+
+                        <button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="<?php echo ($vo["admin_id"]); ?>" attr-a="admin" attr-message="删除">删除</button></td>
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
         </table>

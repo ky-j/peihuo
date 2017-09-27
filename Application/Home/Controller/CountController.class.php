@@ -3,7 +3,7 @@ namespace Home\Controller;
 
 use Think\Controller;
 
-class CountController extends Controller
+class CountController extends CommonController
 {
     // 打印 - 每日菜品清单
     public function foodbyday()
@@ -142,6 +142,7 @@ class CountController extends Controller
         if ($foodId) {
             $thisFood = D("Food")->getFoodById($foodId);
             $info['foodName'] = $thisFood['food_name'];
+            $info['foodUnit'] = $thisFood['food_unit'];
             $info['foodId'] = $foodId;
         }
 

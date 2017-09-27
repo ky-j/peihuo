@@ -65,7 +65,8 @@
             <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜清单</button>
         </div>
     </form>
-    <div class="mt-50 print-box <?php if(!isset($info["foodName"])): ?>hide<?php endif; ?>">
+    <!--<div class="text-c mt-20"><mark>（数据只统计“已终结”订单）</mark></div>-->
+    <div class="mt-30 print-box <?php if(!isset($info["foodName"])): ?>hide<?php endif; ?>">
         <div id="printArea">
             <div class="text-c"><h2><?php echo ($info["foodName"]); ?>配送清单</h2></div>
             <div class="order-info">
@@ -82,7 +83,7 @@
                     <td>日料</td>
                     <td>点心</td>
                     <td>味部</td>
-                    <td>合计</td>
+                    <td>小计</td>
                     <td>备注</td>
                 </tr>
                 </thead>
@@ -93,14 +94,24 @@
                             <td><?php echo ($key+1); ?></td>
                             <td><?php echo ($data["hotel_name"]); ?></td>
                             <td><?php echo ($data["hotel_number"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total1"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total2"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total3"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total4"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total5"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total"]); ?></td>
+                            <td class="format-number zc-number"><?php echo ($data["total1"]); ?></td>
+                            <td class="format-number xc-number"><?php echo ($data["total2"]); ?></td>
+                            <td class="format-number rl-number"><?php echo ($data["total3"]); ?></td>
+                            <td class="format-number dx-number"><?php echo ($data["total4"]); ?></td>
+                            <td class="format-number wb-number"><?php echo ($data["total5"]); ?></td>
+                            <td class="format-number all-number"><?php echo ($data["total"]); ?></td>
                             <td></td>
-                        </tr><?php endforeach; endif; endif; ?>
+                        </tr><?php endforeach; endif; ?>
+                    <tr>
+                        <td colspan="3" class="text-c">合计</td>
+                        <td id="zcTotal"></td>
+                        <td id="xcTotal"></td>
+                        <td id="rlTotal"></td>
+                        <td id="dxTotal"></td>
+                        <td id="wbTotal"></td>
+                        <td id="allTotal"></td>
+                        <td></td>
+                    </tr><?php endif; ?>
                 </tbody>
             </table>
         </div>
@@ -179,6 +190,42 @@
                 $(this).html(parseInt($(this).html()));
             }
         });
+
+        var zcTotal = 0;
+        $(".zc-number").each(function(i){
+            zcTotal = zcTotal + parseFloat($(this).text());
+        });
+        $("#zcTotal").text(zcTotal);
+
+        var xcTotal = 0;
+        $(".xc-number").each(function(i){
+            xcTotal = xcTotal + parseFloat($(this).text());
+        });
+        $("#xcTotal").text(xcTotal);
+
+        var rlTotal = 0;
+        $(".rl-number").each(function(i){
+            rlTotal = rlTotal + parseFloat($(this).text());
+        });
+        $("#rlTotal").text(rlTotal);
+
+        var dxTotal = 0;
+        $(".dx-number").each(function(i){
+            dxTotal = dxTotal + parseFloat($(this).text());
+        });
+        $("#dxTotal").text(dxTotal);
+
+        var wbTotal = 0;
+        $(".wb-number").each(function(i){
+            wbTotal = wbTotal + parseFloat($(this).text());
+        });
+        $("#wbTotal").text(wbTotal);
+
+        var allTotal = 0;
+        $(".all-number").each(function(i){
+            allTotal = allTotal + parseFloat($(this).text());
+        });
+        $("#allTotal").text(allTotal);
 
         $("#printBtn").on("click",function () {
             $('#printArea').printThis({

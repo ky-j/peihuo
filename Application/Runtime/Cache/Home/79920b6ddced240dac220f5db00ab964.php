@@ -96,11 +96,19 @@
                     <?php if(is_array($data)): foreach($data as $key=>$data): ?><tr>
                             <td><?php echo ($key+1); ?></td>
                             <td><?php echo ($data["hotel_name"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total1"]); ?></td>
-                            <td class="format-number"><?php echo ($data["total2"]); ?></td>
+                            <td class="format-number order-number"><?php echo ($data["total1"]); ?></td>
+                            <td class="format-number delivery-number"><?php echo ($data["total2"]); ?></td>
                             <td><?php echo ($data["food_unit"]); ?></td>
                             <td><?php echo (date("Y年m月d日",$data["delivery_date"])); ?></td>
-                        </tr><?php endforeach; endif; endif; ?>
+                        </tr><?php endforeach; endif; ?>
+                    <tr>
+                        <td></td>
+                        <td>合计</td>
+                        <td class="order-total"></td>
+                        <td class="delivery-total"></td>
+                        <td><?php echo ($info["foodUnit"]); ?></td>
+                        <td></td>
+                    </tr><?php endif; ?>
                 </tbody>
             </table>
         </div>
@@ -182,6 +190,18 @@
                 $(this).html(parseInt($(this).html()));
             }
         });
+
+        var orderTotal = 0;
+        $(".order-number").each(function(i){
+            orderTotal = orderTotal + parseFloat($(this).text());
+        });
+        $(".order-total").text(orderTotal);
+
+        var deliveryTotal = 0;
+        $(".delivery-number").each(function(i){
+            deliveryTotal = deliveryTotal + parseFloat($(this).text());
+        });
+        $(".delivery-total").text(deliveryTotal);
 
         $("#printBtn").on("click",function () {
             $('#printArea').printThis({
