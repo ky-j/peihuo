@@ -8,16 +8,16 @@ class CountController extends CommonController
     // 打印 - 每日菜品清单
     public function foodbyday()
     {
-        $categoryId = $_GET['category_id'];
+//        $categoryId = $_GET['category_id'];
         $foodId = $_GET['food_id'];
         $deliveryDate = strtotime($_GET['delivery_date']);
 
         $info = array();
-        if ($categoryId) {
-            $foodList = D("Food")->getFoodByCateId($categoryId);
-            $this->assign('foodList', $foodList);
-            $info['categoryId'] = $categoryId;
-        }
+//        if ($categoryId) {
+//            $foodList = D("Food")->getFoodByCateId($categoryId);
+//            $this->assign('foodList', $foodList);
+//            $info['categoryId'] = $categoryId;
+//        }
         if ($foodId) {
             $thisFood = D("Food")->getFoodById($foodId);
             $info['foodName'] = $thisFood['food_name'];
@@ -34,8 +34,11 @@ class CountController extends CommonController
             $this->assign('data', $data);
         }
 
-        $categoryList = D("Category")->getCategoryList();
-        $this->assign('categoryList', $categoryList);
+//        $categoryList = D("Category")->getCategoryList();
+//        $this->assign('categoryList', $categoryList);
+
+        $foodList = D("Food")->getFoodList();
+        $this->assign('foodList', $foodList);
 
         $this->display();
     }
@@ -56,6 +59,24 @@ class CountController extends CommonController
                 $this->assign('data', $data);
             }
         }
+
+        $this->display();
+    }
+
+    // 打印 - 直接搜酒店订单
+    public function hotel()
+    {
+        $hotelId = $_GET['hotel_id'];
+        $this->assign('hotelId', $hotelId);
+
+        // 如有传参则执行查询操作
+        if ($hotelId) {
+            $orderList = D("Order")->getOrderByHotelId($hotelId);
+            $this->assign('orderList', $orderList);
+        }
+
+        $hotelList = D("Hotel")->getHotelList();
+        $this->assign('hotelList', $hotelList);
 
         $this->display();
     }
@@ -128,17 +149,17 @@ class CountController extends CommonController
     // 单项菜品按月/按日进行统计
     public function onefoodbytime()
     {
-        $categoryId = $_GET['category_id'];
+//        $categoryId = $_GET['category_id'];
         $foodId = $_GET['food_id'];
         $countWay = $_GET['count_way'];
         $deliveryDate = strtotime($_GET['delivery_date']);
 
         $info = array();
-        if ($categoryId) {
-            $foodList = D("Food")->getFoodByCateId($categoryId);
-            $this->assign('foodList', $foodList);
-            $info['categoryId'] = $categoryId;
-        }
+//        if ($categoryId) {
+//            $foodList = D("Food")->getFoodByCateId($categoryId);
+//            $this->assign('foodList', $foodList);
+//            $info['categoryId'] = $categoryId;
+//        }
         if ($foodId) {
             $thisFood = D("Food")->getFoodById($foodId);
             $info['foodName'] = $thisFood['food_name'];
@@ -167,8 +188,11 @@ class CountController extends CommonController
             $this->assign('data', $data);
         }
 
-        $categoryList = D("Category")->getCategoryList();
-        $this->assign('categoryList', $categoryList);
+//        $categoryList = D("Category")->getCategoryList();
+//        $this->assign('categoryList', $categoryList);
+
+        $foodList = D("Food")->getFoodList();
+        $this->assign('foodList', $foodList);
 
         $this->assign('info', $info);
         $this->display();

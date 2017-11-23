@@ -83,7 +83,7 @@
             <dd>
                 <ul>
                     <li><a data-href="index.php?c=food" data-title="菜品管理" href="javascript:void(0)">菜品管理</a></li>
-                    <li><a data-href="index.php?c=category" data-title="菜品分类" href="javascript:void(0)">菜品分类</a></li>
+                    <!--<li><a data-href="index.php?c=category" data-title="菜品分类" href="javascript:void(0)">菜品分类</a></li>-->
                 </ul>
             </dd>
         </dl>
@@ -100,7 +100,7 @@
             <dd>
                 <ul>
                     <li><a data-href="index.php?c=count&a=foodbyday" data-title="每日菜品清单" href="javascript:void(0)">每日菜品清单</a></li>
-                    <li><a data-href="index.php?c=count&a=hotelbysn" data-title="酒店订单" href="javascript:void(0)">酒店订单</a></li>
+                    <li><a data-href="index.php?c=count&a=hotel" data-title="酒店订单" href="javascript:void(0)">酒店订单</a></li>
                 </ul>
             </dd>
         </dl>

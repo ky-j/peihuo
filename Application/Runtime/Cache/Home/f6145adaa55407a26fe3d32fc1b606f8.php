@@ -48,12 +48,14 @@
         <input type="hidden" name="c" value="count">
         <input type="hidden" name="a" value="foodbyday">
         <div class="text-c search-input">
-        <span class="select-box inline">
-            <select name="category_id" class="select category-id">
-                <option value="">-=请选择菜品分类=-</option>
-                <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $info['categoryId']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
-            </select>
-		</span>
+        <!--<span class="select-box inline">-->
+            <!--<select name="category_id" class="select category-id">-->
+                <!--<option value="">-=请选择菜品分类=-</option>-->
+                <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?>-->
+                    <!--<option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $info['categoryId']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option>-->
+                <!--<?php endforeach; endif; ?>-->
+            <!--</select>-->
+		<!--</span>-->
             <span class="select-box inline">
             <select name="food_id" class="select food-id">
                 <option value="">-=请选择菜品=-</option>

@@ -120,7 +120,7 @@ class OrderModel extends Model
             'hotel_id' => "$HotelId",
             'status' => array('neq', -1),
         );
-        $res = $this->_db->where($condition)->find();
+        $res = $this->_db->where($condition)->select();
         return $res;
     }
 

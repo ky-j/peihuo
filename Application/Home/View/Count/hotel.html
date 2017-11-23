@@ -1,0 +1,138 @@
+<include file="Public/_meta"/>
+<style>
+    .order-info {
+        margin: 10px auto;
+    }
+    .order-info span{
+        display: inline-block;
+        width: 220px;
+    }
+    .page-container{
+        width: 700px;
+        margin: 0 auto;
+    }
+    .table-head{
+        font-weight: bold;
+    }
+</style>
+<title>酒店订单</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 打印 <span class="c-gray en">&gt;</span> 酒店订单 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <form method="get" class="form form-horizontal" id="peihuo-form">
+        <input type="hidden" name="c" value="count">
+        <input type="hidden" name="a" value="hotel">
+        <div class="text-c search-input">
+         <span class="select-box inline">
+ 				<select name="hotel_id" class="select">
+                    <option value="">-=请选择酒店=-</option>
+                     <foreach name="hotelList" item="hotel">
+                         <option value="{$hotel.hotel_id}" <if condition="$hotel['hotel_id'] eq $hotelId">selected="selected"</if>>{$hotel.hotel_name}</option>
+                     </foreach>
+				</select>
+		</span>
+            <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜订单</button>
+        </div>
+    </form>
+
+    <div class="mt-20 pl-20 pr-20">
+        <present name="hotelId">
+            <table class="table table-border table-bordered table-bg table-hover table-sort peihuo-table">
+                <thead>
+                <tr class="text-c">
+                    <!--<th width="80">ID</th>-->
+                    <th width="150">订单编号</th>
+                    <!--<th width="200">酒店</th>-->
+                    <!--<th width="80">酒店编号</th>-->
+                    <th width="100">配送日期</th>
+                    <!--<th width="50">菜品数量</th>-->
+                    <th width="100">状态</th>
+                    <!--<th width="150">操作更新时间</th>-->
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="orderList" id="vo">
+                    <tr class="text-c">
+                        <!--<td>{$vo.order_id}</td>-->
+                        <td>{$vo.order_sn}</td>
+                        <!--<td>{$vo.hotel_name}</td>-->
+                        <!--<td>{$vo.hotel_number}</td>-->
+                        <td>{$vo.delivery_date|date="Y-m-d",###}</td>
+                        <!--<td></td>-->
+                        <td>{$vo.status|orderStatus}</td>
+                        <!--<td>{$vo.update_time|date="Y-m-d H:i",###}</td>-->
+                        <td class="td-manage">
+                            <button class="btn btn-primary size-MINI radius peihuo-check" attr-id="{$vo.order_id}" attr-a="order" attr-message="查看" onclick="order_show('查看订单','index.php?c=order&a=check&id={$vo.order_id}')">查看</button>
+                            <!--<span class="pipe">|</span>-->
+                            <!--<button class="btn btn-secondary size-MINI radius peihuo-edit <if condition='$vo[status] gt 2'>disabled</if>" attr-id="{$vo.order_id}" attr-a="order" attr-message="修改" onclick="order_show('修改订单','index.php?c=order&a=edit&id={$vo.order_id}')">修改</button>-->
+                            <!--<span class="pipe">|</span>-->
+                            <!--<button class="btn btn-success size-MINI radius peihuo-delivery_x <if condition='$vo[status] gt 1'>disabled</if>" attr-id="{$vo.order_id}" attr-a="order" attr-message="配送" onclick="order_show('配送情况','index.php?c=order&a=delivery&id={$vo.order_id}')">配送情况</button>-->
+                            <!--<span class="pipe">|</span>-->
+                            <!--<button class="btn btn-warning size-MINI radius peihuo-complete <if condition='$vo[status] gt 2'>disabled</if>" attr-id="{$vo.order_id}" attr-a="order" attr-message="终结">终结</button>-->
+                            <!--<span class="pipe">|</span>-->
+                            <!--<button class="btn btn-danger size-MINI radius peihuo-delete" attr-id="{$vo.order_id}" attr-a="order" attr-message="删除">删除</button>-->
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </present>
+    </div>
+
+</div>
+
+
+<include file="Public/_footer"/>
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/printThis.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<script type="text/javascript">
+    $('.table-sort').dataTable({
+        "aaSorting": [[ 0, "desc" ]],//默认第几个排序
+        "bStateSave": true,//状态保存
+//        "aoColumnDefs": [
+//            //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+//            {"orderable":false,"aTargets":[0,8]}// 制定列不参与排序
+//        ]
+    });
+
+    /*全屏弹出下单页面*/
+    function order_show(title,url){
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+
+    $(function () {
+        $("#peihuo-form").validate({
+            rules: {
+                hotel_id: {
+                    required: true,
+                    digits:true,
+//                    rangelength:[13,13]
+                }
+            },
+            onkeyup: false,
+            success: "valid",
+            // 通过验证后运行的函数
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+    });
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

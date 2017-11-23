@@ -26,14 +26,14 @@ class FoodController extends CommonController
             if (!isset($_POST['food_name']) || !$_POST['food_name']) {
                 return show_msg(0, '菜品名不能为空');
             }
-            if (!isset($_POST['category_id']) || !is_numeric($_POST['category_id'])) {
-                return show_msg(0, '菜品分类不能为空');
-            }
+//            if (!isset($_POST['category_id']) || !is_numeric($_POST['category_id'])) {
+//                return show_msg(0, '菜品分类不能为空');
+//            }
 
             $data = [];
             $data['food_id'] = $_POST['food_id'];
             $data['food_name'] = $_POST['food_name'];
-            $data['category_id'] = $_POST['category_id'];
+//            $data['category_id'] = $_POST['category_id'];
             $data['food_price'] = $_POST['food_price'];
             $data['food_unit'] = $_POST['food_unit'];
             $data['update_time'] = time();
@@ -59,8 +59,8 @@ class FoodController extends CommonController
             return show_msg(0, '新增失败', $foodId);
 
         } else {
-            $category = D("Category")->getCategoryList();
-            $this->assign('category', $category);
+//            $category = D("Category")->getCategoryList();
+//            $this->assign('category', $category);
 
             $this->display();
         }
@@ -72,8 +72,8 @@ class FoodController extends CommonController
         $food = D("Food")->find($foodId);
         $this->assign('food', $food);
 
-        $category = D("Category")->getCategoryList();
-        $this->assign('category', $category);
+//        $category = D("Category")->getCategoryList();
+//        $this->assign('category', $category);
 
         $this->display('add');
     }

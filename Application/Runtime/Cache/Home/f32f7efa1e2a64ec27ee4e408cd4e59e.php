@@ -36,21 +36,23 @@
                 <input type="text" class="input-text" value="<?php echo ($food["food_name"]); ?>" placeholder="" id="food_name" name="food_name">
             </div>
         </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3">
-                <span class="c-red">*</span>
-                所属分类：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-						<span class="select-box">
-						<select class="select" id="category_id" name="category_id" onchange="SetSubID(this);">
-							<option value="">-=请选择分类=-</option>
-                            <?php if(is_array($category)): foreach($category as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $food['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
-						</select>
-						</span>
-            </div>
-            <div class="col-3">
-            </div>
-        </div>
+        <!--<div class="row cl">-->
+            <!--<label class="form-label col-xs-4 col-sm-3">-->
+                <!--<span class="c-red">*</span>-->
+                <!--所属分类：</label>-->
+            <!--<div class="formControls col-xs-8 col-sm-9">-->
+						<!--<span class="select-box">-->
+						<!--<select class="select" id="category_id" name="category_id" onchange="SetSubID(this);">-->
+							<!--<option value="">-=请选择分类=-</option>-->
+                            <!--<?php if(is_array($category)): foreach($category as $key=>$cate): ?>-->
+                            <!--<option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $food['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option>-->
+                            <!--<?php endforeach; endif; ?>-->
+						<!--</select>-->
+						<!--</span>-->
+            <!--</div>-->
+            <!--<div class="col-3">-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3">默认单价：</label>
             <div class="formControls col-xs-8 col-sm-9">
@@ -91,10 +93,10 @@
                 food_name:{
                     required:true,
                 },
-                category_id:{
-                    required:true,
-                    digits:true
-                },
+//                category_id:{
+//                    required:true,
+//                    digits:true
+//                },
                 food_price:{
                     number:true
                 },
