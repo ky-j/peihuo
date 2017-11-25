@@ -81,20 +81,25 @@
         <div class="row cl">
             <label class="form-label col-sm-2">中餐：</label>
             <input type="hidden" name="depart_id[]" value="1">
-            <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-            </div>
-            <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="food_id[]" class="select food-id">
-                    <option value="">-=请选择菜品=-</option>
-				</select>
-				</span>
+            <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?>-->
+                        <!--<option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+            <!--</div>-->
+            <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="food_id[]" class="select food-id">-->
+                    <!--<option value="">-=请选择菜品=-</option>-->
+				<!--</select>-->
+				<!--</span>-->
+            <!--</div>-->
+            <div class="formControls col-sm-4">
+                <input type="text" autocomplete="off" class="input-text food-id" value="" placeholder="选择或者输入菜品" id="foodID" name="food_id[]">
             </div>
             <div class="formControls col-sm-2">
                 <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
@@ -272,6 +277,7 @@
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="/peihuo/Public/js/select.js"></script>
 <script type="text/javascript">
     $(function () {
         $("#peihuo-form").validate({
@@ -384,6 +390,30 @@
                 },1000);
             });
         })
+
+        var datas =[{"id":"2","text":"中国石油天然气股份有限公司"},
+            {"id":"4","text":"中国建筑股份有限公司"},
+            {"id":"3","text":"中国移动有限公司"},
+            {"id":"5","text":"中国工商银行股份有限公司"},
+            {"id":"7","text":"中国铁建股份有限公司"},
+            {"id":"6","text":"中国中铁股份有限公司"},
+            {"id":"8","text":"上海汽车集团股份有限公司"},
+            {"id":"9","text":"中国建设银行股份有限公司"},
+            {"id":"11","text":"中国农业银行股份有限公司"},
+            {"id":"10","text":"中国人寿保险股份有限公司"},
+            {"id":"12","text":"中国银行股份有限公司"},
+            {"id":"14","text":"中国平安保险(集团)股份有限公司"},
+            {"id":"13","text":"中国交通建设股份有限公司"},
+            {"id":"15","text":"中国电信股份有限公司"},
+            {"id":"16","text":"中国人民保险集团股份有限公司"},
+            {"id":"18","text":"中国联合网络通信股份有限公司"},
+            {"id":"19","text":"中国神华能源股份有限公司"},
+            {"id":"20","text":"中国海洋石油有限公司"},
+            {"id":"16","text":"中国冶金科工股份有限公司"},
+            {"id":"21","text":"联想集团有限公司"}];
+
+        $.selectSuggest('foodID',datas);
+
 
     });
 </script>
