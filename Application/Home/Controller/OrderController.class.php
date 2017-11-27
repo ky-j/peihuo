@@ -92,6 +92,9 @@ class OrderController extends CommonController
             $categoryList = D("Category")->getCategoryList();
             $this->assign('categoryList', $categoryList);
 
+            $foodList = D("Food")->getFoodList();
+            $this->assign('foodList', $foodList);
+
 //            $today =  get_today_date();
 //            $this->assign('today', $today);
 

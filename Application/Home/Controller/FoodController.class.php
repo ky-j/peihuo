@@ -123,4 +123,20 @@ class FoodController extends CommonController
 
         return show_msg(0, '没有提交的数据');
     }
+
+    public function getFoodById()
+    {
+        try {
+            if ($_POST) {
+                $foodID = $_POST['food_id'];
+
+                $res = D("Food")->getFoodById($foodID);
+                return show_msg(1, '操作成功', $res);
+            }
+        } catch (Exception $e) {
+            return show_msg(0, $e->getMessage());
+        }
+
+        return show_msg(0, '没有提交的数据');
+    }
 }

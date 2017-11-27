@@ -1,9 +1,11 @@
 (function ($) {
     $.selectSuggest = function (target, data, itemSelectFunction) {
+        var myTarget = $('#' + target);
+
         var defaulOption = {
             suggestMaxHeight: '200px',//弹出框最大高度
             itemColor: '#000000',//默认字体颜色
-            itemBackgroundColor: 'RGB(199,237,204)',//默认背景颜色
+            itemBackgroundColor: '#FFF',//默认背景颜色
             itemOverColor: '#ffffff',//选中字体颜色
             itemOverBackgroundColor: '#C9302C',//选中背景颜色
             itemPadding: 3,//item间距
@@ -13,13 +15,13 @@
         var maxFontNumber = 0;//最大字数
         var currentItem;
         var suggestContainerId = target + "-suggest";
-        var suggestContainerWidth = $('#' + target).innerWidth();
-        var suggestContainerLeft = $('#' + target).offset().left;
-        var suggestContainerTop = $('#' + target).offset().top + $('#' + target).outerHeight();
+        var suggestContainerWidth = myTarget.innerWidth();
+        var suggestContainerLeft = myTarget.offset().left;
+        var suggestContainerTop = myTarget.offset().top + myTarget.outerHeight();
 
         // 点击子项目事件，显示子项目文本在输入框中
         var showClickTextFunction = function () {
-            $('#' + target).val(this.innerText);
+            myTarget.val(this.innerText);
             currentItem = null;
             $('#' + suggestContainerId).hide();
         }
@@ -31,7 +33,7 @@
             suggestContainer = $('<div></div>'); //创建一个子<div>
         }
 
-        suggestContainer.attr('id', suggestContainerId);
+        suggestContainer.attr('id', suggestContainerId) ;
         suggestContainer.attr('tabindex', '0');
         suggestContainer.hide();
 
@@ -76,20 +78,19 @@
 
         // 文本框输入事件，匹配子项目
         var inputChange = function () {
-            var inputValue = $('#' + target).val();
+            var inputValue = myTarget.val();
             inputValue = inputValue.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&");
             var matcher = new RegExp(inputValue, "i");
-            return $.grep(data,
-                function (value) {
-                    return matcher.test(value.text);
-                });
+            return $.grep(data, function (value) {
+                return matcher.test(value.text);
+            });
         }
 
-        $('#' + target).bind("keyup",
-            function () {
-                _initItems(inputChange());
-            });
-        $('#' + target).bind("blur",
+        myTarget.bind("keyup", function () {
+            _initItems(inputChange());
+        });
+
+        myTarget.bind("blur",
             function () {
                 if (!$('#' + suggestContainerId).is(":focus")) {
                     $('#' + suggestContainerId).hide();
@@ -101,7 +102,7 @@
                 }
             });
 
-        $('#' + target).bind("click", function () {
+        myTarget.bind("click", function () {
                 if (defaulOption.alwaysShowALL) {
                     _initItems(data);
                 } else {
@@ -112,7 +113,7 @@
                 var containerWidth = Math.max(tempWidth, suggestContainerWidth);
                 $('#' + suggestContainerId).css({
                     'border': '1px solid #ccc',
-                    // 'max-height': '200px',
+                    // 'max-height': defaulOption.suggestMaxHeight,
                     'top': suggestContainerTop,
                     'left': suggestContainerLeft,
                     'width': containerWidth,
@@ -129,10 +130,9 @@
             });
         _initItems(data);
 
-        $('#' + suggestContainerId).bind("blur",
-            function () {
-                $('#' + suggestContainerId).hide();
-            });
+        $('#' + suggestContainerId).bind("blur", function () {
+            $('#' + suggestContainerId).hide();
+        });
 
     }
 })(jQuery);

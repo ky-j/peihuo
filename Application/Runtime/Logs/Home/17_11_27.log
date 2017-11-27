@@ -1,0 +1,403 @@
+[ 2017-11-27T09:03:28+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 3 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T10:36:57+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 1 ORDER BY food_id asc  [ RunTime:0.0520s ]
+
+[ 2017-11-27T10:37:06+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 3 ORDER BY food_id asc  [ RunTime:0.0010s ]
+
+[ 2017-11-27T10:37:13+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 5 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:07:07+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:08:03+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:08:54+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 3 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:09:10+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:09:15+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 1 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:09:41+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 4 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:10:32+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 1 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:10:36+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 3 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:10:38+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:10:43+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:10:47+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 1 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:12:57+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 3 ORDER BY food_id asc  [ RunTime:0.0010s ]
+
+[ 2017-11-27T11:33:18+08:00 ] 192.168.3.72 /peihuo/index.php/Home/Login/check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ph_admin` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `ph_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ph_admin` SET `lastlogintime`='1511753598' WHERE ( admin_id=1 ) [ RunTime:0.0000s ]
+
+[ 2017-11-27T11:33:51+08:00 ] 192.168.3.78 /peihuo/index.php/Home/Login/check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ph_admin` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `ph_admin` SET `lastlogintime`='1511753631' WHERE ( admin_id=1 ) [ RunTime:0.0010s ]
+
+[ 2017-11-27T11:33:53+08:00 ] 192.168.3.72 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 1 ORDER BY food_id asc  [ RunTime:0.0010s ]
+
+[ 2017-11-27T11:34:54+08:00 ] 192.168.3.78 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 1 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T12:01:19+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:02:40+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0010s ]
+
+[ 2017-11-27T16:03:24+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0860s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 3 ORDER BY food_id asc  [ RunTime:0.0010s ]
+
+[ 2017-11-27T16:03:42+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 4 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:05:09+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 1 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:05:18+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:06:11+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 4 ORDER BY food_id asc  [ RunTime:0.0010s ]
+
+[ 2017-11-27T16:07:28+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:19:34+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 1 ORDER BY food_id asc  [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:55:54+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=20 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:58:53+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=18 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:58:59+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=20 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:59:04+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=17 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:59:07+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=14 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-27T16:59:28+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=16 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-11-27T16:59:38+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-27T17:00:12+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=15 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-11-27T17:03:13+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=20 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-11-27T17:05:23+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=18 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-11-27T17:09:10+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=20 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-27T17:21:16+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=20 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-27T17:22:59+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=18 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-27T17:23:01+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=20 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-11-27T17:25:09+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=18 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-11-27T17:25:11+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=17 ) LIMIT 1   [ RunTime:0.0000s ]
+
