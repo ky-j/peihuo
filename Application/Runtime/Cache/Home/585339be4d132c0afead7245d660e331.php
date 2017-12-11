@@ -23,7 +23,12 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
-<link rel="stylesheet" href="/peihuo/Public/css/chosen.css">
+<link rel="stylesheet" href="/peihuo/Public/lib/jquery.chosen/1.8.2/chosen.css">
+<style>
+    .chosen-container .chosen-results {
+        max-height: 100%;
+    }
+</style>
 <title>添加订单
 </title>
 </head>
@@ -59,25 +64,6 @@
                 <mark>以下数据只有填写菜品和下单数量才能有效记录</mark>
             </div>
         </div>
-        <!--<div class="row cl">-->
-            <!--<label class="form-label col-sm-2"><span class="c-red">*</span> 订单状态：</label>-->
-            <!--<div class="formControls col-sm-8">-->
-				<!--<span class="select-box">-->
-				<!--<select name="hotel_id" class="select">-->
-                    <!--<option value="">-=请选择酒店=-</option>-->
-                    <!--<?php if(is_array($hotelList)): foreach($hotelList as $key=>$hotel): ?>-->
-                        <!--<option value="<?php echo ($hotel["hotel_id"]); ?>"><?php echo ($hotel["hotel_name"]); ?></option>-->
-                    <!--<?php endforeach; endif; ?>-->
-				<!--</select>-->
-				<!--</span>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="row cl">-->
-        <!--<label class="form-label col-sm-2">中餐：</label>-->
-        <!--</div>-->
-        <!--<div class="row cl">-->
-        <!--<div class="line col-xs-12"></div>-->
-        <!--</div>-->
         <div class="row cl">
             <label class="form-label col-sm-2">中餐：</label>
             <input type="hidden" name="depart_id[]" value="1">
@@ -95,6 +81,7 @@
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <!--<option value="-1">-=手动输入菜品=-</option>-->
                     <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>"><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
@@ -102,6 +89,7 @@
             <div class="formControls col-sm-2">
                 <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
                 <input type="hidden" value="" class="food-unit" name="food_unit[]">
+                <input type="text" class="input-text order-add-input food-name hide" value="" placeholder="新菜品名" id="" name="food_name[]">
             </div>
             <!--<div class="formControls col-sm-1">-->
                 <!--<input type="text" class="input-text unit" value="" placeholder="单位" id="" name="food_unit[]">-->
@@ -135,6 +123,7 @@
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <!--<option value="-1">-=手动输入菜品=-</option>-->
                     <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>"><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
@@ -142,6 +131,7 @@
             <div class="formControls col-sm-2">
                 <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
                 <input type="hidden" value="" class="food-unit" name="food_unit[]">
+                <input type="text" class="input-text order-add-input food-name hide" value="" placeholder="新菜品名" id="" name="food_name[]">
             </div>
             <div class="formControls col-sm-2">
                 <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
@@ -179,6 +169,7 @@
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <!--<option value="-1">-=手动输入菜品=-</option>-->
                     <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>"><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
@@ -186,6 +177,7 @@
             <div class="formControls col-sm-2">
                 <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
                 <input type="hidden" value="" class="food-unit" name="food_unit[]">
+                <input type="text" class="input-text order-add-input food-name hide" value="" placeholder="新菜品名" id="" name="food_name[]">
             </div>
             <div class="formControls col-sm-2">
                 <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
@@ -223,6 +215,7 @@
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <!--<option value="-1">-=手动输入菜品=-</option>-->
                     <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>"><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
@@ -230,6 +223,7 @@
             <div class="formControls col-sm-2">
                 <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
                 <input type="hidden" value="" class="food-unit" name="food_unit[]">
+                <input type="text" class="input-text order-add-input food-name hide" value="" placeholder="新菜品名" id="" name="food_name[]">
             </div>
             <div class="formControls col-sm-2">
                 <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
@@ -267,6 +261,7 @@
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <!--<option value="-1">-=手动输入菜品=-</option>-->
                     <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>"><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
@@ -274,6 +269,7 @@
             <div class="formControls col-sm-2">
                 <input type="text" class="input-text order-add-input food-price" value="" placeholder="单价" id="" name="food_price[]"> <span class="unit"></span>
                 <input type="hidden" value="" class="food-unit" name="food_unit[]">
+                <input type="text" class="input-text order-add-input food-name hide" value="" placeholder="新菜品名" id="" name="food_name[]">
             </div>
             <div class="formControls col-sm-2">
                 <input type="text" class="input-text order-number" value="" placeholder="下单数量" id="" name="order_number[]">
@@ -308,17 +304,13 @@
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/messages_zh.js"></script>
-<script type="text/javascript" src="/peihuo/Public/js/chosen.jquery.js"></script>
+<script type="text/javascript" src="/peihuo/Public/lib/jquery.chosen/1.8.2/chosen.jquery.js"></script>
 <script type="text/javascript">
     $(function () {
         $('.food-id').chosen({
             search_contains: true, // 全字段模糊匹配
-            no_results_text: '<a href="javascript:" onclick="alert(1)">找不到菜品</a>'
+            no_results_text: '找不到菜品'
         });
-
-//        function addFood() {
-//            console.log(1);
-//        }
 
         $("#peihuo-form").validate({
             rules: {
@@ -358,39 +350,48 @@
 
         var foodData = {};
 
-        $(".category-id").change(function () {
-            var ele = $(this).parent().parent().parent();
-            var foodSelect = ele.find(".food-id");
-
-            foodSelect.html("");
-            $("<option value=''>-=请选择菜品=-</option>").appendTo(foodSelect);
-
-            var cateValue = $(this).val();
-            if (cateValue != "") {
-                var postData = {
-                    'category_id': cateValue
-                };
-                $.post('index.php?c=food&a=getFoodData', postData, function (result) {
-                    if (result.status == 1) {
-                        //成功
-                        //console.log(result.data);
-                        foodData = result.data;
-                        $.each(foodData, function (k, v) {
-                            $("<option value ='" + v['food_id'] + "'> " + v['food_name'] + "</option>").appendTo(foodSelect);
-                        });
-                    } else if (result.status == 0) {
-                        // 失败
-                        return dialog.error(result.message);
-                    }
-                }, "JSON");
-            }
-        });
+//        $(".category-id").change(function () {
+//            var ele = $(this).parent().parent().parent();
+//            var foodSelect = ele.find(".food-id");
+//
+//            foodSelect.html("");
+//            $("<option value=''>-=请选择菜品=-</option>").appendTo(foodSelect);
+//
+//            var cateValue = $(this).val();
+//            if (cateValue != "") {
+//                var postData = {
+//                    'category_id': cateValue
+//                };
+//                $.post('index.php?c=food&a=getFoodData', postData, function (result) {
+//                    if (result.status == 1) {
+//                        //成功
+//                        //console.log(result.data);
+//                        foodData = result.data;
+//                        $.each(foodData, function (k, v) {
+//                            $("<option value ='" + v['food_id'] + "'> " + v['food_name'] + "</option>").appendTo(foodSelect);
+//                        });
+//                    } else if (result.status == 0) {
+//                        // 失败
+//                        return dialog.error(result.message);
+//                    }
+//                }, "JSON");
+//            }
+//        });
 
         $(".food-id").change(function () {
             var ele = $(this).parent().parent().parent();
             foodValue = $(this).val();
 
-            if (foodValue != "") {
+            if (foodValue == "-1"){
+                ele.find('.food-price').addClass('hide');
+                ele.find('.food-name').removeClass('hide').val("");
+                ele.find('.unit').html("");
+            }
+
+            if (foodValue != "" && foodValue != "-1") {
+                ele.find('.food-price').removeClass('hide');
+                ele.find('.food-name').val("").addClass('hide');
+
                 var postData = {
                     'food_id': foodValue
                 };
@@ -401,6 +402,7 @@
                         foodData = result.data;
                         ele.find('.food-price').val(foodData['food_price']);
                         ele.find('.food-unit').val(foodData['food_unit']);
+
                         ele.find('.unit').html("元 / "+foodData['food_unit']);
                     } else if (result.status == 0) {
                         // 失败
@@ -412,15 +414,24 @@
         });
 
         $(".add-item").on('click',function () {
+            $(".food-id").chosen("destroy"); // 销毁所有chosen
             var ele = $(this).parent().parent();
             ele.find('.remove-item').removeClass('hide');
             var copy = ele.clone(true);
 
             ele.after(copy.addClass('hui-fadein'));
             var newEle = ele.next();
+
             var newFoodSelect = newEle.find('.food-id');
-            newFoodSelect.html('');
-            $("<option value=''>-=请选择菜品=-</option>").appendTo(newFoodSelect);
+            newFoodSelect.find("option[value='']").attr("selected",true);
+
+            // 重新对页面chosen
+            $(".food-id").chosen({
+                search_contains: true, // 全字段模糊匹配
+                no_results_text: '找不到菜品'
+            });
+
+            newEle.find('.food-name').val('');
             newEle.find('.food-price').val('');
             newEle.find('.food-unit').val('');
             newEle.find('.unit').html('');
@@ -440,12 +451,6 @@
                 },1000);
             });
         });
-
-        // 选择输入匹配
-        var datas =[<?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?>{"id":"{$food.food_id}","text":"<?php echo ($food["food_name"]); ?>"},<?php endforeach; endif; ?>];
-
-
-
 
     });
 </script>

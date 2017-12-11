@@ -55,7 +55,7 @@ class OrderController extends CommonController
                         $detailData['depart_id'] = $departID = $_POST['depart_id'][$i];
                         $detailData["depart_number_$departID"] = $_POST['order_number'][$i];
 
-                        $detailData['category_id'] = $_POST['category_id'][$i];
+//                        $detailData['category_id'] = $_POST['category_id'][$i];
 //                        $category = D("Category")->getCategoryById($_POST['category_id'][$i]);
 //                        $detailData['category_name'] = $category['category_name'];
 
@@ -89,8 +89,8 @@ class OrderController extends CommonController
             $hotelList = D("Hotel")->getHotelList();
             $this->assign('hotelList', $hotelList);
 
-            $categoryList = D("Category")->getCategoryList();
-            $this->assign('categoryList', $categoryList);
+//            $categoryList = D("Category")->getCategoryList();
+//            $this->assign('categoryList', $categoryList);
 
             $foodList = D("Food")->getFoodList();
             $this->assign('foodList', $foodList);
@@ -159,7 +159,7 @@ class OrderController extends CommonController
                         $detailData['depart_id'] = $departID = $_POST['depart_id'][$i];
                         $detailData["depart_number_$departID"] = $_POST['order_number'][$i];
 
-                        $detailData['category_id'] = $_POST['category_id'][$i];
+//                        $detailData['category_id'] = $_POST['category_id'][$i];
 
                         $detailData['food_id'] = $_POST['food_id'][$i];
                         $detailData['food_price'] = $_POST['food_price'][$i];

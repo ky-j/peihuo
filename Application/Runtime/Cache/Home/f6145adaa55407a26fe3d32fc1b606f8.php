@@ -23,7 +23,11 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
+<link rel="stylesheet" href="/peihuo/Public/lib/jquery.chosen/1.8.2/chosen.css">
 <style>
+    .chosen-container .chosen-results {
+        max-height: 100%;
+    }
     .order-info {
         margin: 10px auto;
     }
@@ -134,10 +138,16 @@
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="/peihuo/Public/lib/jquery.chosen/1.8.2/chosen.jquery.js"></script>
 <script type="text/javascript" src="/peihuo/Public/js/printThis.min.js"></script>
 <script type="text/javascript" src="/peihuo/Public/js/common.js"></script>
 <script type="text/javascript">
     $(function () {
+//        $('.food-id').chosen({
+//            search_contains: true, // 全字段模糊匹配
+//            no_results_text: '找不到菜品'
+//        });
+
         $("#peihuo-form").validate({
             rules: {
                 category_id: {

@@ -1,5 +1,10 @@
 <include file="Public/_meta"/>
-
+<link rel="stylesheet" href="__PUBLIC__/lib/jquery.chosen/1.8.2/chosen.css">
+<style>
+    .chosen-container .chosen-results {
+        max-height: 100%;
+    }
+</style>
 <title>修改订单</title>
 </head>
 <body>
@@ -77,20 +82,23 @@
             <div class="row cl">
                 <label class="form-label col-sm-2">中餐：</label>
                 <input type="hidden" name="depart_id[]" value="1">
-                <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="category">
-                        <option value="{$category.category_id}">{$category.category_name}</option>
-                    </foreach>
-				</select>
-				</span>
-                </div>
+                <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<foreach name="categoryList" item="category">-->
+                        <!--<option value="{$category.category_id}">{$category.category_name}</option>-->
+                    <!--</foreach>-->
+				<!--</select>-->
+				<!--</span>-->
+                <!--</div>-->
                 <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}">{$food.food_name}</option>
+                    </foreach>
 				</select>
 				</span>
                 </div>
@@ -122,25 +130,25 @@
                 <div class="row cl">
                     <label class="form-label col-sm-2">中餐：</label>
                     <input type="hidden" name="depart_id[]" value="1">
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="cate">
-                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $zc['category_id']">selected="selected"</if>>{$cate.category_name}</option>
-                    </foreach>
-				</select>
-				</span>
-                    </div>
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="food_id[]" class="select food-id">
-                    <option value="">-=请选择菜品=-</option>
-                    <foreach name="foodList" item="food">
-                        <option value="{$food.food_id}" <if condition="$food['food_id'] eq $zc['food_id']">selected="selected"</if>>{$food.food_name}</option>
-                    </foreach>
-				</select>
-				</span>
+                    <!--<div class="formControls col-sm-2">-->
+                        <!--<span class="select-box">-->
+                        <!--<select name="category_id[]" class="select category-id">-->
+                            <!--<option value="">-=请选择菜品分类=-</option>-->
+                            <!--<foreach name="categoryList" item="cate">-->
+                                <!--<option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $zc['category_id']">selected="selected"</if>>{$cate.category_name}</option>-->
+                            <!--</foreach>-->
+                        <!--</select>-->
+                    <!--</span>-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-4">
+                        <span class="select-box">
+                        <select name="food_id[]" class="select food-id">
+                            <option value="">-=请选择菜品=-</option>
+                            <foreach name="foodList" item="food">
+                                <option value="{$food.food_id}" <if condition="$food['food_id'] eq $zc['food_id']">selected="selected"</if>>{$food.food_name}</option>
+                            </foreach>
+                        </select>
+                        </span>
                     </div>
                     <div class="formControls col-sm-2">
                         <input type="text" class="input-text order-add-input food-price" value="{$zc.food_price}" placeholder="单价" id=""
@@ -176,20 +184,23 @@
             <div class="row cl">
                 <label class="form-label col-sm-2">西餐：</label>
                 <input type="hidden" name="depart_id[]" value="2">
-                <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="category">
-                        <option value="{$category.category_id}">{$category.category_name}</option>
-                    </foreach>
-				</select>
-				</span>
-                </div>
-                <div class="formControls col-sm-2">
+                <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<foreach name="categoryList" item="category">-->
+                        <!--<option value="{$category.category_id}">{$category.category_name}</option>-->
+                    <!--</foreach>-->
+				<!--</select>-->
+				<!--</span>-->
+                <!--</div>-->
+                <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}">{$food.food_name}</option>
+                    </foreach>
 				</select>
 				</span>
                 </div>
@@ -221,17 +232,17 @@
                 <div class="row cl">
                     <label class="form-label col-sm-2">西餐：</label>
                     <input type="hidden" name="depart_id[]" value="2">
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="cate">
-                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $xc['category_id']">selected="selected"</if>>{$cate.category_name}</option>
-                    </foreach>
-				</select>
-				</span>
-                    </div>
-                    <div class="formControls col-sm-2">
+                    <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<foreach name="categoryList" item="cate">-->
+                        <!--<option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $xc['category_id']">selected="selected"</if>>{$cate.category_name}</option>-->
+                    <!--</foreach>-->
+				<!--</select>-->
+				<!--</span>-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
@@ -276,20 +287,23 @@
             <div class="row cl">
                 <label class="form-label col-sm-2">日本料理：</label>
                 <input type="hidden" name="depart_id[]" value="3">
-                <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="category">
-                        <option value="{$category.category_id}">{$category.category_name}</option>
-                    </foreach>
-				</select>
-				</span>
-                </div>
-                <div class="formControls col-sm-2">
+                <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<foreach name="categoryList" item="category">-->
+                        <!--<option value="{$category.category_id}">{$category.category_name}</option>-->
+                    <!--</foreach>-->
+				<!--</select>-->
+				<!--</span>-->
+                <!--</div>-->
+                <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}">{$food.food_name}</option>
+                    </foreach>
 				</select>
 				</span>
                 </div>
@@ -321,17 +335,17 @@
                 <div class="row cl">
                     <label class="form-label col-sm-2">日本料理：</label>
                     <input type="hidden" name="depart_id[]" value="3">
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="cate">
-                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $rbll['category_id']">selected="selected"</if>>{$cate.category_name}</option>
-                    </foreach>
-				</select>
-				</span>
-                    </div>
-                    <div class="formControls col-sm-2">
+                    <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<foreach name="categoryList" item="cate">-->
+                        <!--<option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $rbll['category_id']">selected="selected"</if>>{$cate.category_name}</option>-->
+                    <!--</foreach>-->
+				<!--</select>-->
+				<!--</span>-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
@@ -375,20 +389,23 @@
             <div class="row cl">
                 <label class="form-label col-sm-2">点心：</label>
                 <input type="hidden" name="depart_id[]" value="4">
-                <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="category">
-                        <option value="{$category.category_id}">{$category.category_name}</option>
-                    </foreach>
-				</select>
-				</span>
-                </div>
-                <div class="formControls col-sm-2">
+                <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<foreach name="categoryList" item="category">-->
+                        <!--<option value="{$category.category_id}">{$category.category_name}</option>-->
+                    <!--</foreach>-->
+				<!--</select>-->
+				<!--</span>-->
+                <!--</div>-->
+                <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}">{$food.food_name}</option>
+                    </foreach>
 				</select>
 				</span>
                 </div>
@@ -420,17 +437,17 @@
                 <div class="row cl">
                     <label class="form-label col-sm-2">点心：</label>
                     <input type="hidden" name="depart_id[]" value="4">
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="cate">
-                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $dx['category_id']">selected="selected"</if>>{$cate.category_name}</option>
-                    </foreach>
-				</select>
-				</span>
-                    </div>
-                    <div class="formControls col-sm-2">
+                    <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<foreach name="categoryList" item="cate">-->
+                        <!--<option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $dx['category_id']">selected="selected"</if>>{$cate.category_name}</option>-->
+                    <!--</foreach>-->
+				<!--</select>-->
+				<!--</span>-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
@@ -474,20 +491,23 @@
             <div class="row cl">
                 <label class="form-label col-sm-2">味部：</label>
                 <input type="hidden" name="depart_id[]" value="5">
-                <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="category">
-                        <option value="{$category.category_id}">{$category.category_name}</option>
-                    </foreach>
-				</select>
-				</span>
-                </div>
-                <div class="formControls col-sm-2">
+                <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<foreach name="categoryList" item="category">-->
+                        <!--<option value="{$category.category_id}">{$category.category_name}</option>-->
+                    <!--</foreach>-->
+				<!--</select>-->
+				<!--</span>-->
+                <!--</div>-->
+                <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <foreach name="foodList" item="food">
+                        <option value="{$food.food_id}">{$food.food_name}</option>
+                    </foreach>
 				</select>
 				</span>
                 </div>
@@ -519,17 +539,17 @@
                 <div class="row cl">
                     <label class="form-label col-sm-2">味部：</label>
                     <input type="hidden" name="depart_id[]" value="5">
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <foreach name="categoryList" item="cate">
-                        <option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $wb['category_id']">selected="selected"</if>>{$cate.category_name}</option>
-                    </foreach>
-				</select>
-				</span>
-                    </div>
-                    <div class="formControls col-sm-2">
+                    <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<foreach name="categoryList" item="cate">-->
+                        <!--<option value="{$cate.category_id}" <if condition="$cate['category_id'] eq $wb['category_id']">selected="selected"</if>>{$cate.category_name}</option>-->
+                    <!--</foreach>-->
+				<!--</select>-->
+				<!--</span>-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
@@ -580,8 +600,13 @@
 <script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.chosen/1.8.2/chosen.jquery.js"></script>
 <script type="text/javascript">
     $(function () {
+        $('.food-id').chosen({
+            search_contains: true, // 全字段模糊匹配
+            no_results_text: '找不到菜品'
+        });
 //        if(parseInt($(".order-number").val()) == $(".order-number").val()){
 //            $(".order-number").val(parseInt($(".order-number").val()))
 //        }
@@ -642,59 +667,76 @@
 
         var foodData = {};
 
-        $(".category-id").change(function () {
-            var ele = $(this).parent().parent().parent();
-            var foodSelect = ele.find(".food-id");
-
-            foodSelect.html("");
-            $("<option value=''>-=请选择菜品=-</option>").appendTo(foodSelect);
-
-            var cateValue = $(this).val();
-            if (cateValue != "") {
-                var postData = {
-                    'category_id': cateValue
-                };
-                $.post('index.php?c=food&a=getFoodData', postData, function (result) {
-                    if (result.status == 1) {
-                        //成功
-                        //console.log(result.data);
-                        foodData = result.data;
-                        $.each(foodData, function (k, v) {
-                            $("<option value ='" + v['food_id'] + "'> " + v['food_name'] + "</option>").appendTo(foodSelect);
-                        });
-                    } else if (result.status == 0) {
-                        // 失败
-                        return dialog.error(result.message);
-                    }
-                }, "JSON");
-            }
-        });
+//        $(".category-id").change(function () {
+//            var ele = $(this).parent().parent().parent();
+//            var foodSelect = ele.find(".food-id");
+//
+//            foodSelect.html("");
+//            $("<option value=''>-=请选择菜品=-</option>").appendTo(foodSelect);
+//
+//            var cateValue = $(this).val();
+//            if (cateValue != "") {
+//                var postData = {
+//                    'category_id': cateValue
+//                };
+//                $.post('index.php?c=food&a=getFoodData', postData, function (result) {
+//                    if (result.status == 1) {
+//                        //成功
+//                        //console.log(result.data);
+//                        foodData = result.data;
+//                        $.each(foodData, function (k, v) {
+//                            $("<option value ='" + v['food_id'] + "'> " + v['food_name'] + "</option>").appendTo(foodSelect);
+//                        });
+//                    } else if (result.status == 0) {
+//                        // 失败
+//                        return dialog.error(result.message);
+//                    }
+//                }, "JSON");
+//            }
+//        });
 
         $(".food-id").change(function () {
             var ele = $(this).parent().parent().parent();
             foodValue = $(this).val();
 
-            $.each(foodData, function (k, v) {
-                if (foodValue == v['food_id']) {
-                    ele.find('.food-price').val(v['food_price']);
-                    ele.find('.food-unit').val(v['food_unit']);
-                    ele.find('.unit').html("元 / " + v['food_unit']);
+            var postData = {
+                'food_id': foodValue
+            };
+            $.post('index.php?c=food&a=getFoodById', postData, function (result) {
+                if (result.status == 1) {
+                    //成功
+                    //console.log(result.data);
+                    foodData = result.data;
+                    ele.find('.food-price').val(foodData['food_price']);
+                    ele.find('.food-unit').val(foodData['food_unit']);
+
+                    ele.find('.unit').html("元 / "+foodData['food_unit']);
+                } else if (result.status == 0) {
+                    // 失败
+                    return dialog.error(result.message);
                 }
-            });
+            }, "JSON");
         });
 
         $(".add-item").on('click', function () {
+            $(".food-id").chosen("destroy"); // 销毁所有chosen
             var ele = $(this).parent().parent();
             ele.find('.remove-item').removeClass('hide');
             var copy = ele.clone(true);
 
             ele.after(copy.addClass('hui-fadein'));
             var newEle = ele.next();
-            var newCateSelect = newEle.find('.category-id');
-            newCateSelect.find("option[value='']").attr("selected",true);
+
             var newFoodSelect = newEle.find('.food-id');
-            newFoodSelect.html('');
-            $("<option value=''>-=请选择菜品=-</option>").appendTo(newFoodSelect);
+            newFoodSelect.find("option[value='']").attr("selected",true);
+
+            // 重新对页面chosen
+            $(".food-id").chosen({
+                search_contains: true, // 全字段模糊匹配
+                no_results_text: '找不到菜品'
+            });
+
+            newEle.find('.food-name').val('');
             newEle.find('.food-price').val('');
             newEle.find('.food-unit').val('');
             newEle.find('.unit').html('');

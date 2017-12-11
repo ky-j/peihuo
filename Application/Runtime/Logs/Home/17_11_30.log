@@ -1,0 +1,492 @@
+[ 2017-11-30T12:31:04+08:00 ] 192.168.3.72 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=16 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-11-30T12:31:08+08:00 ] 192.168.3.72 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0510s ]
+SQL: INSERT INTO `ph_order` (`hotel_id`,`order_sn`,`order_date`,`delivery_date`,`update_time`) VALUES ('2','2017113039170','1512016267','1511971200','1512016267') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ph_log` [ RunTime:0.1830s ]
+SQL: INSERT INTO `ph_log` (`log_time`,`log_info`,`admin_id`,`admin_user`) VALUES ('1512016268','新增订单：订单ID为47','1','admin') [ RunTime:0.0010s ]
+
+[ 2017-11-30T12:31:09+08:00 ] 192.168.3.72 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 52 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 74 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 116 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 155 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 201 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 247 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-30T14:13:57+08:00 ] 192.168.3.78 /peihuo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-30T14:13:57+08:00 ] 192.168.3.78 /peihuo/index.php/Home/Login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-30T14:14:15+08:00 ] 192.168.3.78 /peihuo/index.php/Home/Login/check.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ph_admin` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `ph_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `ph_admin` SET `lastlogintime`='1512022455' WHERE ( admin_id=1 ) [ RunTime:0.0000s ]
+
+[ 2017-11-30T14:14:17+08:00 ] 192.168.3.78 /peihuo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webname F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-30T14:14:17+08:00 ] 192.168.3.78 /peihuo/index.php?a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-30T14:14:21+08:00 ] 192.168.3.78 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0350s ]
+SQL: SELECT o.*,`hotel_name`,`hotel_number` FROM ph_order o LEFT JOIN ph_hotel h ON o.hotel_id = h.hotel_id  WHERE o.status <> -1 ORDER BY order_id asc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-30T14:14:24+08:00 ] 192.168.3.78 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 52 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 74 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 116 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 155 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 201 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 247 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-30T14:14:45+08:00 ] 192.168.3.78 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0770s ]
+SQL: SELECT o.*,`hotel_name`,`hotel_number` FROM ph_order o LEFT JOIN ph_hotel h ON o.hotel_id = h.hotel_id  WHERE o.status <> -1 ORDER BY order_id asc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-30T14:14:48+08:00 ] 192.168.3.78 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 52 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 74 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 116 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 155 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 201 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 247 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-30T15:01:52+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 AND `category_id` = 2 ORDER BY food_id asc  [ RunTime:0.0010s ]
+
+[ 2017-11-30T15:01:59+08:00 ] ::1 /peihuo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webname F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-11-30T15:02:00+08:00 ] ::1 /peihuo/index.php?a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-30T15:02:07+08:00 ] ::1 /peihuo/index.php?c=order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\OrderModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\OrderModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_order` [ RunTime:0.0770s ]
+SQL: SELECT o.*,`hotel_name`,`hotel_number` FROM ph_order o LEFT JOIN ph_hotel h ON o.hotel_id = h.hotel_id  WHERE o.status <> -1 ORDER BY order_id asc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ph_order` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 61 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 63 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-30T15:02:10+08:00 ] ::1 /peihuo/index.php?c=order&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\OrderController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\HotelModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\HotelModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_hotel` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `ph_hotel` WHERE `status` <> -1 ORDER BY hotel_id asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `ph_food` WHERE `status` <> -1 ORDER BY food_id desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: today F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 52 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 74 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 116 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 155 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 201 行.
+NOTIC: [8] Undefined variable: categoryList F:\phpStudy\WWW\peihuo\Application\Runtime\Cache\Home\585339be4d132c0afead7245d660e331.php 第 247 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-30T15:02:13+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=18 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-30T15:02:18+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=18 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-11-30T15:02:22+08:00 ] ::1 /peihuo/index.php?c=food&a=getFoodById
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\FoodController::setStatus() should be compatible with Home\Controller\CommonController::setStatus($data, $models) F:\phpStudy\WWW\peihuo\Application\Home\Controller\FoodController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\FoodModel::find() should be compatible with Think\Model::find($options = Array) F:\phpStudy\WWW\peihuo\Application\Common\Model\FoodModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `ph_food` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `ph_food` WHERE ( food_id=20 ) LIMIT 1   [ RunTime:0.0010s ]
+

@@ -23,7 +23,12 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
-
+<link rel="stylesheet" href="/peihuo/Public/lib/jquery.chosen/1.8.2/chosen.css">
+<style>
+    .chosen-container .chosen-results {
+        max-height: 100%;
+    }
+</style>
 <title>修改订单</title>
 </head>
 <body>
@@ -98,18 +103,21 @@
         <?php if(empty($list_1)): ?><div class="row cl">
                 <label class="form-label col-sm-2">中餐：</label>
                 <input type="hidden" name="depart_id[]" value="1">
-                <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-                </div>
+                <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?>-->
+                        <!--<option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+                <!--</div>-->
                 <div class="formControls col-sm-2">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>"><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
                 </div>
@@ -140,21 +148,23 @@
             <?php if(is_array($list_1)): foreach($list_1 as $key=>$zc): ?><div class="row cl">
                     <label class="form-label col-sm-2">中餐：</label>
                     <input type="hidden" name="depart_id[]" value="1">
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $zc['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-                    </div>
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="food_id[]" class="select food-id">
-                    <option value="">-=请选择菜品=-</option>
-                    <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>" <?php if($food['food_id'] == $zc['food_id']): ?>selected="selected"<?php endif; ?>><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
+                    <!--<div class="formControls col-sm-2">-->
+                        <!--<span class="select-box">-->
+                        <!--<select name="category_id[]" class="select category-id">-->
+                            <!--<option value="">-=请选择菜品分类=-</option>-->
+                            <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?>-->
+                                <!--<option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $zc['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option>-->
+                            <!--<?php endforeach; endif; ?>-->
+                        <!--</select>-->
+                    <!--</span>-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-4">
+                        <span class="select-box">
+                        <select name="food_id[]" class="select food-id">
+                            <option value="">-=请选择菜品=-</option>
+                            <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>" <?php if($food['food_id'] == $zc['food_id']): ?>selected="selected"<?php endif; ?>><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
+                        </select>
+                        </span>
                     </div>
                     <div class="formControls col-sm-2">
                         <input type="text" class="input-text order-add-input food-price" value="<?php echo ($zc["food_price"]); ?>" placeholder="单价" id=""
@@ -187,18 +197,21 @@
         <?php if(empty($list_2)): ?><div class="row cl">
                 <label class="form-label col-sm-2">西餐：</label>
                 <input type="hidden" name="depart_id[]" value="2">
-                <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-                </div>
-                <div class="formControls col-sm-2">
+                <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?>-->
+                        <!--<option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+                <!--</div>-->
+                <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>"><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
                 </div>
@@ -229,15 +242,17 @@
             <?php if(is_array($list_2)): foreach($list_2 as $key=>$xc): ?><div class="row cl">
                     <label class="form-label col-sm-2">西餐：</label>
                     <input type="hidden" name="depart_id[]" value="2">
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $xc['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-                    </div>
-                    <div class="formControls col-sm-2">
+                    <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?>-->
+                        <!--<option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $xc['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
@@ -277,18 +292,21 @@
         <?php if(empty($list_3)): ?><div class="row cl">
                 <label class="form-label col-sm-2">日本料理：</label>
                 <input type="hidden" name="depart_id[]" value="3">
-                <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-                </div>
-                <div class="formControls col-sm-2">
+                <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?>-->
+                        <!--<option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+                <!--</div>-->
+                <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>"><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
                 </div>
@@ -319,15 +337,17 @@
             <?php if(is_array($list_3)): foreach($list_3 as $key=>$rbll): ?><div class="row cl">
                     <label class="form-label col-sm-2">日本料理：</label>
                     <input type="hidden" name="depart_id[]" value="3">
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $rbll['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-                    </div>
-                    <div class="formControls col-sm-2">
+                    <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?>-->
+                        <!--<option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $rbll['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
@@ -366,18 +386,21 @@
         <?php if(empty($list_4)): ?><div class="row cl">
                 <label class="form-label col-sm-2">点心：</label>
                 <input type="hidden" name="depart_id[]" value="4">
-                <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-                </div>
-                <div class="formControls col-sm-2">
+                <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?>-->
+                        <!--<option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+                <!--</div>-->
+                <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>"><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
                 </div>
@@ -408,15 +431,17 @@
             <?php if(is_array($list_4)): foreach($list_4 as $key=>$dx): ?><div class="row cl">
                     <label class="form-label col-sm-2">点心：</label>
                     <input type="hidden" name="depart_id[]" value="4">
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $dx['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-                    </div>
-                    <div class="formControls col-sm-2">
+                    <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?>-->
+                        <!--<option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $dx['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
@@ -455,18 +480,21 @@
         <?php if(empty($list_5)): ?><div class="row cl">
                 <label class="form-label col-sm-2">味部：</label>
                 <input type="hidden" name="depart_id[]" value="5">
-                <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?><option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-                </div>
-                <div class="formControls col-sm-2">
+                <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$category): ?>-->
+                        <!--<option value="<?php echo ($category["category_id"]); ?>"><?php echo ($category["category_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+                <!--</div>-->
+                <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
+                    <?php if(is_array($foodList)): foreach($foodList as $key=>$food): ?><option value="<?php echo ($food["food_id"]); ?>"><?php echo ($food["food_name"]); ?></option><?php endforeach; endif; ?>
 				</select>
 				</span>
                 </div>
@@ -497,15 +525,17 @@
             <?php if(is_array($list_5)): foreach($list_5 as $key=>$wb): ?><div class="row cl">
                     <label class="form-label col-sm-2">味部：</label>
                     <input type="hidden" name="depart_id[]" value="5">
-                    <div class="formControls col-sm-2">
-				<span class="select-box">
-				<select name="category_id[]" class="select category-id">
-                    <option value="">-=请选择菜品分类=-</option>
-                    <?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?><option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $wb['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option><?php endforeach; endif; ?>
-				</select>
-				</span>
-                    </div>
-                    <div class="formControls col-sm-2">
+                    <!--<div class="formControls col-sm-2">-->
+				<!--<span class="select-box">-->
+				<!--<select name="category_id[]" class="select category-id">-->
+                    <!--<option value="">-=请选择菜品分类=-</option>-->
+                    <!--<?php if(is_array($categoryList)): foreach($categoryList as $key=>$cate): ?>-->
+                        <!--<option value="<?php echo ($cate["category_id"]); ?>" <?php if($cate['category_id'] == $wb['category_id']): ?>selected="selected"<?php endif; ?>><?php echo ($cate["category_name"]); ?></option>-->
+                    <!--<?php endforeach; endif; ?>-->
+				<!--</select>-->
+				<!--</span>-->
+                    <!--</div>-->
+                    <div class="formControls col-sm-4">
 				<span class="select-box">
 				<select name="food_id[]" class="select food-id">
                     <option value="">-=请选择菜品=-</option>
@@ -558,8 +588,13 @@
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/peihuo/Public/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="/peihuo/Public/lib/jquery.chosen/1.8.2/chosen.jquery.js"></script>
 <script type="text/javascript">
     $(function () {
+        $('.food-id').chosen({
+            search_contains: true, // 全字段模糊匹配
+            no_results_text: '找不到菜品'
+        });
 //        if(parseInt($(".order-number").val()) == $(".order-number").val()){
 //            $(".order-number").val(parseInt($(".order-number").val()))
 //        }
@@ -620,59 +655,76 @@
 
         var foodData = {};
 
-        $(".category-id").change(function () {
-            var ele = $(this).parent().parent().parent();
-            var foodSelect = ele.find(".food-id");
-
-            foodSelect.html("");
-            $("<option value=''>-=请选择菜品=-</option>").appendTo(foodSelect);
-
-            var cateValue = $(this).val();
-            if (cateValue != "") {
-                var postData = {
-                    'category_id': cateValue
-                };
-                $.post('index.php?c=food&a=getFoodData', postData, function (result) {
-                    if (result.status == 1) {
-                        //成功
-                        //console.log(result.data);
-                        foodData = result.data;
-                        $.each(foodData, function (k, v) {
-                            $("<option value ='" + v['food_id'] + "'> " + v['food_name'] + "</option>").appendTo(foodSelect);
-                        });
-                    } else if (result.status == 0) {
-                        // 失败
-                        return dialog.error(result.message);
-                    }
-                }, "JSON");
-            }
-        });
+//        $(".category-id").change(function () {
+//            var ele = $(this).parent().parent().parent();
+//            var foodSelect = ele.find(".food-id");
+//
+//            foodSelect.html("");
+//            $("<option value=''>-=请选择菜品=-</option>").appendTo(foodSelect);
+//
+//            var cateValue = $(this).val();
+//            if (cateValue != "") {
+//                var postData = {
+//                    'category_id': cateValue
+//                };
+//                $.post('index.php?c=food&a=getFoodData', postData, function (result) {
+//                    if (result.status == 1) {
+//                        //成功
+//                        //console.log(result.data);
+//                        foodData = result.data;
+//                        $.each(foodData, function (k, v) {
+//                            $("<option value ='" + v['food_id'] + "'> " + v['food_name'] + "</option>").appendTo(foodSelect);
+//                        });
+//                    } else if (result.status == 0) {
+//                        // 失败
+//                        return dialog.error(result.message);
+//                    }
+//                }, "JSON");
+//            }
+//        });
 
         $(".food-id").change(function () {
             var ele = $(this).parent().parent().parent();
             foodValue = $(this).val();
 
-            $.each(foodData, function (k, v) {
-                if (foodValue == v['food_id']) {
-                    ele.find('.food-price').val(v['food_price']);
-                    ele.find('.food-unit').val(v['food_unit']);
-                    ele.find('.unit').html("元 / " + v['food_unit']);
+            var postData = {
+                'food_id': foodValue
+            };
+            $.post('index.php?c=food&a=getFoodById', postData, function (result) {
+                if (result.status == 1) {
+                    //成功
+                    //console.log(result.data);
+                    foodData = result.data;
+                    ele.find('.food-price').val(foodData['food_price']);
+                    ele.find('.food-unit').val(foodData['food_unit']);
+
+                    ele.find('.unit').html("元 / "+foodData['food_unit']);
+                } else if (result.status == 0) {
+                    // 失败
+                    return dialog.error(result.message);
                 }
-            });
+            }, "JSON");
         });
 
         $(".add-item").on('click', function () {
+            $(".food-id").chosen("destroy"); // 销毁所有chosen
             var ele = $(this).parent().parent();
             ele.find('.remove-item').removeClass('hide');
             var copy = ele.clone(true);
 
             ele.after(copy.addClass('hui-fadein'));
             var newEle = ele.next();
-            var newCateSelect = newEle.find('.category-id');
-            newCateSelect.find("option[value='']").attr("selected",true);
+
             var newFoodSelect = newEle.find('.food-id');
-            newFoodSelect.html('');
-            $("<option value=''>-=请选择菜品=-</option>").appendTo(newFoodSelect);
+            newFoodSelect.find("option[value='']").attr("selected",true);
+
+            // 重新对页面chosen
+            $(".food-id").chosen({
+                search_contains: true, // 全字段模糊匹配
+                no_results_text: '找不到菜品'
+            });
+
+            newEle.find('.food-name').val('');
             newEle.find('.food-price').val('');
             newEle.find('.food-unit').val('');
             newEle.find('.unit').html('');
